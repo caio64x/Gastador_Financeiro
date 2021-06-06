@@ -146,7 +146,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(971, 263);
+            this.panel2.Size = new System.Drawing.Size(971, 294);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -171,8 +171,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(971, 263);
+            this.dataGridView1.Size = new System.Drawing.Size(971, 294);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // NomeFinanceiroTipo
             // 
@@ -191,17 +192,19 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.quantidadeLabel);
+            this.panel3.Controls.Add(this.valorTotalReceitaLabel);
             this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 335);
+            this.panel3.Location = new System.Drawing.Point(0, 366);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(971, 103);
+            this.panel3.Size = new System.Drawing.Size(971, 72);
             this.panel3.TabIndex = 1;
             // 
             // quantidadeLabel
             // 
             this.quantidadeLabel.AutoSize = true;
-            this.quantidadeLabel.Location = new System.Drawing.Point(12, 20);
+            this.quantidadeLabel.Location = new System.Drawing.Point(12, 17);
             this.quantidadeLabel.Name = "quantidadeLabel";
             this.quantidadeLabel.Size = new System.Drawing.Size(84, 13);
             this.quantidadeLabel.TabIndex = 4;
@@ -210,24 +213,22 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.valorTotalReceitaLabel);
-            this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.valorTotalDespesaLabel);
             this.panel4.Controls.Add(this.fecharButton);
             this.panel4.Controls.Add(this.inserirButton);
             this.panel4.Controls.Add(this.excluirButton);
             this.panel4.Controls.Add(this.alterarButton);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(284, 0);
+            this.panel4.Location = new System.Drawing.Point(400, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(687, 103);
+            this.panel4.Size = new System.Drawing.Size(571, 72);
             this.panel4.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(35, 58);
+            this.label3.Location = new System.Drawing.Point(34, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 14;
@@ -237,7 +238,7 @@
             // 
             this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
-            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(-85, 32);
+            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(195, 41);
             this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
             this.valorTotalReceitaLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalReceitaLabel.TabIndex = 12;
@@ -248,7 +249,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(44, 8);
+            this.label2.Location = new System.Drawing.Point(324, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
             this.label2.TabIndex = 13;
@@ -258,7 +259,7 @@
             // 
             this.valorTotalDespesaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(-85, 82);
+            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(-86, 41);
             this.valorTotalDespesaLabel.Name = "valorTotalDespesaLabel";
             this.valorTotalDespesaLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalDespesaLabel.TabIndex = 11;
@@ -268,7 +269,7 @@
             // fecharButton
             // 
             this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharButton.Location = new System.Drawing.Point(596, 71);
+            this.fecharButton.Location = new System.Drawing.Point(487, 35);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(79, 23);
             this.fecharButton.TabIndex = 10;
@@ -279,7 +280,7 @@
             // inserirButton
             // 
             this.inserirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inserirButton.Location = new System.Drawing.Point(353, 71);
+            this.inserirButton.Location = new System.Drawing.Point(244, 35);
             this.inserirButton.Name = "inserirButton";
             this.inserirButton.Size = new System.Drawing.Size(79, 23);
             this.inserirButton.TabIndex = 9;
@@ -290,7 +291,7 @@
             // excluirButton
             // 
             this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirButton.Location = new System.Drawing.Point(515, 71);
+            this.excluirButton.Location = new System.Drawing.Point(406, 35);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(79, 23);
             this.excluirButton.TabIndex = 7;
@@ -301,7 +302,7 @@
             // alterarButton
             // 
             this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarButton.Location = new System.Drawing.Point(434, 71);
+            this.alterarButton.Location = new System.Drawing.Point(325, 35);
             this.alterarButton.Name = "alterarButton";
             this.alterarButton.Size = new System.Drawing.Size(79, 23);
             this.alterarButton.TabIndex = 8;

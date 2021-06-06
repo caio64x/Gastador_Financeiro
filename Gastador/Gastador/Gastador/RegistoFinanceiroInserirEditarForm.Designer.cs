@@ -40,6 +40,7 @@
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.excluirButton = new System.Windows.Forms.Button();
             this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,20 +63,20 @@
             // 
             // salvarButton
             // 
-            this.salvarButton.Location = new System.Drawing.Point(306, 226);
+            this.salvarButton.Location = new System.Drawing.Point(365, 226);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarButton.TabIndex = 4;
+            this.salvarButton.TabIndex = 5;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
             this.salvarButton.Click += new System.EventHandler(this.salvarButton_Click);
             // 
             // fecharButton
             // 
-            this.fecharButton.Location = new System.Drawing.Point(387, 226);
+            this.fecharButton.Location = new System.Drawing.Point(446, 226);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(75, 23);
-            this.fecharButton.TabIndex = 3;
+            this.fecharButton.TabIndex = 4;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -104,7 +105,7 @@
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(532, 120);
-            this.descricaoTextBox.TabIndex = 1;
+            this.descricaoTextBox.TabIndex = 2;
             // 
             // label4
             // 
@@ -119,17 +120,17 @@
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mvFinanceiroBindingSource, "Valor", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
             this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.valorTextBox.Location = new System.Drawing.Point(79, 226);
+            this.valorTextBox.Location = new System.Drawing.Point(67, 226);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(208, 23);
-            this.valorTextBox.TabIndex = 2;
+            this.valorTextBox.TabIndex = 3;
             this.valorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorTextBox_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(32, 226);
+            this.label2.Location = new System.Drawing.Point(20, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 10;
@@ -141,8 +142,18 @@
             this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(344, 21);
             this.dataVencimentoDateTimePicker.Name = "dataVencimentoDateTimePicker";
             this.dataVencimentoDateTimePicker.Size = new System.Drawing.Size(101, 20);
-            this.dataVencimentoDateTimePicker.TabIndex = 11;
+            this.dataVencimentoDateTimePicker.TabIndex = 1;
             this.dataVencimentoDateTimePicker.Value = new System.DateTime(2021, 6, 6, 0, 0, 0, 0);
+            // 
+            // excluirButton
+            // 
+            this.excluirButton.Location = new System.Drawing.Point(284, 226);
+            this.excluirButton.Name = "excluirButton";
+            this.excluirButton.Size = new System.Drawing.Size(75, 23);
+            this.excluirButton.TabIndex = 11;
+            this.excluirButton.Text = "Excluir";
+            this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
             // mvFinanceiroBindingSource
             // 
@@ -153,6 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 261);
+            this.Controls.Add(this.excluirButton);
             this.Controls.Add(this.dataVencimentoDateTimePicker);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(this.label2);
@@ -181,7 +193,6 @@
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Button salvarButton;
         private System.Windows.Forms.Button fecharButton;
-        private System.Windows.Forms.ComboBox financeiroComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox descricaoTextBox;
         private System.Windows.Forms.Label label4;
@@ -189,5 +200,7 @@
         private System.Windows.Forms.BindingSource mvFinanceiroBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dataVencimentoDateTimePicker;
+        private System.Windows.Forms.Button excluirButton;
+        public System.Windows.Forms.ComboBox financeiroComboBox;
     }
 }

@@ -73,23 +73,23 @@ namespace Gastador
 
         }
 
-        private void excluirButton_Click(object sender, EventArgs e)
-        {
-            //if (MessageBox.Show("Deseja realmente excluir o registro " + financeiro.Nome + "?",
-            //    "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    var resp = new FinanceiroDAO().Excluir(financeiro.ID);
-            //    if (resp)
-            //    {
-            //        MessageBox.Show("Excluído com sucesso");
-            //        Close();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Erro ao excluir!");
-            //    }
-            //}
-        }
+        //private void excluirButton_Click(object sender, EventArgs e)
+        //{
+        //    if (MessageBox.Show("Deseja realmente excluir o registro " + financeiro.Nome + "?",
+        //        "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+        //    {
+        //        var resp = new FinanceiroDAO().Excluir(financeiro.ID);
+        //        if (resp)
+        //        {
+        //            MessageBox.Show("Excluído com sucesso");
+        //            Close();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Erro ao excluir!");
+        //        }
+        //    }
+        //}
 
         void ListarFinanceiroTipos()
         {

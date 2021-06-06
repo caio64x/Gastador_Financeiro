@@ -65,6 +65,7 @@ namespace Gastador
             {
                 new RegistoFinanceiroInserirEditarForm(id).ShowDialog();
                 Listar();
+
             }
         }
 
@@ -122,6 +123,67 @@ namespace Gastador
             buscarButton.PerformClick();
         }
 
-       
+        //funçao do sub menu
+        public void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+
+                ContextMenuStrip sub_menu = new ContextMenuStrip();
+                int posicao = dataGridView1.HitTest(e.X, e.Y).RowIndex;
+
+                if (posicao >= 0)
+                {
+                    sub_menu.Items.Add("Confirmar pagamento").Name = "confirmar_pagamento";
+                }
+
+                sub_menu.Show(dataGridView1, new Point(e.X, e.Y));
+
+                sub_menu.ItemClicked += new ToolStripItemClickedEventHandler(sub_menu_clicked);
+            }
+        }
+
+        //acoes no submenu
+        public void sub_menu_clicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Name.ToString())
+            {
+                case "confirmar_pagamento":
+                    
+                    //chama a função de pagamento
+                    ConfirmarPagamento(mvFinanceiro);
+                    break;
+            }
+        }
+
+        public void ConfirmarPagamento(MvFinanceiro mvFinanceiro)
+        {
+            int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
+            mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
+            try
+            {
+                mvFinanceiro.ID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
+                if (mvFinanceiro.ID > 0)
+                {
+
+                    new MvFinanceiroDAO().Pagamento(mvFinanceiro);
+
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Selecione um registro");
+            }
+                       
+
+            if (mvFinanceiro.ID > 0)
+            {
+                new MvFinanceiroDAO().Pagamento(mvFinanceiro);
+                MessageBox.Show("Pagamento confirmado!");
+                Listar();
+
+            }
+        }
     }
 }

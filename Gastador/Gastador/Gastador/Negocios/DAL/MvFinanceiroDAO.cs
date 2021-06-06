@@ -39,9 +39,9 @@ namespace Gastador.Negocios.DAL
 
 
 
-        public MvFinanceiro Buscar(int id)
+        public MvFinanceiro Buscar(int ID)
         {
-            return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros WHERE ID = @id", new { id }).SingleOrDefault();
+            return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros WHERE ID = @id", new { id= ID }).SingleOrDefault();
         }
 
 
@@ -68,12 +68,27 @@ namespace Gastador.Negocios.DAL
             {
                 //update
                 if (banco.Execute("UPDATE MvFinanceiros SET " +
-                "IDMvFinanceiroTipo = @IDMvFinanceiroTipo, Nome = @Nome, Ativo = @Ativo " +
+                "IDFinanceiro = @IDFinanceiro, Descricao = @Descricao, DataVencimento = @DataVencimento, Valor = @Valor " +
                 "WHERE ID = @ID", financeiro) == 1)
                     return financeiro.ID;
                 else
                     return 0;
             }
         }
+
+        public void Pagamento(MvFinanceiro mvFinanceiro)
+        {
+            if (mvFinanceiro.Pago == "N")
+            {
+                //update
+                banco.Execute("UPDATE MvFinanceiros SET " +
+                 " Pago = 'S' " +
+                 "WHERE ID = @ID", mvFinanceiro);
+
+            }
+
+        }
+
+        
     }
 }
