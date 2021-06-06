@@ -23,6 +23,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Gastador_Financeiro</ProductName>
+    <PublisherName>Gastador</PublisherName>
+    <SuiteName>Gastador</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
@@ -62,7 +65,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Properties\logo.ico</ApplicationIcon>
+    <ApplicationIcon>profits_78367.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
@@ -75,9 +78,8 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
-  <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
-  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
@@ -191,7 +193,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioInserirEditarForm.resx">
@@ -229,6 +231,11 @@
   <ItemGroup>
     <Content Include="alogo.ico" />
     <Content Include="logo.ico" />
+    <None Include="Resources\money.ico" />
+    <None Include="Properties\save-money.ico" />
+    <Content Include="profits_78367.ico" />
+    <None Include="Resources\Icon1.ico" />
+    <Content Include="save-money.ico" />
     <None Include="Properties\logo.ico" />
     <Content Include="Properties\logo.png" />
     <Content Include="Properties\sair.png" />

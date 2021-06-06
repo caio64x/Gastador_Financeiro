@@ -59,9 +59,10 @@ namespace Gastador.Negocios.DAL
             {
                 //se o id for zero, é inclusão
                 return banco.Query<int>(
-                "INSERT INTO MvFinanceiros (IDMvFinanceiroTipo, Nome, Ativo) values " +
-                "(@IDMvFinanceiroTipo, @Nome, @Ativo) " +
+                "INSERT INTO MvFinanceiros (IDFinanceiro, Descricao, DataVencimento, Valor) values " +
+                "(@IDFinanceiro, @Descricao, @DataVencimento, @Valor) " +
                 "select @@Identity", financeiro).SingleOrDefault();
+
             }
             else
             {

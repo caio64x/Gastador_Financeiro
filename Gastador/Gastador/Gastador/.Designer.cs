@@ -38,7 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -53,18 +54,17 @@
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -174,9 +174,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(971, 263);
             this.dataGridView1.TabIndex = 0;
             // 
-            // mvFinanceiroBindingSource
+            // NomeFinanceiroTipo
             // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
+            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.HeaderText = "Tipo";
+            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.ReadOnly = true;
+            // 
+            // NomeFinanceiro
+            // 
+            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
+            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
+            this.NomeFinanceiro.Name = "NomeFinanceiro";
+            this.NomeFinanceiro.ReadOnly = true;
             // 
             // panel3
             // 
@@ -321,20 +331,6 @@
             this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
             this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // NomeFinanceiroTipo
-            // 
-            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.HeaderText = "Tipo";
-            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.ReadOnly = true;
-            // 
-            // NomeFinanceiro
-            // 
-            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
-            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
-            this.NomeFinanceiro.Name = "NomeFinanceiro";
-            this.NomeFinanceiro.ReadOnly = true;
-            // 
             // descricaoDataGridViewTextBoxColumn
             // 
             this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -368,6 +364,10 @@
             this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
             this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
+            // 
             // RegistoFinanceiroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,11 +384,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

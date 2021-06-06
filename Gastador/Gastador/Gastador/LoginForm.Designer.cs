@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.senhaTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.loginTextBox = new System.Windows.Forms.TextBox();
@@ -35,11 +36,14 @@
             this.fecharButton = new System.Windows.Forms.Button();
             this.entrarButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // senhaTextBox
             // 
-            this.senhaTextBox.Location = new System.Drawing.Point(161, 75);
+            this.senhaTextBox.Location = new System.Drawing.Point(169, 103);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(132, 20);
@@ -48,7 +52,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(158, 59);
+            this.label4.Location = new System.Drawing.Point(166, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 13;
@@ -56,7 +60,7 @@
             // 
             // loginTextBox
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(55, 75);
+            this.loginTextBox.Location = new System.Drawing.Point(63, 103);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
             this.loginTextBox.TabIndex = 0;
@@ -64,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 59);
+            this.label3.Location = new System.Drawing.Point(63, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 12;
@@ -73,7 +77,7 @@
             // fecharButton
             // 
             this.fecharButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.fecharButton.Location = new System.Drawing.Point(296, 139);
+            this.fecharButton.Location = new System.Drawing.Point(306, 139);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(75, 23);
             this.fecharButton.TabIndex = 3;
@@ -83,7 +87,7 @@
             // 
             // entrarButton
             // 
-            this.entrarButton.Location = new System.Drawing.Point(215, 139);
+            this.entrarButton.Location = new System.Drawing.Point(225, 139);
             this.entrarButton.Name = "entrarButton";
             this.entrarButton.Size = new System.Drawing.Size(75, 23);
             this.entrarButton.TabIndex = 2;
@@ -94,12 +98,32 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 9);
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(90, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 39);
             this.label1.TabIndex = 16;
-            this.label1.Text = "GASTADOR";
+            this.label1.Text = "Gastador";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(92, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 26);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Controle Financeiro";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -107,7 +131,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.fecharButton;
-            this.ClientSize = new System.Drawing.Size(383, 174);
+            this.ClientSize = new System.Drawing.Size(391, 170);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fecharButton);
             this.Controls.Add(this.entrarButton);
@@ -116,11 +142,13 @@
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrar";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +163,7 @@
         private System.Windows.Forms.Button fecharButton;
         private System.Windows.Forms.Button entrarButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

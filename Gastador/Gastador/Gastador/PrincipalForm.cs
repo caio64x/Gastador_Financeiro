@@ -18,12 +18,6 @@ namespace Gastador
             InitializeComponent();
         }
 
-        private void pegarStringToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var str = System.Configuration.ConfigurationManager.AppSettings["banco"];
-            MessageBox.Show(str);
-        }
-
         
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,6 +35,11 @@ namespace Gastador
                 loginToolStripButton.Text = "ENTRAR";
                 loginToolStripButton.Image = Gastador.Properties.Resources.entrar;
 
+                //bloqueia acesso se não logar
+                usuariostoolStripButton.Enabled = false;
+                registrarFinanceiroToolStripButton.Enabled = false;
+                cadastrosToolStripMenuItem.Enabled = false;
+
                  usuarioToolStripStatusLabel.Text = "Usuário não logado";
 
             }
@@ -49,6 +48,11 @@ namespace Gastador
                 loginToolStripButton.Text = "SAIR";
                 loginToolStripButton.Image = Gastador.Properties.Resources.sair;
                 usuarioToolStripStatusLabel.Text = "Usuário: " + Compartilhada.UsuarioLogado.Nome;
+
+                //libera acesso ao logar 
+                usuariostoolStripButton.Enabled = true;
+                registrarFinanceiroToolStripButton.Enabled = true;
+                cadastrosToolStripMenuItem.Enabled = true;
 
             }
         }

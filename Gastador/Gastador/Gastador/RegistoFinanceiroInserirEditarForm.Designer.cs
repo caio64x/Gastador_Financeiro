@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             // 
             // salvarButton
             // 
-            this.salvarButton.Location = new System.Drawing.Point(291, 211);
+            this.salvarButton.Location = new System.Drawing.Point(306, 226);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(75, 23);
             this.salvarButton.TabIndex = 4;
@@ -71,7 +72,7 @@
             // 
             // fecharButton
             // 
-            this.fecharButton.Location = new System.Drawing.Point(372, 211);
+            this.fecharButton.Location = new System.Drawing.Point(387, 226);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(75, 23);
             this.fecharButton.TabIndex = 3;
@@ -102,7 +103,7 @@
             this.descricaoTextBox.Location = new System.Drawing.Point(1, 60);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(471, 120);
+            this.descricaoTextBox.Size = new System.Drawing.Size(532, 120);
             this.descricaoTextBox.TabIndex = 1;
             // 
             // label4
@@ -118,7 +119,7 @@
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mvFinanceiroBindingSource, "Valor", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
             this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.valorTextBox.Location = new System.Drawing.Point(64, 211);
+            this.valorTextBox.Location = new System.Drawing.Point(79, 226);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(208, 23);
             this.valorTextBox.TabIndex = 2;
@@ -128,11 +129,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(17, 211);
+            this.label2.Location = new System.Drawing.Point(32, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "Valor";
+            // 
+            // dataVencimentoDateTimePicker
+            // 
+            this.dataVencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(344, 21);
+            this.dataVencimentoDateTimePicker.Name = "dataVencimentoDateTimePicker";
+            this.dataVencimentoDateTimePicker.Size = new System.Drawing.Size(101, 20);
+            this.dataVencimentoDateTimePicker.TabIndex = 11;
+            this.dataVencimentoDateTimePicker.Value = new System.DateTime(2021, 6, 6, 0, 0, 0, 0);
             // 
             // mvFinanceiroBindingSource
             // 
@@ -142,7 +152,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 246);
+            this.ClientSize = new System.Drawing.Size(533, 261);
+            this.Controls.Add(this.dataVencimentoDateTimePicker);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.descricaoTextBox);
@@ -177,5 +188,6 @@
         private System.Windows.Forms.TextBox valorTextBox;
         private System.Windows.Forms.BindingSource mvFinanceiroBindingSource;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dataVencimentoDateTimePicker;
     }
 }

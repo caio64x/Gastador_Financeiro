@@ -33,8 +33,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.loginToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.registrarFinanceiroToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.usuariostoolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.registrarFinanceiroToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.vendasToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,16 +81,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
-            // registrarFinanceiroToolStripButton
-            // 
-            this.registrarFinanceiroToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("registrarFinanceiroToolStripButton.Image")));
-            this.registrarFinanceiroToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.registrarFinanceiroToolStripButton.Name = "registrarFinanceiroToolStripButton";
-            this.registrarFinanceiroToolStripButton.Size = new System.Drawing.Size(113, 35);
-            this.registrarFinanceiroToolStripButton.Text = "Registrar financeiro";
-            this.registrarFinanceiroToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.registrarFinanceiroToolStripButton.Click += new System.EventHandler(this.registrarFinanceiroToolStripMenuItem_Click);
-            // 
             // usuariostoolStripButton
             // 
             this.usuariostoolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("usuariostoolStripButton.Image")));
@@ -100,6 +90,16 @@
             this.usuariostoolStripButton.Text = "Usuarios";
             this.usuariostoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.usuariostoolStripButton.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // registrarFinanceiroToolStripButton
+            // 
+            this.registrarFinanceiroToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("registrarFinanceiroToolStripButton.Image")));
+            this.registrarFinanceiroToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.registrarFinanceiroToolStripButton.Name = "registrarFinanceiroToolStripButton";
+            this.registrarFinanceiroToolStripButton.Size = new System.Drawing.Size(110, 35);
+            this.registrarFinanceiroToolStripButton.Text = "Registro financeiro";
+            this.registrarFinanceiroToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.registrarFinanceiroToolStripButton.Click += new System.EventHandler(this.registrarFinanceiroToolStripMenuItem_Click);
             // 
             // vendasToolStripButton
             // 
@@ -168,6 +168,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "PrincipalForm";
             this.Text = "Gastador";

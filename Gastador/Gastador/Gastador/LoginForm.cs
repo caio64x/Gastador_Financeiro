@@ -55,5 +55,7 @@ namespace Gastador
             Compartilhada.UsuarioLogado = usuario;
             Close();
         }
+
+      
     }
 }

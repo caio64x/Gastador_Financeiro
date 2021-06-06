@@ -15,7 +15,7 @@ namespace Gastador
 {
     public partial class RegistoFinanceiroInserirEditarForm : Form
     {
-        Financeiro financeiro = null;
+        MvFinanceiro mvFinanceiro = null;
         public RegistoFinanceiroInserirEditarForm()
         {
             InitializeComponent();
@@ -25,8 +25,8 @@ namespace Gastador
             this.Text = "Nova despesa/receita";
             idTextBox.Text = "Automático";
             idTextBox.Enabled = false;
-            
-            financeiro = new Financeiro();
+
+            mvFinanceiro = new MvFinanceiro();
 
         }
 
@@ -37,14 +37,14 @@ namespace Gastador
             ListarFinanceiro();
 
             this.Text = "Alteração despesa/receita";
-            financeiro = new FinanceiroDAO().Buscar(id);
+            mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
 
-            idTextBox.Text = financeiro.ID.ToString();
+            idTextBox.Text = mvFinanceiro.ID.ToString();
             idTextBox.Enabled = false;
 
            // nomeTextBox.Text = financeiro.Nome;
             
-            financeiroComboBox.SelectedValue = Convert.ToInt32(financeiro.IDFinanceiroTipo);
+            financeiroComboBox.SelectedValue = Convert.ToInt32(mvFinanceiro.IDFinanceiroTipo);
 
         }
 
@@ -55,19 +55,31 @@ namespace Gastador
 
         private void salvarButton_Click(object sender, EventArgs e)
         {
-            financeiro.IDFinanceiroTipo = Convert.ToInt32(financeiroComboBox.SelectedValue);
-        //    financeiro.Nome = nomeTextBox.Text.Trim();
-          
-            financeiro.ID= new FinanceiroDAO().Salvar(financeiro);
+            // mvFinanceiro.IDFinanceiroTipo = Convert.ToInt32(financeiroComboBox.SelectedValue);
 
-            if (financeiro.ID == 0)
+            //    financeiro.Nome = nomeTextBox.Text.Trim();
+            if (dataVencimentoDateTimePicker.Value.Date == null)
+            {
+                MessageBox.Show("Selecione uma data",
+                   "data nao verificada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+     
+
+            mvFinanceiro.Descricao = descricaoTextBox.Text.Trim();
+            mvFinanceiro.Valor = Convert.ToDecimal(valorTextBox.Text.Trim());
+            mvFinanceiro.DataVencimento = Convert.ToDateTime(dataVencimentoDateTimePicker.Value.Date);
+            mvFinanceiro.IDFinanceiro = Convert.ToInt32(financeiroComboBox.SelectedValue);
+                        
+            mvFinanceiro.ID= new MvFinanceiroDAO().Salvar(mvFinanceiro);
+          
+            if (mvFinanceiro.ID == 0)
             {
                 MessageBox.Show("Erro ao salvar!");
             }
             else
             {
                 this.Text = "Alteração despesa/receita";
-                idTextBox.Text = financeiro.ID.ToString();
+                idTextBox.Text = mvFinanceiro.ID.ToString();
                 MessageBox.Show("Registro salvo com sucesso!");
             }
 
