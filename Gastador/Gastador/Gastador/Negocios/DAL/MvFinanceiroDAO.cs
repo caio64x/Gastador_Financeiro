@@ -76,15 +76,30 @@ namespace Gastador.Negocios.DAL
             //confirma pagamento
             if (mvFinanceiro.Pago == "N")
             {
-                DateTime mes = Convert.ToDateTime(DateTime.Now.Date.ToShortDateString());
 
-                //update
-                banco.Execute("UPDATE MvFinanceiros SET " +
-                 "DataConfirmacao = '" + mes + "', Pago = 'S' " +
-                 "WHERE ID = @ID", mvFinanceiro);
+                DateTime mes = Convert.ToDateTime(DateTime.Now.Date.ToShortDateString());
+                if (mvFinanceiro.DataVencimento < mes)
+                {
+                    string vencimento = mvFinanceiro.DataVencimento.ToString().Substring(0, 10);
+
+                    mvFinanceiro.Descricao = (mvFinanceiro.Descricao + " " + "| Confirmação de pagamento atrasada " +
+                    " Data de vencimento anterior: " + vencimento).ToString().Trim();
+
+                   banco.Execute("UPDATE MvFinanceiros SET " +
+                   "DataConfirmacao = '" + mes + "', DataVencimento = '" + mes + "', Descricao = '" + mvFinanceiro.Descricao + "', Pago = 'S' " +
+                   "WHERE ID = @ID", mvFinanceiro);
+                }
+                else
+                {
+                    banco.Execute("UPDATE MvFinanceiros SET " +
+                    "DataConfirmacao = '" + mes + "', Pago = 'S' " +
+                    "WHERE ID = @ID", mvFinanceiro);
+                }
+
+
             }
 
-          //  estorna o pagamento
+            //  estorna o pagamento
             if (mvFinanceiro.Pago == "S")
             {
                 //update

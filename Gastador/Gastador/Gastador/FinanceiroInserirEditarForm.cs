@@ -27,6 +27,7 @@ namespace Gastador
             idTextBox.Enabled = false;
             ativoCheckBox.Checked = true;
             financeiro = new Financeiro();
+         
 
         }
 
