@@ -19,7 +19,7 @@ namespace Gastador.Negocios.DAL
         }
 
 
-        // funciona
+        // consulta com filtro por mes
         public List<MvFinanceiro> Listar(string nome, string mes)
         {
 
@@ -33,19 +33,17 @@ namespace Gastador.Negocios.DAL
         }
 
 
-
+        //consulta geral
         public MvFinanceiro Buscar(int ID)
         {
             return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros WHERE ID = @id", new { id = ID }).SingleOrDefault();
         }
 
 
-
         public bool Excluir(int id)
         {
             return banco.Execute(@"DELETE FROM MvFinanceiros WHERE ID = @xxxxxx", new { xxxxxx = id }) == 1;
         }
-
 
 
         public int Salvar(MvFinanceiro financeiro)
@@ -78,6 +76,7 @@ namespace Gastador.Negocios.DAL
             {
 
                 DateTime mes = Convert.ToDateTime(DateTime.Now.Date.ToShortDateString());
+                //se o pagamento estiver atrasado atualiza data de vencimento e confirmação
                 if (mvFinanceiro.DataVencimento < mes)
                 {
                     string vencimento = mvFinanceiro.DataVencimento.ToString().Substring(0, 10);
@@ -85,17 +84,17 @@ namespace Gastador.Negocios.DAL
                     mvFinanceiro.Descricao = (mvFinanceiro.Descricao + " " + "| Confirmação de pagamento atrasada " +
                     " Data de vencimento anterior: " + vencimento).ToString().Trim();
 
-                   banco.Execute("UPDATE MvFinanceiros SET " +
-                   "DataConfirmacao = '" + mes + "', DataVencimento = '" + mes + "', Descricao = '" + mvFinanceiro.Descricao + "', Pago = 'S' " +
-                   "WHERE ID = @ID", mvFinanceiro);
+                    banco.Execute("UPDATE MvFinanceiros SET " +
+                    "DataConfirmacao = '" + mes + "', DataVencimento = '" + mes + "', Descricao = '" + mvFinanceiro.Descricao + "', Pago = 'S' " +
+                    "WHERE ID = @ID", mvFinanceiro);
                 }
                 else
                 {
+                    //se nao, atualiza somente a data de confirmação
                     banco.Execute("UPDATE MvFinanceiros SET " +
                     "DataConfirmacao = '" + mes + "', Pago = 'S' " +
                     "WHERE ID = @ID", mvFinanceiro);
                 }
-
 
             }
 
@@ -108,7 +107,6 @@ namespace Gastador.Negocios.DAL
                  "WHERE ID = @ID", mvFinanceiro);
             }
         }
-
 
     }
 }

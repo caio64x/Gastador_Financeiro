@@ -19,35 +19,21 @@ namespace Gastador.Negocios.DAL
 
         public List<Financeiro> ListarParaCombo()
         {
-
             return banco.Query<Financeiro>(@"SELECT fi.ID, concat(fi.Nome, ' | ', ti.Nome) as Nome FROM Financeiros fi join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID Order By fi.Nome").ToList();
         }
 
         // funciona
         public List<Financeiro> Listar(string nome)
         {
-            //            return banco.Query<Financeiro>(@"SELECT * FROM Financeiros
-            //WHERE Nome LIKE '%" + nome + "%' Order By Nome").ToList();
-
             return banco.Query<Financeiro>(@"SELECT fi.*, ft.Nome as FinanceiroTipoNome FROM Financeiros fi join FinanceiroTipos ft on fi.IDFinanceiroTipo = ft.ID
             WHERE fi.Nome LIKE '%" + nome + "%' Order By fi.Nome").ToList();
         }
-
 
 
         public Financeiro Buscar(int id)
         {
             return banco.Query<Financeiro>(@"SELECT * FROM Financeiros WHERE ID = @id", new { id }).SingleOrDefault();
         }
-
-
-
-        //public bool Excluir(int id)
-        //{
-        //    return banco.Execute(@"DELETE FROM Financeiros WHERE ID = @xxxxxx", new { xxxxxx = id }) == 1;
-        //}
-
-
 
         public int Salvar(Financeiro financeiro)
         {

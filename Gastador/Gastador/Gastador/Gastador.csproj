@@ -105,21 +105,9 @@
     <Compile Include="RegistoFinanceiroInserirEditarForm.Designer.cs">
       <DependentUpon>RegistoFinanceiroInserirEditarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientePesquisarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClientePesquisarForm.Designer.cs">
-      <DependentUpon>ClientePesquisarForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Negocios\DAL\MvFinanceiroDAO.cs" />
     <Compile Include="Negocios\DAL\FinanceiroTipoDAO.cs" />
     <Compile Include="Negocios\Mapeamento\MvFinanceiro.cs" />
-    <Compile Include="ProdutoInserirEditarForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProdutoInserirEditarForm.Designer.cs">
-      <DependentUpon>ProdutoInserirEditarForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistoFinanceiroForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,12 +167,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="RegistoFinanceiroInserirEditarForm.resx">
       <DependentUpon>RegistoFinanceiroInserirEditarForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClientePesquisarForm.resx">
-      <DependentUpon>ClientePesquisarForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProdutoInserirEditarForm.resx">
-      <DependentUpon>ProdutoInserirEditarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoFinanceiroForm.resx">
       <DependentUpon>RegistoFinanceiroForm.cs</DependentUpon>
