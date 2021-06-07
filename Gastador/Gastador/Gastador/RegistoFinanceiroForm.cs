@@ -28,14 +28,10 @@ namespace Gastador
             quantidadeLabel.Text = "Aguarde... buscando....";
             Application.DoEvents();// enquanto o evento acontece
 
-
-
             var lista = new MvFinanceiroDAO().Listar(filtroTextBox.Text, mesDespesacomboBox.Text.Substring(0, 2).Trim());
 
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
-
-
 
             valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2).Sum(s => s.Valor).ToString("C");
             valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1).Sum(s => s.Valor).ToString("C");
@@ -135,6 +131,7 @@ namespace Gastador
                 if (posicao >= 0)
                 {
                     sub_menu.Items.Add("Confirmar pagamento").Name = "confirmar_pagamento";
+                    sub_menu.Items.Add("Estornar pagamento").Name = "estornar_pagamento";
                 }
 
                 sub_menu.Show(dataGridView1, new Point(e.X, e.Y));
@@ -149,41 +146,94 @@ namespace Gastador
             switch (e.ClickedItem.Name.ToString())
             {
                 case "confirmar_pagamento":
-                    
+
                     //chama a função de pagamento
-                    ConfirmarPagamento(mvFinanceiro);
+
+                    ConfirmarPagamento();
+
+
+                    break;
+                case "estornar_pagamento":
+
+                    //chama a função de pagamento
+
+                    EstornarPagamento();
+
+
                     break;
             }
         }
 
-        public void ConfirmarPagamento(MvFinanceiro mvFinanceiro)
+        public void ConfirmarPagamento()
         {
-            int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
-            mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
+            int id;
             try
             {
-                mvFinanceiro.ID = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
-                if (mvFinanceiro.ID > 0)
-                {
+                id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
 
-                    new MvFinanceiroDAO().Pagamento(mvFinanceiro);
-
-                }
+                mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
 
             }
             catch
             {
                 MessageBox.Show("Selecione um registro");
             }
-                       
 
-            if (mvFinanceiro.ID > 0)
+
+            if (mvFinanceiro.ID > 0 && mvFinanceiro.Pago == "N")
             {
+
                 new MvFinanceiroDAO().Pagamento(mvFinanceiro);
                 MessageBox.Show("Pagamento confirmado!");
                 Listar();
 
             }
+            else
+
+            {
+               
+                MessageBox.Show("Pagamento já confirmado!");
+                Listar();
+            }
+
+
         }
+
+        public void EstornarPagamento()
+        {
+            int id;
+            try
+            {
+                id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
+
+                mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
+
+            }
+            catch
+            {
+                MessageBox.Show("Selecione um registro");
+            }
+
+
+            if (mvFinanceiro.ID > 0 && mvFinanceiro.Pago == "S")
+            {
+
+                new MvFinanceiroDAO().Pagamento(mvFinanceiro);
+                MessageBox.Show("Pagamento estornado!");
+                Listar();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Pagamento ja estornado");
+                Listar();
+
+            }
+
+
+
+        }
+
     }
 }

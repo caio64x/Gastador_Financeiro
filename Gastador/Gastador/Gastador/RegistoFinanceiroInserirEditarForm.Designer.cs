@@ -42,6 +42,7 @@
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.excluirButton = new System.Windows.Forms.Button();
             this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,11 +160,21 @@
             // 
             this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(341, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Data de vencimento";
+            // 
             // RegistoFinanceiroInserirEditarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 261);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.excluirButton);
             this.Controls.Add(this.dataVencimentoDateTimePicker);
             this.Controls.Add(this.valorTextBox);
@@ -202,5 +213,6 @@
         private System.Windows.Forms.DateTimePicker dataVencimentoDateTimePicker;
         private System.Windows.Forms.Button excluirButton;
         public System.Windows.Forms.ComboBox financeiroComboBox;
+        private System.Windows.Forms.Label label5;
     }
 }

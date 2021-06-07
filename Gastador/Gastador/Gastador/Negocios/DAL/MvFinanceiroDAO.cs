@@ -19,29 +19,24 @@ namespace Gastador.Negocios.DAL
         }
 
 
-       // funciona
+        // funciona
         public List<MvFinanceiro> Listar(string nome, string mes)
         {
-            DateTime.Now.ToString("yyyy'-'MM'-'dd");
-            //            return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros
-            //WHERE Nome LIKE '%" + nome + "%' Order By Nome").ToList();
+
             if (mes == "MÊ")
                 mes = DateTime.Now.Month.ToString();
-            
-            
-            
+
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
             WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and fi.Nome LIKE '%" + nome + "%'").ToList();
 
-            // WHERE fi.Nome LIKE '%" + nome + "%' or ti.Nome LIKE '%" + nome + "%' or mv.Descricao LIKE '%" + nome + "%'Order By fi.Nome and MONTH (mv.DataVencimento) = '" + mes + "'").ToList();
         }
 
 
 
         public MvFinanceiro Buscar(int ID)
         {
-            return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros WHERE ID = @id", new { id= ID }).SingleOrDefault();
+            return banco.Query<MvFinanceiro>(@"SELECT * FROM MvFinanceiros WHERE ID = @id", new { id = ID }).SingleOrDefault();
         }
 
 
@@ -78,17 +73,27 @@ namespace Gastador.Negocios.DAL
 
         public void Pagamento(MvFinanceiro mvFinanceiro)
         {
+            //confirma pagamento
             if (mvFinanceiro.Pago == "N")
+            {
+                DateTime mes = Convert.ToDateTime(DateTime.Now.Date.ToShortDateString());
+
+                //update
+                banco.Execute("UPDATE MvFinanceiros SET " +
+                 "DataConfirmacao = '" + mes + "', Pago = 'S' " +
+                 "WHERE ID = @ID", mvFinanceiro);
+            }
+
+          //  estorna o pagamento
+            if (mvFinanceiro.Pago == "S")
             {
                 //update
                 banco.Execute("UPDATE MvFinanceiros SET " +
-                 " Pago = 'S' " +
+                 "DataConfirmacao = null, Pago = 'N' " +
                  "WHERE ID = @ID", mvFinanceiro);
-
             }
-
         }
 
-        
+
     }
 }
