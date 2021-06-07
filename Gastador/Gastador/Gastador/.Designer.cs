@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoFinanceiroForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.mesDespesacomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,15 +43,15 @@
             this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
+            this.valorTotalReceitaLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.valorTotalReceitaLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.valorTotalDespesaLabel = new System.Windows.Forms.Label();
             this.fecharButton = new System.Windows.Forms.Button();
             this.inserirButton = new System.Windows.Forms.Button();
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,6 +211,17 @@
             this.quantidadeLabel.TabIndex = 4;
             this.quantidadeLabel.Text = "Nenhum registro";
             // 
+            // valorTotalReceitaLabel
+            // 
+            this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
+            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(195, 41);
+            this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
+            this.valorTotalReceitaLabel.Size = new System.Drawing.Size(201, 17);
+            this.valorTotalReceitaLabel.TabIndex = 12;
+            this.valorTotalReceitaLabel.Text = "...";
+            this.valorTotalReceitaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
@@ -233,27 +245,6 @@
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Despesas";
-            // 
-            // valorTotalReceitaLabel
-            // 
-            this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
-            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(195, 41);
-            this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
-            this.valorTotalReceitaLabel.Size = new System.Drawing.Size(201, 17);
-            this.valorTotalReceitaLabel.TabIndex = 12;
-            this.valorTotalReceitaLabel.Text = "...";
-            this.valorTotalReceitaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(324, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Receitas";
             // 
             // valorTotalDespesaLabel
             // 
@@ -309,6 +300,16 @@
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
             this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(324, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Receitas";
             // 
             // iDdataGridViewTextBoxColumn1
             // 
@@ -377,6 +378,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistoFinanceiroForm";
             this.Text = "Registro financeiro";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceiroInserirEditarForm));
             this.label1 = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
@@ -118,7 +119,7 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Tipo financeiro";
             // 
-            // FinanceiroEditarForm
+            // FinanceiroInserirEditarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,9 +134,10 @@
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FinanceiroEditarForm";
+            this.Name = "FinanceiroInserirEditarForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

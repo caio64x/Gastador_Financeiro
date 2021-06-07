@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoFinanceiroInserirEditarForm));
             this.label1 = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.salvarButton = new System.Windows.Forms.Button();
@@ -38,10 +39,10 @@
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.valorTextBox = new System.Windows.Forms.TextBox();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.excluirButton = new System.Windows.Forms.Button();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -127,6 +128,10 @@
             this.valorTextBox.TabIndex = 3;
             this.valorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorTextBox_KeyPress);
             // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -156,10 +161,6 @@
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -188,6 +189,7 @@
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistoFinanceiroInserirEditarForm";

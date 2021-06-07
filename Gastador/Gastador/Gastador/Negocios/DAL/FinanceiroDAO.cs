@@ -19,7 +19,8 @@ namespace Gastador.Negocios.DAL
 
         public List<Financeiro> ListarParaCombo()
         {
-            return banco.Query<Financeiro>(@"SELECT fi.ID, concat(fi.Nome, ' | ', ti.Nome) as Nome FROM Financeiros fi join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID Order By fi.Nome").ToList();
+            return banco.Query<Financeiro>(@"SELECT fi.ID, concat(fi.Nome, ' | ', ti.Nome) 
+            as Nome FROM Financeiros fi join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID where fi.Ativo = 1 Order By fi.Nome").ToList();
         }
 
         // funciona

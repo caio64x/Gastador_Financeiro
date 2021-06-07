@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceiroListarForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buscarButton = new System.Windows.Forms.Button();
             this.filtroTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iddataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDFinanceiroTipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.financeiroTipoNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.financeiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.fecharButton = new System.Windows.Forms.Button();
             this.inserirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
+            this.iddataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDFinanceiroTipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.financeiroTipoNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.financeiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.financeiroBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.financeiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,47 +125,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 323);
             this.dataGridView1.TabIndex = 0;
             // 
-            // iddataGridViewTextBoxColumn1
-            // 
-            this.iddataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iddataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iddataGridViewTextBoxColumn1.Name = "iddataGridViewTextBoxColumn1";
-            this.iddataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDFinanceiroTipoDataGridViewTextBoxColumn
-            // 
-            this.iDFinanceiroTipoDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiroTipo";
-            this.iDFinanceiroTipoDataGridViewTextBoxColumn.HeaderText = "IDFinanceiroTipo";
-            this.iDFinanceiroTipoDataGridViewTextBoxColumn.Name = "iDFinanceiroTipoDataGridViewTextBoxColumn";
-            this.iDFinanceiroTipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Ativo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            // 
-            // financeiroTipoNomeDataGridViewTextBoxColumn
-            // 
-            this.financeiroTipoNomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.financeiroTipoNomeDataGridViewTextBoxColumn.DataPropertyName = "FinanceiroTipoNome";
-            this.financeiroTipoNomeDataGridViewTextBoxColumn.HeaderText = "FinanceiroTipo";
-            this.financeiroTipoNomeDataGridViewTextBoxColumn.Name = "financeiroTipoNomeDataGridViewTextBoxColumn";
-            this.financeiroTipoNomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // financeiroBindingSource
-            // 
-            this.financeiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.Financeiro);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.quantidadeLabel);
@@ -228,6 +188,47 @@
             this.alterarButton.UseVisualStyleBackColor = true;
             this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
+            // iddataGridViewTextBoxColumn1
+            // 
+            this.iddataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iddataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iddataGridViewTextBoxColumn1.Name = "iddataGridViewTextBoxColumn1";
+            this.iddataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iDFinanceiroTipoDataGridViewTextBoxColumn
+            // 
+            this.iDFinanceiroTipoDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiroTipo";
+            this.iDFinanceiroTipoDataGridViewTextBoxColumn.HeaderText = "IDFinanceiroTipo";
+            this.iDFinanceiroTipoDataGridViewTextBoxColumn.Name = "iDFinanceiroTipoDataGridViewTextBoxColumn";
+            this.iDFinanceiroTipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Ativo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Ativo";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // financeiroTipoNomeDataGridViewTextBoxColumn
+            // 
+            this.financeiroTipoNomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.financeiroTipoNomeDataGridViewTextBoxColumn.DataPropertyName = "FinanceiroTipoNome";
+            this.financeiroTipoNomeDataGridViewTextBoxColumn.HeaderText = "FinanceiroTipo";
+            this.financeiroTipoNomeDataGridViewTextBoxColumn.Name = "financeiroTipoNomeDataGridViewTextBoxColumn";
+            this.financeiroTipoNomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // financeiroBindingSource
+            // 
+            this.financeiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.Financeiro);
+            // 
             // FinanceiroListarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +237,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FinanceiroListarForm";
             this.Text = "Lista de tipos de finanças";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -244,10 +246,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.financeiroBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.financeiroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
