@@ -37,8 +37,16 @@
             this.buscarButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.restanteReceberlabel = new System.Windows.Forms.Label();
@@ -61,21 +69,13 @@
             this.inserirButton = new System.Windows.Forms.Button();
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
-            this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -171,6 +171,32 @@
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
+            // iDdataGridViewTextBoxColumn1
+            // 
+            this.iDdataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.iDdataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDdataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDdataGridViewTextBoxColumn1.Name = "iDdataGridViewTextBoxColumn1";
+            this.iDdataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDdataGridViewTextBoxColumn1.Width = 43;
+            // 
+            // iDFinanceiroDataGridViewTextBoxColumn
+            // 
+            this.iDFinanceiroDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiro";
+            this.iDFinanceiroDataGridViewTextBoxColumn.HeaderText = "IDFinanceiro";
+            this.iDFinanceiroDataGridViewTextBoxColumn.Name = "iDFinanceiroDataGridViewTextBoxColumn";
+            this.iDFinanceiroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDFinanceiroDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pagoDataGridViewTextBoxColumn
+            // 
+            this.pagoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.pagoDataGridViewTextBoxColumn.DataPropertyName = "Pago";
+            this.pagoDataGridViewTextBoxColumn.HeaderText = "Pago";
+            this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
+            this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pagoDataGridViewTextBoxColumn.Width = 57;
+            // 
             // NomeFinanceiroTipo
             // 
             this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
@@ -185,6 +211,45 @@
             this.NomeFinanceiro.Name = "NomeFinanceiro";
             this.NomeFinanceiro.ReadOnly = true;
             this.NomeFinanceiro.Visible = false;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Valor";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataVencimentoDataGridViewTextBoxColumn
+            // 
+            this.dataVencimentoDataGridViewTextBoxColumn.DataPropertyName = "DataVencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.HeaderText = "DataVencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.Name = "dataVencimentoDataGridViewTextBoxColumn";
+            this.dataVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataVencimentoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dataConfirmacaoDataGridViewTextBoxColumn
+            // 
+            this.dataConfirmacaoDataGridViewTextBoxColumn.DataPropertyName = "DataConfirmacao";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.HeaderText = "DataConfirmacao";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataConfirmacaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // panel5
             // 
@@ -216,7 +281,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(1059, 254);
+            this.label1.Location = new System.Drawing.Point(982, 250);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 20);
             this.label1.TabIndex = 24;
@@ -226,7 +291,7 @@
             // 
             this.restanteReceberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restanteReceberlabel.ForeColor = System.Drawing.Color.Green;
-            this.restanteReceberlabel.Location = new System.Drawing.Point(1053, 274);
+            this.restanteReceberlabel.Location = new System.Drawing.Point(982, 274);
             this.restanteReceberlabel.Name = "restanteReceberlabel";
             this.restanteReceberlabel.Size = new System.Drawing.Size(201, 17);
             this.restanteReceberlabel.TabIndex = 23;
@@ -238,7 +303,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label11.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label11.Location = new System.Drawing.Point(1059, 362);
+            this.label11.Location = new System.Drawing.Point(982, 359);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 20);
             this.label11.TabIndex = 22;
@@ -248,7 +313,7 @@
             // 
             this.lucroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lucroLabel.ForeColor = System.Drawing.Color.Green;
-            this.lucroLabel.Location = new System.Drawing.Point(1053, 382);
+            this.lucroLabel.Location = new System.Drawing.Point(982, 383);
             this.lucroLabel.Name = "lucroLabel";
             this.lucroLabel.Size = new System.Drawing.Size(201, 17);
             this.lucroLabel.TabIndex = 21;
@@ -259,7 +324,7 @@
             // 
             this.restantePagarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restantePagarLabel.ForeColor = System.Drawing.Color.Red;
-            this.restantePagarLabel.Location = new System.Drawing.Point(1053, 323);
+            this.restantePagarLabel.Location = new System.Drawing.Point(982, 323);
             this.restantePagarLabel.Name = "restantePagarLabel";
             this.restantePagarLabel.Size = new System.Drawing.Size(201, 17);
             this.restantePagarLabel.TabIndex = 19;
@@ -271,7 +336,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(1059, 115);
+            this.label7.Location = new System.Drawing.Point(982, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(244, 20);
             this.label7.TabIndex = 18;
@@ -281,7 +346,7 @@
             // 
             this.valorTotalDespesaFixaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaFixaLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaFixaLabel.Location = new System.Drawing.Point(1059, 135);
+            this.valorTotalDespesaFixaLabel.Location = new System.Drawing.Point(982, 140);
             this.valorTotalDespesaFixaLabel.Name = "valorTotalDespesaFixaLabel";
             this.valorTotalDespesaFixaLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalDespesaFixaLabel.TabIndex = 17;
@@ -293,7 +358,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1059, 65);
+            this.label5.Location = new System.Drawing.Point(982, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(272, 20);
             this.label5.TabIndex = 16;
@@ -303,7 +368,7 @@
             // 
             this.valorTotalDespesaVariavelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaVariavelLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaVariavelLabel.Location = new System.Drawing.Point(1059, 85);
+            this.valorTotalDespesaVariavelLabel.Location = new System.Drawing.Point(982, 90);
             this.valorTotalDespesaVariavelLabel.Name = "valorTotalDespesaVariavelLabel";
             this.valorTotalDespesaVariavelLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalDespesaVariavelLabel.TabIndex = 15;
@@ -315,7 +380,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(1059, 165);
+            this.label3.Location = new System.Drawing.Point(982, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 20);
             this.label3.TabIndex = 14;
@@ -325,7 +390,7 @@
             // 
             this.valorTotalDespesaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(1053, 185);
+            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(982, 189);
             this.valorTotalDespesaLabel.Name = "valorTotalDespesaLabel";
             this.valorTotalDespesaLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalDespesaLabel.TabIndex = 11;
@@ -337,7 +402,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label2.Location = new System.Drawing.Point(1059, 13);
+            this.label2.Location = new System.Drawing.Point(982, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 20);
             this.label2.TabIndex = 13;
@@ -347,7 +412,7 @@
             // 
             this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
-            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(1053, 33);
+            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(982, 37);
             this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
             this.valorTotalReceitaLabel.Size = new System.Drawing.Size(201, 17);
             this.valorTotalReceitaLabel.TabIndex = 12;
@@ -359,7 +424,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(1059, 303);
+            this.label9.Location = new System.Drawing.Point(982, 299);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 20);
             this.label9.TabIndex = 20;
@@ -443,71 +508,6 @@
             this.alterarButton.UseVisualStyleBackColor = true;
             this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
-            // iDdataGridViewTextBoxColumn1
-            // 
-            this.iDdataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.iDdataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDdataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDdataGridViewTextBoxColumn1.Name = "iDdataGridViewTextBoxColumn1";
-            this.iDdataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDdataGridViewTextBoxColumn1.Width = 43;
-            // 
-            // iDFinanceiroDataGridViewTextBoxColumn
-            // 
-            this.iDFinanceiroDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiro";
-            this.iDFinanceiroDataGridViewTextBoxColumn.HeaderText = "IDFinanceiro";
-            this.iDFinanceiroDataGridViewTextBoxColumn.Name = "iDFinanceiroDataGridViewTextBoxColumn";
-            this.iDFinanceiroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDFinanceiroDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pagoDataGridViewTextBoxColumn
-            // 
-            this.pagoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.pagoDataGridViewTextBoxColumn.DataPropertyName = "Pago";
-            this.pagoDataGridViewTextBoxColumn.HeaderText = "Pago";
-            this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
-            this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pagoDataGridViewTextBoxColumn.Width = 57;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Valor";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataVencimentoDataGridViewTextBoxColumn
-            // 
-            this.dataVencimentoDataGridViewTextBoxColumn.DataPropertyName = "DataVencimento";
-            this.dataVencimentoDataGridViewTextBoxColumn.HeaderText = "DataVencimento";
-            this.dataVencimentoDataGridViewTextBoxColumn.Name = "dataVencimentoDataGridViewTextBoxColumn";
-            this.dataVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataVencimentoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dataConfirmacaoDataGridViewTextBoxColumn
-            // 
-            this.dataConfirmacaoDataGridViewTextBoxColumn.DataPropertyName = "DataConfirmacao";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.HeaderText = "DataConfirmacao";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataConfirmacaoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
-            // 
             // RelatorioMensalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,12 +525,12 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
