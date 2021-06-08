@@ -34,22 +34,12 @@ namespace Gastador.Negocios.DAL
 
         public List<MvFinanceiro> ListarPagos(string mes)
         {
-
-            //if (mes == "MÊ")
-            //    mes = DateTime.Now.Month.ToString();
-
-            //return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
-            //join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            //WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and mv.Pago = 'S' order by fi.Nome").ToList();
-
-
             if (mes == "MÊ")
                 mes = DateTime.Now.Month.ToString();
 
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
             WHERE  MONTH (mv.DataVencimento) = '" + mes + "' order by fi.Nome").ToList();
-
         }
 
 
