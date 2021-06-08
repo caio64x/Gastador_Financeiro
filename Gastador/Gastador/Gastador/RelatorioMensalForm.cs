@@ -28,14 +28,28 @@ namespace Gastador
             quantidadeLabel.Text = "Aguarde... buscando....";
             Application.DoEvents();// enquanto o evento acontece
 
-            var lista = new MvFinanceiroDAO().Listar(filtroTextBox.Text, mesDespesacomboBox.Text.Substring(0, 2).Trim());
+           // var lista = new MvFinanceiroDAO().Listar(mesDespesacomboBox.Text.Substring(0, 2).Trim());
+           var lista = new MvFinanceiroDAO().ListarPagos(mesDespesacomboBox.Text.Substring(0, 2).Trim());
+
 
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 
             //somatorio filtrado
+                var calc1 = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor);
             valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+
+            var calc2 = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor);
             valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+
+            valorTotalDespesaFixaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+            valorTotalDespesaVariavelLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+
+
+            decimal total = calc2 - calc1;
+            lucroLabel.Text = total.ToString();
+            restantePagarLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
+            restanteReceberlabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
             Application.DoEvents();
             // enquanto o evento acontece
 
@@ -226,7 +240,7 @@ namespace Gastador
         }
 
         //formatar coluna pelo valor do status do pagamento
-         public void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        public void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
             if (e.Value.ToString() == "S")
@@ -242,5 +256,7 @@ namespace Gastador
 
             }
         }
+
+
     }
 }
