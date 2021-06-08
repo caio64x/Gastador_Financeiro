@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace Gastador
 {
-    public partial class RegistoFinanceiroForm : Form
+    public partial class RelatorioMensalForm : Form
     {
         MvFinanceiro mvFinanceiro = null;
-        public RegistoFinanceiroForm()
+        public RelatorioMensalForm()
         {
             InitializeComponent();
             Application.DoEvents();// enquanto o evento acontece
@@ -33,8 +33,9 @@ namespace Gastador
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 
-            valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2).Sum(s => s.Valor).ToString("C");
-            valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1).Sum(s => s.Valor).ToString("C");
+            //somatorio filtrado
+            valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+            valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
             Application.DoEvents();
             // enquanto o evento acontece
 

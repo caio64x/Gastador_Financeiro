@@ -99,11 +99,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Designer - Copy.cs">
+      <DependentUpon>RelatorioMensalForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AboutBox1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioMensalForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegistoFinanceiroInserirEditarForm.cs">
       <SubType>Form</SubType>
@@ -173,6 +180,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioMensalForm.resx">
+      <DependentUpon>RelatorioMensalForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistoFinanceiroInserirEditarForm.resx">
       <DependentUpon>RegistoFinanceiroInserirEditarForm.cs</DependentUpon>

@@ -27,6 +27,7 @@ namespace Gastador
             idTextBox.Enabled = false;
             excluirButton.Enabled = false;
             dataVencimentoDateTimePicker.Text = ("");
+            valorTextBox.Text = "0,00";
             mvFinanceiro = new MvFinanceiro();
 
         }
@@ -42,6 +43,7 @@ namespace Gastador
             mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
 
             financeiroComboBox.SelectedValue = Convert.ToInt32(mvFinanceiro.IDFinanceiro);
+
             dataVencimentoDateTimePicker.Value = mvFinanceiro.DataVencimento;
             idTextBox.Text = mvFinanceiro.ID.ToString();
             descricaoTextBox.Text = mvFinanceiro.Descricao.ToString().Trim();
@@ -70,19 +72,27 @@ namespace Gastador
             mvFinanceiro.DataVencimento = Convert.ToDateTime(dataVencimentoDateTimePicker.Value.Date);
             mvFinanceiro.IDFinanceiro = Convert.ToInt32(financeiroComboBox.SelectedValue);
 
-            mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
-
-            if (mvFinanceiro.ID == 0)
+            if (mvFinanceiro.IDFinanceiro == 0)
             {
-                MessageBox.Show("Erro ao salvar!");
+                MessageBox.Show("Selecione a despesa/receita!");
             }
             else
             {
-                this.Text = "Alteração despesa/receita";
-                idTextBox.Text = mvFinanceiro.ID.ToString();
-                excluirButton.Enabled = true;
-                MessageBox.Show("Registro salvo com sucesso!");
+                mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
+
+                if (mvFinanceiro.ID == 0)
+                {
+                    MessageBox.Show("Erro ao salvar!");
+                }
+                else
+                {
+                    this.Text = "Alteração despesa/receita";
+                    idTextBox.Text = mvFinanceiro.ID.ToString();
+                    excluirButton.Enabled = true;
+                    MessageBox.Show("Registro salvo com sucesso!");
+                }
             }
+            
 
         }
 
@@ -127,6 +137,14 @@ namespace Gastador
 
             }
 
+        }
+
+        private void RegistoFinanceiroInserirEditarForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
         }
     }
 }

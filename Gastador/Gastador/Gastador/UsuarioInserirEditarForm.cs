@@ -102,7 +102,12 @@ namespace Gastador
             }
         }
 
-
-
+        private void UsuarioInserirEditarForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
+        }
     }
 }

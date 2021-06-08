@@ -100,9 +100,9 @@ namespace Gastador
 
         private void relatorioMensalToolStripButton_Click(object sender, EventArgs e)
         {
-            //var form = new RelatorioMensalForm();
-            //form.MdiParent = this;
-            //form.Show();
+            var form = new RelatorioMensalForm();
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)

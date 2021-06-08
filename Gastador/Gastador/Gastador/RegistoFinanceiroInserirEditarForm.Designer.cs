@@ -87,6 +87,7 @@
             // 
             // financeiroComboBox
             // 
+            this.financeiroComboBox.DisplayMember = "1";
             this.financeiroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.financeiroComboBox.FormattingEnabled = true;
             this.financeiroComboBox.Location = new System.Drawing.Point(126, 25);
@@ -106,18 +107,20 @@
             // 
             // descricaoTextBox
             // 
+            this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.descricaoTextBox.Location = new System.Drawing.Point(1, 81);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(532, 150);
+            this.descricaoTextBox.Size = new System.Drawing.Size(532, 140);
             this.descricaoTextBox.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 65);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(12, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Descrição";
             // 
@@ -196,10 +199,12 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegistoFinanceiroInserirEditarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistoFinanceiroInserirEditarForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

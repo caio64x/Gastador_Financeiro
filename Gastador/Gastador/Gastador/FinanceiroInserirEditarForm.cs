@@ -100,6 +100,12 @@ namespace Gastador
             financeiroTipoComboBox.DataSource = lista;
         }
 
-        
+        private void FinanceiroInserirEditarForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
+        }
     }
 }

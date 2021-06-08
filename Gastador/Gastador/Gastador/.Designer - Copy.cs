@@ -1,6 +1,6 @@
 ﻿namespace Gastador
 {
-    partial class RegistoFinanceiroForm
+    partial class RelatorioMensalForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoFinanceiroForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatorioMensalForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.mesDespesacomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -377,7 +377,7 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Receitas";
             // 
-            // RegistoFinanceiroForm
+            // RelatorioMensalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -386,8 +386,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "RegistoFinanceiroForm";
-            this.Text = "Registro financeiro";
+            this.Name = "RelatorioMensalForm";
+            this.Text = "Relatorio mensal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RegistrarFinanceiroForm_Load_1);
             this.panel1.ResumeLayout(false);
