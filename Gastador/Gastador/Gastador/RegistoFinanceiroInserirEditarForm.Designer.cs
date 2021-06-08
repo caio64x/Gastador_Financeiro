@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 4);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -58,14 +58,14 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(12, 20);
+            this.idTextBox.Location = new System.Drawing.Point(12, 25);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 0;
             // 
             // salvarButton
             // 
-            this.salvarButton.Location = new System.Drawing.Point(365, 226);
+            this.salvarButton.Location = new System.Drawing.Point(370, 237);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(75, 23);
             this.salvarButton.TabIndex = 5;
@@ -75,10 +75,10 @@
             // 
             // fecharButton
             // 
-            this.fecharButton.Location = new System.Drawing.Point(446, 226);
+            this.fecharButton.Location = new System.Drawing.Point(451, 237);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(75, 23);
-            this.fecharButton.TabIndex = 4;
+            this.fecharButton.TabIndex = 6;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -87,7 +87,7 @@
             // 
             this.financeiroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.financeiroComboBox.FormattingEnabled = true;
-            this.financeiroComboBox.Location = new System.Drawing.Point(126, 20);
+            this.financeiroComboBox.Location = new System.Drawing.Point(126, 25);
             this.financeiroComboBox.Name = "financeiroComboBox";
             this.financeiroComboBox.Size = new System.Drawing.Size(204, 21);
             this.financeiroComboBox.TabIndex = 0;
@@ -95,24 +95,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 4);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(123, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.Size = new System.Drawing.Size(116, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Despesa/Receita";
             // 
             // descricaoTextBox
             // 
-            this.descricaoTextBox.Location = new System.Drawing.Point(1, 60);
+            this.descricaoTextBox.Location = new System.Drawing.Point(1, 81);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(532, 120);
+            this.descricaoTextBox.Size = new System.Drawing.Size(532, 150);
             this.descricaoTextBox.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 44);
+            this.label4.Location = new System.Drawing.Point(12, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 8;
@@ -122,7 +123,7 @@
             // 
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mvFinanceiroBindingSource, "Valor", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
             this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.valorTextBox.Location = new System.Drawing.Point(67, 226);
+            this.valorTextBox.Location = new System.Drawing.Point(72, 237);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(208, 23);
             this.valorTextBox.TabIndex = 3;
@@ -136,7 +137,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(20, 226);
+            this.label2.Location = new System.Drawing.Point(25, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 10;
@@ -145,7 +146,7 @@
             // dataVencimentoDateTimePicker
             // 
             this.dataVencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(344, 21);
+            this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(344, 26);
             this.dataVencimentoDateTimePicker.Name = "dataVencimentoDateTimePicker";
             this.dataVencimentoDateTimePicker.Size = new System.Drawing.Size(101, 20);
             this.dataVencimentoDateTimePicker.TabIndex = 1;
@@ -153,10 +154,10 @@
             // 
             // excluirButton
             // 
-            this.excluirButton.Location = new System.Drawing.Point(284, 226);
+            this.excluirButton.Location = new System.Drawing.Point(289, 237);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(75, 23);
-            this.excluirButton.TabIndex = 11;
+            this.excluirButton.TabIndex = 4;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
@@ -164,9 +165,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.Location = new System.Drawing.Point(341, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 13);
+            this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Data de vencimento";
             // 
@@ -174,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 261);
+            this.ClientSize = new System.Drawing.Size(534, 266);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.excluirButton);
             this.Controls.Add(this.dataVencimentoDateTimePicker);

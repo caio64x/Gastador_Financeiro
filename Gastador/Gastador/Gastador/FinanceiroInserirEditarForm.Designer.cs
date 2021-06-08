@@ -61,14 +61,15 @@
             this.nomeTextBox.Location = new System.Drawing.Point(12, 75);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(437, 20);
-            this.nomeTextBox.TabIndex = 1;
+            this.nomeTextBox.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(12, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome";
             // 
@@ -87,7 +88,7 @@
             this.salvarButton.Location = new System.Drawing.Point(293, 133);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarButton.TabIndex = 4;
+            this.salvarButton.TabIndex = 3;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
             this.salvarButton.Click += new System.EventHandler(this.salvarButton_Click);
@@ -97,7 +98,7 @@
             this.fecharButton.Location = new System.Drawing.Point(374, 133);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(75, 23);
-            this.fecharButton.TabIndex = 3;
+            this.fecharButton.TabIndex = 4;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -108,14 +109,15 @@
             this.financeiroTipoComboBox.Location = new System.Drawing.Point(15, 130);
             this.financeiroTipoComboBox.Name = "financeiroTipoComboBox";
             this.financeiroTipoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.financeiroTipoComboBox.TabIndex = 5;
+            this.financeiroTipoComboBox.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 114);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(12, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tipo financeiro";
             // 

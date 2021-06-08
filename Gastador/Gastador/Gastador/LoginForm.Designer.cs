@@ -43,34 +43,38 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.senhaTextBox.Location = new System.Drawing.Point(169, 103);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';
-            this.senhaTextBox.Size = new System.Drawing.Size(132, 20);
+            this.senhaTextBox.Size = new System.Drawing.Size(132, 23);
             this.senhaTextBox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 87);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(166, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Senha";
             // 
             // loginTextBox
             // 
+            this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginTextBox.Location = new System.Drawing.Point(63, 103);
             this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loginTextBox.Size = new System.Drawing.Size(100, 23);
             this.loginTextBox.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 87);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(60, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 12;
             this.label3.Text = "Login";
             // 
@@ -130,6 +134,7 @@
             this.AcceptButton = this.entrarButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.fecharButton;
             this.ClientSize = new System.Drawing.Size(391, 170);
             this.Controls.Add(this.pictureBox1);

@@ -58,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.buscarButton);
             this.panel1.Controls.Add(this.filtroTextBox);
             this.panel1.Controls.Add(this.label1);
@@ -73,7 +74,7 @@
             this.buscarButton.Location = new System.Drawing.Point(344, 35);
             this.buscarButton.Name = "buscarButton";
             this.buscarButton.Size = new System.Drawing.Size(75, 23);
-            this.buscarButton.TabIndex = 5;
+            this.buscarButton.TabIndex = 1;
             this.buscarButton.Text = "Buscar";
             this.buscarButton.UseVisualStyleBackColor = true;
             this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
@@ -83,15 +84,16 @@
             this.filtroTextBox.Location = new System.Drawing.Point(15, 37);
             this.filtroTextBox.Name = "filtroTextBox";
             this.filtroTextBox.Size = new System.Drawing.Size(323, 20);
-            this.filtroTextBox.TabIndex = 4;
+            this.filtroTextBox.TabIndex = 0;
             this.filtroTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.filtroTextBox_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Digite o Nome";
             // 
@@ -161,7 +163,7 @@
             this.fecharButton.Location = new System.Drawing.Point(365, 20);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(79, 23);
-            this.fecharButton.TabIndex = 10;
+            this.fecharButton.TabIndex = 2;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -172,7 +174,7 @@
             this.inserirButton.Location = new System.Drawing.Point(203, 20);
             this.inserirButton.Name = "inserirButton";
             this.inserirButton.Size = new System.Drawing.Size(79, 23);
-            this.inserirButton.TabIndex = 9;
+            this.inserirButton.TabIndex = 0;
             this.inserirButton.Text = "Inserir";
             this.inserirButton.UseVisualStyleBackColor = true;
             this.inserirButton.Click += new System.EventHandler(this.inserirButton_Click);
@@ -183,7 +185,7 @@
             this.alterarButton.Location = new System.Drawing.Point(284, 20);
             this.alterarButton.Name = "alterarButton";
             this.alterarButton.Size = new System.Drawing.Size(79, 23);
-            this.alterarButton.TabIndex = 8;
+            this.alterarButton.TabIndex = 1;
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
             this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);

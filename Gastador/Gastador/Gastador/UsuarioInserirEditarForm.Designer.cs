@@ -64,7 +64,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(12, 68);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(158, 20);
-            this.nomeTextBox.TabIndex = 1;
+            this.nomeTextBox.TabIndex = 0;
             // 
             // label2
             // 
@@ -81,7 +81,7 @@
             this.ativoCheckBox.Location = new System.Drawing.Point(25, 169);
             this.ativoCheckBox.Name = "ativoCheckBox";
             this.ativoCheckBox.Size = new System.Drawing.Size(50, 17);
-            this.ativoCheckBox.TabIndex = 5;
+            this.ativoCheckBox.TabIndex = 3;
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -90,7 +90,7 @@
             this.salvarButton.Location = new System.Drawing.Point(295, 169);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(75, 23);
-            this.salvarButton.TabIndex = 7;
+            this.salvarButton.TabIndex = 5;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
             this.salvarButton.Click += new System.EventHandler(this.salvarButton_Click);
@@ -110,7 +110,7 @@
             this.excluirButton.Location = new System.Drawing.Point(214, 169);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(75, 23);
-            this.excluirButton.TabIndex = 8;
+            this.excluirButton.TabIndex = 4;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
@@ -120,7 +120,7 @@
             this.loginTextBox.Location = new System.Drawing.Point(176, 68);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
-            this.loginTextBox.TabIndex = 2;
+            this.loginTextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -137,7 +137,7 @@
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';
             this.senhaTextBox.Size = new System.Drawing.Size(132, 20);
-            this.senhaTextBox.TabIndex = 3;
+            this.senhaTextBox.TabIndex = 2;
             // 
             // label4
             // 

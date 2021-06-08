@@ -36,12 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,16 +43,23 @@
             this.incluirButton = new System.Windows.Forms.Button();
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.buscarButton);
             this.panel1.Controls.Add(this.filtroTextBox);
             this.panel1.Controls.Add(this.label1);
@@ -74,7 +75,7 @@
             this.buscarButton.Location = new System.Drawing.Point(344, 35);
             this.buscarButton.Name = "buscarButton";
             this.buscarButton.Size = new System.Drawing.Size(75, 23);
-            this.buscarButton.TabIndex = 5;
+            this.buscarButton.TabIndex = 1;
             this.buscarButton.Text = "Buscar";
             this.buscarButton.UseVisualStyleBackColor = true;
             this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
@@ -84,7 +85,7 @@
             this.filtroTextBox.Location = new System.Drawing.Point(15, 37);
             this.filtroTextBox.Name = "filtroTextBox";
             this.filtroTextBox.Size = new System.Drawing.Size(323, 20);
-            this.filtroTextBox.TabIndex = 4;
+            this.filtroTextBox.TabIndex = 0;
             this.filtroTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.filtroTextBox_KeyPress);
             // 
             // label1
@@ -125,6 +126,81 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(673, 323);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.quantidadeLabel);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 395);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(673, 55);
+            this.panel3.TabIndex = 1;
+            // 
+            // quantidadeLabel
+            // 
+            this.quantidadeLabel.AutoSize = true;
+            this.quantidadeLabel.Location = new System.Drawing.Point(12, 20);
+            this.quantidadeLabel.Name = "quantidadeLabel";
+            this.quantidadeLabel.Size = new System.Drawing.Size(84, 13);
+            this.quantidadeLabel.TabIndex = 4;
+            this.quantidadeLabel.Text = "Nenhum registro";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.fecharButton);
+            this.panel4.Controls.Add(this.incluirButton);
+            this.panel4.Controls.Add(this.excluirButton);
+            this.panel4.Controls.Add(this.alterarButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(217, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(456, 55);
+            this.panel4.TabIndex = 0;
+            // 
+            // fecharButton
+            // 
+            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fecharButton.Location = new System.Drawing.Point(365, 20);
+            this.fecharButton.Name = "fecharButton";
+            this.fecharButton.Size = new System.Drawing.Size(79, 23);
+            this.fecharButton.TabIndex = 3;
+            this.fecharButton.Text = "Fechar";
+            this.fecharButton.UseVisualStyleBackColor = true;
+            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
+            // 
+            // incluirButton
+            // 
+            this.incluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incluirButton.Location = new System.Drawing.Point(122, 20);
+            this.incluirButton.Name = "incluirButton";
+            this.incluirButton.Size = new System.Drawing.Size(79, 23);
+            this.incluirButton.TabIndex = 0;
+            this.incluirButton.Text = "Incluir";
+            this.incluirButton.UseVisualStyleBackColor = true;
+            this.incluirButton.Click += new System.EventHandler(this.incluirButton_Click);
+            // 
+            // excluirButton
+            // 
+            this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.excluirButton.Location = new System.Drawing.Point(284, 20);
+            this.excluirButton.Name = "excluirButton";
+            this.excluirButton.Size = new System.Drawing.Size(79, 23);
+            this.excluirButton.TabIndex = 2;
+            this.excluirButton.Text = "Excluir";
+            this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
+            // 
+            // alterarButton
+            // 
+            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarButton.Location = new System.Drawing.Point(203, 20);
+            this.alterarButton.Name = "alterarButton";
+            this.alterarButton.Size = new System.Drawing.Size(79, 23);
+            this.alterarButton.TabIndex = 1;
+            this.alterarButton.Text = "Alterar";
+            this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -168,81 +244,6 @@
             // 
             this.usuarioBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.Usuario);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.quantidadeLabel);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 395);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(673, 55);
-            this.panel3.TabIndex = 1;
-            // 
-            // quantidadeLabel
-            // 
-            this.quantidadeLabel.AutoSize = true;
-            this.quantidadeLabel.Location = new System.Drawing.Point(12, 20);
-            this.quantidadeLabel.Name = "quantidadeLabel";
-            this.quantidadeLabel.Size = new System.Drawing.Size(84, 13);
-            this.quantidadeLabel.TabIndex = 4;
-            this.quantidadeLabel.Text = "Nenhum registro";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.fecharButton);
-            this.panel4.Controls.Add(this.incluirButton);
-            this.panel4.Controls.Add(this.excluirButton);
-            this.panel4.Controls.Add(this.alterarButton);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(217, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(456, 55);
-            this.panel4.TabIndex = 0;
-            // 
-            // fecharButton
-            // 
-            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharButton.Location = new System.Drawing.Point(365, 20);
-            this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(79, 23);
-            this.fecharButton.TabIndex = 10;
-            this.fecharButton.Text = "Fechar";
-            this.fecharButton.UseVisualStyleBackColor = true;
-            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
-            // 
-            // incluirButton
-            // 
-            this.incluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.incluirButton.Location = new System.Drawing.Point(122, 20);
-            this.incluirButton.Name = "incluirButton";
-            this.incluirButton.Size = new System.Drawing.Size(79, 23);
-            this.incluirButton.TabIndex = 9;
-            this.incluirButton.Text = "Incluir";
-            this.incluirButton.UseVisualStyleBackColor = true;
-            this.incluirButton.Click += new System.EventHandler(this.incluirButton_Click);
-            // 
-            // excluirButton
-            // 
-            this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirButton.Location = new System.Drawing.Point(284, 20);
-            this.excluirButton.Name = "excluirButton";
-            this.excluirButton.Size = new System.Drawing.Size(79, 23);
-            this.excluirButton.TabIndex = 7;
-            this.excluirButton.Text = "Excluir";
-            this.excluirButton.UseVisualStyleBackColor = true;
-            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
-            // 
-            // alterarButton
-            // 
-            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarButton.Location = new System.Drawing.Point(203, 20);
-            this.alterarButton.Name = "alterarButton";
-            this.alterarButton.Size = new System.Drawing.Size(79, 23);
-            this.alterarButton.TabIndex = 8;
-            this.alterarButton.Text = "Alterar";
-            this.alterarButton.UseVisualStyleBackColor = true;
-            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
-            // 
             // UsuariosListarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,10 +261,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
