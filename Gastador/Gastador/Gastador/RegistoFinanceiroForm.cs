@@ -23,6 +23,7 @@ namespace Gastador
 
         }
 
+        //listar os registros financeiros, que sao os gastos ou receitas
         public void Listar()
         {
             quantidadeLabel.Text = "Aguarde... buscando....";
@@ -39,12 +40,15 @@ namespace Gastador
             // enquanto o evento acontece
 
             dataGridView1.DataSource = lista;
+
         }
 
         private void buscarButton_Click(object sender, EventArgs e)
         {
             Listar();
+
         }
+
 
         private void alterarButton_Click(object sender, EventArgs e)
         {
@@ -93,6 +97,8 @@ namespace Gastador
             try
             {
                 id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDdataGridViewTextBoxColumn1"].Value);
+                mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
+
             }
             catch
             {
@@ -102,14 +108,15 @@ namespace Gastador
 
             if (id > 0)
             {
+                if (MessageBox.Show("Deseja realmente excluir o registro " + mvFinanceiro.ID + " " + mvFinanceiro.NomeFinanceiro + "?",
+                "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var resp = new MvFinanceiroDAO().Excluir(id);
 
-                new MvFinanceiroDAO().Excluir(id);
-                MessageBox.Show("Registro excluído!",
-                "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Listar();
-
+                    MessageBox.Show("Excluído com sucesso");
+                    buscarButton.PerformClick();
+                }
             }
-
         }
 
         private void RegistrarFinanceiroForm_Load_1(object sender, EventArgs e)
@@ -151,14 +158,12 @@ namespace Gastador
 
                     ConfirmarPagamento();
 
-
                     break;
                 case "estornar_pagamento":
 
                     //chama a função de pagamento
 
                     EstornarPagamento();
-
 
                     break;
             }
@@ -191,7 +196,7 @@ namespace Gastador
             else
 
             {
-               
+
                 MessageBox.Show("Pagamento já confirmado!");
                 Listar();
             }
@@ -230,8 +235,6 @@ namespace Gastador
                 Listar();
 
             }
-
-
 
         }
 

@@ -39,6 +39,7 @@ namespace Gastador
                 usuariostoolStripButton.Enabled = false;
                 registrarFinanceiroToolStripButton.Enabled = false;
                 cadastrosToolStripMenuItem.Enabled = false;
+                relatorioMensalToolStripButton.Enabled = false;
 
                  usuarioToolStripStatusLabel.Text = "Usuário não logado";
 
@@ -53,6 +54,8 @@ namespace Gastador
                 usuariostoolStripButton.Enabled = true;
                 registrarFinanceiroToolStripButton.Enabled = true;
                 cadastrosToolStripMenuItem.Enabled = true;
+                relatorioMensalToolStripButton.Enabled = true;
+
 
             }
         }
@@ -93,6 +96,19 @@ namespace Gastador
             var form = new RegistoFinanceiroForm();
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void relatorioMensalToolStripButton_Click(object sender, EventArgs e)
+        {
+            //var form = new RelatorioMensalForm();
+            //form.MdiParent = this;
+            //form.Show();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new AboutBox1();
+            form.ShowDialog();
         }
     }
 

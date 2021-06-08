@@ -85,9 +85,11 @@
             // 
             // salvarButton
             // 
+            this.salvarButton.Image = global::Gastador.Properties.Resources.salvar;
+            this.salvarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salvarButton.Location = new System.Drawing.Point(293, 133);
             this.salvarButton.Name = "salvarButton";
-            this.salvarButton.Size = new System.Drawing.Size(75, 23);
+            this.salvarButton.Size = new System.Drawing.Size(79, 25);
             this.salvarButton.TabIndex = 3;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
@@ -97,7 +99,7 @@
             // 
             this.fecharButton.Location = new System.Drawing.Point(374, 133);
             this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(75, 23);
+            this.fecharButton.Size = new System.Drawing.Size(79, 25);
             this.fecharButton.TabIndex = 4;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;

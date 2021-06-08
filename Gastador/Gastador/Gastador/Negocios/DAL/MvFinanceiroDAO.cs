@@ -28,7 +28,7 @@ namespace Gastador.Negocios.DAL
 
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and fi.Nome LIKE '%" + nome + "%'").ToList();
+            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and fi.Nome LIKE '%" + nome + "%' order by fi.Nome").ToList();
 
         }
 

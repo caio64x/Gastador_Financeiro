@@ -65,9 +65,11 @@
             // 
             // salvarButton
             // 
+            this.salvarButton.Image = global::Gastador.Properties.Resources.salvar;
+            this.salvarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salvarButton.Location = new System.Drawing.Point(370, 237);
             this.salvarButton.Name = "salvarButton";
-            this.salvarButton.Size = new System.Drawing.Size(75, 23);
+            this.salvarButton.Size = new System.Drawing.Size(79, 25);
             this.salvarButton.TabIndex = 5;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
@@ -77,7 +79,7 @@
             // 
             this.fecharButton.Location = new System.Drawing.Point(451, 237);
             this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(75, 23);
+            this.fecharButton.Size = new System.Drawing.Size(79, 25);
             this.fecharButton.TabIndex = 6;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
@@ -150,13 +152,15 @@
             this.dataVencimentoDateTimePicker.Name = "dataVencimentoDateTimePicker";
             this.dataVencimentoDateTimePicker.Size = new System.Drawing.Size(101, 20);
             this.dataVencimentoDateTimePicker.TabIndex = 1;
-            this.dataVencimentoDateTimePicker.Value = new System.DateTime(2021, 6, 6, 0, 0, 0, 0);
+            this.dataVencimentoDateTimePicker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // excluirButton
             // 
+            this.excluirButton.Image = global::Gastador.Properties.Resources.excluir;
+            this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.excluirButton.Location = new System.Drawing.Point(289, 237);
             this.excluirButton.Name = "excluirButton";
-            this.excluirButton.Size = new System.Drawing.Size(75, 23);
+            this.excluirButton.Size = new System.Drawing.Size(79, 25);
             this.excluirButton.TabIndex = 4;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;

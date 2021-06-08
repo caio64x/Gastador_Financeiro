@@ -26,7 +26,7 @@ namespace Gastador
             idTextBox.Text = "Automático";
             idTextBox.Enabled = false;
             excluirButton.Enabled = false;
-
+            dataVencimentoDateTimePicker.Text = ("");
             mvFinanceiro = new MvFinanceiro();
 
         }
@@ -58,7 +58,7 @@ namespace Gastador
         private void salvarButton_Click(object sender, EventArgs e)
         {
 
-            if (dataVencimentoDateTimePicker.Value.Date == null)
+            if (dataVencimentoDateTimePicker.Text == "")
             {
                 MessageBox.Show("Selecione uma data",
                    "data nao verificada", MessageBoxButtons.OK, MessageBoxIcon.Error);

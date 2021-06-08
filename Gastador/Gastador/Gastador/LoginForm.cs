@@ -22,6 +22,7 @@ namespace Gastador
         private void fecharButton_Click(object sender, EventArgs e)
         {
             Close();
+            Application.Exit();
         }
 
         private void entrarButton_Click(object sender, EventArgs e)
@@ -48,8 +49,6 @@ namespace Gastador
 
                 return;
             }
-
-            
 
             //se chegou aqui, está ok
             Compartilhada.UsuarioLogado = usuario;

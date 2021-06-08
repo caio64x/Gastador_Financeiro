@@ -39,8 +39,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
             this.valorTotalReceitaLabel = new System.Windows.Forms.Label();
@@ -52,20 +60,12 @@
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,6 +179,28 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
+            // iDdataGridViewTextBoxColumn1
+            // 
+            this.iDdataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDdataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDdataGridViewTextBoxColumn1.Name = "iDdataGridViewTextBoxColumn1";
+            this.iDdataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // iDFinanceiroDataGridViewTextBoxColumn
+            // 
+            this.iDFinanceiroDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiro";
+            this.iDFinanceiroDataGridViewTextBoxColumn.HeaderText = "IDFinanceiro";
+            this.iDFinanceiroDataGridViewTextBoxColumn.Name = "iDFinanceiroDataGridViewTextBoxColumn";
+            this.iDFinanceiroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDFinanceiroDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pagoDataGridViewTextBoxColumn
+            // 
+            this.pagoDataGridViewTextBoxColumn.DataPropertyName = "Pago";
+            this.pagoDataGridViewTextBoxColumn.HeaderText = "Status_Pago";
+            this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
+            this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // NomeFinanceiroTipo
             // 
             this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
@@ -192,6 +214,43 @@
             this.NomeFinanceiro.HeaderText = "Despesa/Receita";
             this.NomeFinanceiro.Name = "NomeFinanceiro";
             this.NomeFinanceiro.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Valor";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataVencimentoDataGridViewTextBoxColumn
+            // 
+            this.dataVencimentoDataGridViewTextBoxColumn.DataPropertyName = "DataVencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.HeaderText = "DataVencimento";
+            this.dataVencimentoDataGridViewTextBoxColumn.Name = "dataVencimentoDataGridViewTextBoxColumn";
+            this.dataVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataConfirmacaoDataGridViewTextBoxColumn
+            // 
+            this.dataConfirmacaoDataGridViewTextBoxColumn.DataPropertyName = "DataConfirmacao";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.HeaderText = "DataConfirmacao";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
+            this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // panel3
             // 
@@ -265,7 +324,7 @@
             this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fecharButton.Location = new System.Drawing.Point(487, 35);
             this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(79, 23);
+            this.fecharButton.Size = new System.Drawing.Size(79, 25);
             this.fecharButton.TabIndex = 3;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
@@ -273,10 +332,11 @@
             // 
             // inserirButton
             // 
+            this.inserirButton.Image = global::Gastador.Properties.Resources.incluir;
             this.inserirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inserirButton.Location = new System.Drawing.Point(244, 35);
             this.inserirButton.Name = "inserirButton";
-            this.inserirButton.Size = new System.Drawing.Size(79, 23);
+            this.inserirButton.Size = new System.Drawing.Size(79, 25);
             this.inserirButton.TabIndex = 0;
             this.inserirButton.Text = "Inserir";
             this.inserirButton.UseVisualStyleBackColor = true;
@@ -284,10 +344,11 @@
             // 
             // excluirButton
             // 
+            this.excluirButton.Image = global::Gastador.Properties.Resources.excluir;
             this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.excluirButton.Location = new System.Drawing.Point(406, 35);
             this.excluirButton.Name = "excluirButton";
-            this.excluirButton.Size = new System.Drawing.Size(79, 23);
+            this.excluirButton.Size = new System.Drawing.Size(79, 25);
             this.excluirButton.TabIndex = 2;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
@@ -295,10 +356,11 @@
             // 
             // alterarButton
             // 
+            this.alterarButton.Image = global::Gastador.Properties.Resources.alterar;
             this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.alterarButton.Location = new System.Drawing.Point(325, 35);
             this.alterarButton.Name = "alterarButton";
-            this.alterarButton.Size = new System.Drawing.Size(79, 23);
+            this.alterarButton.Size = new System.Drawing.Size(79, 25);
             this.alterarButton.TabIndex = 1;
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
@@ -313,65 +375,6 @@
             this.label2.Size = new System.Drawing.Size(72, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Receitas";
-            // 
-            // iDdataGridViewTextBoxColumn1
-            // 
-            this.iDdataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.iDdataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.iDdataGridViewTextBoxColumn1.Name = "iDdataGridViewTextBoxColumn1";
-            this.iDdataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // iDFinanceiroDataGridViewTextBoxColumn
-            // 
-            this.iDFinanceiroDataGridViewTextBoxColumn.DataPropertyName = "IDFinanceiro";
-            this.iDFinanceiroDataGridViewTextBoxColumn.HeaderText = "IDFinanceiro";
-            this.iDFinanceiroDataGridViewTextBoxColumn.Name = "iDFinanceiroDataGridViewTextBoxColumn";
-            this.iDFinanceiroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDFinanceiroDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pagoDataGridViewTextBoxColumn
-            // 
-            this.pagoDataGridViewTextBoxColumn.DataPropertyName = "Pago";
-            this.pagoDataGridViewTextBoxColumn.HeaderText = "Status_Pago";
-            this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
-            this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Valor";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataVencimentoDataGridViewTextBoxColumn
-            // 
-            this.dataVencimentoDataGridViewTextBoxColumn.DataPropertyName = "DataVencimento";
-            this.dataVencimentoDataGridViewTextBoxColumn.HeaderText = "DataVencimento";
-            this.dataVencimentoDataGridViewTextBoxColumn.Name = "dataVencimentoDataGridViewTextBoxColumn";
-            this.dataVencimentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataConfirmacaoDataGridViewTextBoxColumn
-            // 
-            this.dataConfirmacaoDataGridViewTextBoxColumn.DataPropertyName = "DataConfirmacao";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.HeaderText = "DataConfirmacao";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
-            this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // RegistoFinanceiroForm
             // 
@@ -390,11 +393,11 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

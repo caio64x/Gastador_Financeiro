@@ -35,11 +35,12 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.usuariostoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.registrarFinanceiroToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.vendasToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.relatorioMensalToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centroDeCustoreceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.usuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1.SuspendLayout();
@@ -50,29 +51,30 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator1,
             this.loginToolStripButton,
             this.toolStripSeparator2,
             this.usuariostoolStripButton,
             this.registrarFinanceiroToolStripButton,
-            this.vendasToolStripButton});
+            this.relatorioMensalToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 54);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
             // 
             // loginToolStripButton
             // 
             this.loginToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.loginToolStripButton.Name = "loginToolStripButton";
-            this.loginToolStripButton.Size = new System.Drawing.Size(42, 35);
+            this.loginToolStripButton.Size = new System.Drawing.Size(42, 51);
             this.loginToolStripButton.Text = "Entrar";
             this.loginToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.loginToolStripButton.Click += new System.EventHandler(this.loginToolStripButton_Click);
@@ -80,37 +82,40 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 54);
             // 
             // usuariostoolStripButton
             // 
-            this.usuariostoolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("usuariostoolStripButton.Image")));
+            this.usuariostoolStripButton.Image = global::Gastador.Properties.Resources.usuarios;
             this.usuariostoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.usuariostoolStripButton.Name = "usuariostoolStripButton";
-            this.usuariostoolStripButton.Size = new System.Drawing.Size(56, 35);
+            this.usuariostoolStripButton.Size = new System.Drawing.Size(56, 51);
             this.usuariostoolStripButton.Text = "Usuarios";
             this.usuariostoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.usuariostoolStripButton.ToolTipText = "Gerenciar os usuarios";
             this.usuariostoolStripButton.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // registrarFinanceiroToolStripButton
             // 
-            this.registrarFinanceiroToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("registrarFinanceiroToolStripButton.Image")));
+            this.registrarFinanceiroToolStripButton.Image = global::Gastador.Properties.Resources.registro;
             this.registrarFinanceiroToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.registrarFinanceiroToolStripButton.Name = "registrarFinanceiroToolStripButton";
-            this.registrarFinanceiroToolStripButton.Size = new System.Drawing.Size(110, 35);
+            this.registrarFinanceiroToolStripButton.Size = new System.Drawing.Size(110, 51);
             this.registrarFinanceiroToolStripButton.Text = "Registro financeiro";
             this.registrarFinanceiroToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.registrarFinanceiroToolStripButton.ToolTipText = "Registro despesa ou receita";
             this.registrarFinanceiroToolStripButton.Click += new System.EventHandler(this.registrarFinanceiroToolStripMenuItem_Click);
             // 
-            // vendasToolStripButton
+            // relatorioMensalToolStripButton
             // 
-            this.vendasToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("vendasToolStripButton.Image")));
-            this.vendasToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.vendasToolStripButton.Name = "vendasToolStripButton";
-            this.vendasToolStripButton.Size = new System.Drawing.Size(48, 35);
-            this.vendasToolStripButton.Text = "Vendas";
-            this.vendasToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.vendasToolStripButton.ToolTipText = "Vendas";
+            this.relatorioMensalToolStripButton.Image = global::Gastador.Properties.Resources.relatoriomensal;
+            this.relatorioMensalToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.relatorioMensalToolStripButton.Name = "relatorioMensalToolStripButton";
+            this.relatorioMensalToolStripButton.Size = new System.Drawing.Size(99, 51);
+            this.relatorioMensalToolStripButton.Text = "Relatório mensal";
+            this.relatorioMensalToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.relatorioMensalToolStripButton.ToolTipText = "Visualizar o resumo de cada mês";
+            this.relatorioMensalToolStripButton.Click += new System.EventHandler(this.relatorioMensalToolStripButton_Click);
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -138,12 +143,20 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrosToolStripMenuItem});
+            this.cadastrosToolStripMenuItem,
+            this.sobreToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
+            // 
+            // sobreToolStripMenuItem
+            // 
+            this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -194,7 +207,7 @@
         private System.Windows.Forms.ToolStripButton loginToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton registrarFinanceiroToolStripButton;
-        private System.Windows.Forms.ToolStripButton vendasToolStripButton;
+        private System.Windows.Forms.ToolStripButton relatorioMensalToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
@@ -202,6 +215,7 @@
         private System.Windows.Forms.ToolStripStatusLabel usuarioToolStripStatusLabel;
         private System.Windows.Forms.ToolStripButton usuariostoolStripButton;
         private System.Windows.Forms.ToolStripMenuItem centroDeCustoreceitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
     }
 }
 
