@@ -37,6 +37,7 @@ namespace Gastador
 
             //somatorio filtrado
 
+      
             valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
             valorTotalDespesaVariavelLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
             valorTotalDespesaFixaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
@@ -48,7 +49,7 @@ namespace Gastador
             decimal total = calc2 - calc1;
             lucroLabel.Text = total.ToString();
 
-            restantePagarLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
+            restantePagarLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "N"  || s.IDFinanceiroTipo == 2 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
             restanteReceberlabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
             Application.DoEvents();
             // enquanto o evento acontece

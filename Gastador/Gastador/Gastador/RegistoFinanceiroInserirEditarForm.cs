@@ -92,8 +92,6 @@ namespace Gastador
                     MessageBox.Show("Registro salvo com sucesso!");
                 }
             }
-            
-
         }
 
         private void excluirButton_Click(object sender, EventArgs e)

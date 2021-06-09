@@ -44,6 +44,7 @@
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.excluirButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,11 +180,22 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Data de vencimento";
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(341, 58);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(104, 17);
+            this.checkBox2.TabIndex = 14;
+            this.checkBox2.Text = "Repetir cadastro";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // RegistoFinanceiroInserirEditarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 266);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.excluirButton);
             this.Controls.Add(this.dataVencimentoDateTimePicker);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.Button excluirButton;
         public System.Windows.Forms.ComboBox financeiroComboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
