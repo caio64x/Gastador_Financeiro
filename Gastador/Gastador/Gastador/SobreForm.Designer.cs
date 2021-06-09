@@ -1,6 +1,6 @@
 ﻿namespace Gastador
 {
-    partial class AboutBox1
+    partial class SobreForm
     {
         /// <summary>
         /// Required designer variable.

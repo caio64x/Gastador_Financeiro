@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Gastador
 {
-    partial class AboutBox1 : Form
+    partial class SobreForm : Form
     {
-        public AboutBox1()
+        public SobreForm()
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);

@@ -90,7 +90,7 @@
             this.usuariostoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.usuariostoolStripButton.Name = "usuariostoolStripButton";
             this.usuariostoolStripButton.Size = new System.Drawing.Size(56, 51);
-            this.usuariostoolStripButton.Text = "Usuarios";
+            this.usuariostoolStripButton.Text = "Usuários";
             this.usuariostoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.usuariostoolStripButton.ToolTipText = "Gerenciar os usuarios";
             this.usuariostoolStripButton.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
@@ -130,7 +130,7 @@
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Text = "Usuários";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // centroDeCustoreceitaToolStripMenuItem

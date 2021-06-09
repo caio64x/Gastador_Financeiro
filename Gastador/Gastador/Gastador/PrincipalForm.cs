@@ -107,7 +107,7 @@ namespace Gastador
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new AboutBox1();
+            var form = new SobreForm();
             form.ShowDialog();
         }
     }
