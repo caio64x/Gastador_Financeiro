@@ -1,2 +1,2 @@
 # Gastador_Financeiro
-Controle de gastos e despesas
+Controle de despesas e receitas
