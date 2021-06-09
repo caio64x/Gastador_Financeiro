@@ -42,6 +42,8 @@ namespace Gastador
             this.Text = "Alteração despesa/receita";
             mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
 
+            
+
             financeiroComboBox.SelectedValue = Convert.ToInt32(mvFinanceiro.IDFinanceiro);
 
             dataVencimentoDateTimePicker.Value = mvFinanceiro.DataVencimento;
@@ -78,18 +80,40 @@ namespace Gastador
             }
             else
             {
-                mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
-
-                if (mvFinanceiro.ID == 0)
+                //com repetição de cadastro
+                if (repetirCadastroCheckBox.Checked)
                 {
-                    MessageBox.Show("Erro ao salvar!");
+                    mvFinanceiro.ID = 0;
+                    mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
+
+                    if (mvFinanceiro.ID == 0)
+                    {
+                        MessageBox.Show("Erro ao salvar!");
+                    }
+                    else
+                    {
+                        this.Text = "Alteração despesa/receita";
+                        idTextBox.Text = mvFinanceiro.ID.ToString();
+                        excluirButton.Enabled = true;
+                        MessageBox.Show("Registro salvo com sucesso!");
+                    }
                 }
                 else
                 {
-                    this.Text = "Alteração despesa/receita";
-                    idTextBox.Text = mvFinanceiro.ID.ToString();
-                    excluirButton.Enabled = true;
-                    MessageBox.Show("Registro salvo com sucesso!");
+                    //sem repetição de cadastro
+                    mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
+
+                    if (mvFinanceiro.ID == 0)
+                    {
+                        MessageBox.Show("Erro ao salvar!");
+                    }
+                    else
+                    {
+                        this.Text = "Alteração despesa/receita";
+                        idTextBox.Text = mvFinanceiro.ID.ToString();
+                        excluirButton.Enabled = true;
+                        MessageBox.Show("Registro salvo com sucesso!");
+                    }
                 }
             }
         }

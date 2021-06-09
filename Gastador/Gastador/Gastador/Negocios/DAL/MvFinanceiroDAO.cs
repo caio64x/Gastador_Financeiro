@@ -69,7 +69,7 @@ namespace Gastador.Negocios.DAL
             }
             else
             {
-                //update
+                //update se ja existir
                 if (banco.Execute("UPDATE MvFinanceiros SET " +
                 "IDFinanceiro = @IDFinanceiro, Descricao = @Descricao, DataVencimento = @DataVencimento, Valor = @Valor " +
                 "WHERE ID = @ID", financeiro) == 1)
