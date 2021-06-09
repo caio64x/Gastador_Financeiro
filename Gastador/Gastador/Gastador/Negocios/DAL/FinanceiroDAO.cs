@@ -31,6 +31,7 @@ namespace Gastador.Negocios.DAL
         }
 
 
+
         public Financeiro Buscar(int id)
         {
             return banco.Query<Financeiro>(@"SELECT * FROM Financeiros WHERE ID = @id", new { id }).SingleOrDefault();
