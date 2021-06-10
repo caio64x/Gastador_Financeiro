@@ -168,5 +168,29 @@ namespace Gastador
                 this.Close();
             }
         }
+
+        private void dataVencimentoDateTimePicker_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (repetirCadastroCheckBox.Checked)
+            {
+                if (e.KeyValue.Equals(13)) //enter
+                {
+                salvarButton.PerformClick();
+
+                }
+            }
+        }
+
+        private void valorTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (repetirCadastroCheckBox.Checked)
+            {
+                if (e.KeyValue.Equals(13)) //enter
+                {
+                    salvarButton.PerformClick();
+
+                }
+            }
+        }
     }
 }

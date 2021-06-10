@@ -80,7 +80,6 @@ namespace Gastador
                 MessageBox.Show("Registro salvo com sucesso!");
 
             }
-
         }
 
 

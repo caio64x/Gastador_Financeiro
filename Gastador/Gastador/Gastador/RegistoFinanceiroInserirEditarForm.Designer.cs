@@ -39,12 +39,12 @@
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.excluirButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.repetirCadastroCheckBox = new System.Windows.Forms.CheckBox();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             this.salvarButton.Location = new System.Drawing.Point(370, 237);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(79, 25);
-            this.salvarButton.TabIndex = 5;
+            this.salvarButton.TabIndex = 6;
             this.salvarButton.Text = "Salvar";
             this.salvarButton.UseVisualStyleBackColor = true;
             this.salvarButton.Click += new System.EventHandler(this.salvarButton_Click);
@@ -81,7 +81,7 @@
             this.fecharButton.Location = new System.Drawing.Point(451, 237);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(79, 25);
-            this.fecharButton.TabIndex = 6;
+            this.fecharButton.TabIndex = 7;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -113,7 +113,7 @@
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(532, 140);
-            this.descricaoTextBox.TabIndex = 2;
+            this.descricaoTextBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -132,12 +132,9 @@
             this.valorTextBox.Location = new System.Drawing.Point(72, 237);
             this.valorTextBox.Name = "valorTextBox";
             this.valorTextBox.Size = new System.Drawing.Size(208, 23);
-            this.valorTextBox.TabIndex = 3;
+            this.valorTextBox.TabIndex = 4;
+            this.valorTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.valorTextBox_KeyDown);
             this.valorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorTextBox_KeyPress);
-            // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // label2
             // 
@@ -152,11 +149,12 @@
             // dataVencimentoDateTimePicker
             // 
             this.dataVencimentoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(344, 26);
+            this.dataVencimentoDateTimePicker.Location = new System.Drawing.Point(336, 25);
             this.dataVencimentoDateTimePicker.Name = "dataVencimentoDateTimePicker";
             this.dataVencimentoDateTimePicker.Size = new System.Drawing.Size(101, 20);
             this.dataVencimentoDateTimePicker.TabIndex = 1;
             this.dataVencimentoDateTimePicker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dataVencimentoDateTimePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataVencimentoDateTimePicker_KeyDown);
             // 
             // excluirButton
             // 
@@ -165,7 +163,7 @@
             this.excluirButton.Location = new System.Drawing.Point(289, 237);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(79, 25);
-            this.excluirButton.TabIndex = 4;
+            this.excluirButton.TabIndex = 5;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
@@ -186,9 +184,13 @@
             this.repetirCadastroCheckBox.Location = new System.Drawing.Point(341, 58);
             this.repetirCadastroCheckBox.Name = "repetirCadastroCheckBox";
             this.repetirCadastroCheckBox.Size = new System.Drawing.Size(104, 17);
-            this.repetirCadastroCheckBox.TabIndex = 14;
+            this.repetirCadastroCheckBox.TabIndex = 2;
             this.repetirCadastroCheckBox.Text = "Repetir cadastro";
             this.repetirCadastroCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // RegistoFinanceiroInserirEditarForm
             // 

@@ -53,8 +53,6 @@ namespace Gastador
             //se chegou aqui, está ok
             Compartilhada.UsuarioLogado = usuario;
             Close();
-        }
-
-      
+        }  
     }
 }

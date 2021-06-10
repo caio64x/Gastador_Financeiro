@@ -18,7 +18,7 @@ namespace Gastador
             InitializeComponent();
         }
 
-        
+
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new UsuariosListarForm();
@@ -41,7 +41,7 @@ namespace Gastador
                 cadastrosToolStripMenuItem.Enabled = false;
                 relatorioMensalToolStripButton.Enabled = false;
 
-                 usuarioToolStripStatusLabel.Text = "Usuário não logado";
+                usuarioToolStripStatusLabel.Text = "Usuário não logado";
 
             }
             else
@@ -82,7 +82,7 @@ namespace Gastador
             ValidarUsuario();
         }
 
-     
+
 
         private void centroDeCustoreceitaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -111,5 +111,4 @@ namespace Gastador
             form.ShowDialog();
         }
     }
-
 }
