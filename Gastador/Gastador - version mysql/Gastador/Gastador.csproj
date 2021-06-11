@@ -13,21 +13,21 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Gastador\</PublishUrl>
+    <PublishUrl>C:\Gastador2\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\localhost\c%24\Gastador\</InstallUrl>
     <ProductName>Gastador_Financeiro</ProductName>
     <PublisherName>Gastador</PublisherName>
     <SuiteName>Gastador</SuiteName>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -219,6 +219,125 @@
     <None Include="Gastador.Negocios.Mapeamento.Financeiro.datasource" />
     <None Include="Gastador.Negocios.Mapeamento.MvFinanceiro.datasource" />
     <None Include="Gastador.Negocios.Mapeamento.Usuario.datasource" />
+    <None Include="MySQL\bat\adicionando_porta_firewall.bat" />
+    <None Include="MySQL\bat\install_mysql_service.bat" />
+    <None Include="MySQL\bat\uninstall_mysql_service.bat" />
+    <None Include="MySQL\COPYING" />
+    <None Include="MySQL\COPYING.LESSER" />
+    <None Include="MySQL\CREDITS" />
+    <None Include="MySQL\data\gastadordb\db.opt" />
+    <None Include="MySQL\data\gastadordb\financeiros.frm" />
+    <None Include="MySQL\data\gastadordb\financeiros.MYD" />
+    <None Include="MySQL\data\gastadordb\financeiros.MYI" />
+    <None Include="MySQL\data\gastadordb\financeirotipos.frm" />
+    <None Include="MySQL\data\gastadordb\financeirotipos.MYD" />
+    <None Include="MySQL\data\gastadordb\financeirotipos.MYI" />
+    <None Include="MySQL\data\gastadordb\mvfinanceiros.frm" />
+    <None Include="MySQL\data\gastadordb\mvfinanceiros.MYD" />
+    <None Include="MySQL\data\gastadordb\mvfinanceiros.MYI" />
+    <None Include="MySQL\data\gastadordb\usuarios.frm" />
+    <None Include="MySQL\data\gastadordb\usuarios.MYD" />
+    <None Include="MySQL\data\gastadordb\usuarios.MYI" />
+    <None Include="MySQL\data\mysql.rar" />
+    <None Include="MySQL\data\mysql\Chave_Lib.ini" />
+    <None Include="MySQL\data\mysql\columns_priv.frm" />
+    <None Include="MySQL\data\mysql\columns_priv.MYD" />
+    <None Include="MySQL\data\mysql\columns_priv.MYI" />
+    <None Include="MySQL\data\mysql\column_stats.frm" />
+    <None Include="MySQL\data\mysql\column_stats.MYD" />
+    <None Include="MySQL\data\mysql\column_stats.MYI" />
+    <None Include="MySQL\data\mysql\db.frm" />
+    <None Include="MySQL\data\mysql\db.MYD" />
+    <None Include="MySQL\data\mysql\db.MYI" />
+    <None Include="MySQL\data\mysql\event.frm" />
+    <None Include="MySQL\data\mysql\event.MYD" />
+    <None Include="MySQL\data\mysql\event.MYI" />
+    <None Include="MySQL\data\mysql\func.frm" />
+    <None Include="MySQL\data\mysql\func.MYD" />
+    <None Include="MySQL\data\mysql\func.MYI" />
+    <None Include="MySQL\data\mysql\general_log.CSM" />
+    <None Include="MySQL\data\mysql\general_log.CSV" />
+    <None Include="MySQL\data\mysql\general_log.frm" />
+    <None Include="MySQL\data\mysql\gtid_slave_pos.frm" />
+    <None Include="MySQL\data\mysql\gtid_slave_pos.ibd" />
+    <None Include="MySQL\data\mysql\help_category.frm" />
+    <None Include="MySQL\data\mysql\help_category.MYD" />
+    <None Include="MySQL\data\mysql\help_category.MYI" />
+    <None Include="MySQL\data\mysql\help_keyword.frm" />
+    <None Include="MySQL\data\mysql\help_keyword.MYD" />
+    <None Include="MySQL\data\mysql\help_keyword.MYI" />
+    <None Include="MySQL\data\mysql\help_relation.frm" />
+    <None Include="MySQL\data\mysql\help_relation.MYD" />
+    <None Include="MySQL\data\mysql\help_relation.MYI" />
+    <None Include="MySQL\data\mysql\help_topic.frm" />
+    <None Include="MySQL\data\mysql\help_topic.MYD" />
+    <None Include="MySQL\data\mysql\help_topic.MYI" />
+    <None Include="MySQL\data\mysql\host.frm" />
+    <None Include="MySQL\data\mysql\host.MYD" />
+    <None Include="MySQL\data\mysql\host.MYI" />
+    <None Include="MySQL\data\mysql\index_stats.frm" />
+    <None Include="MySQL\data\mysql\index_stats.MYD" />
+    <None Include="MySQL\data\mysql\index_stats.MYI" />
+    <None Include="MySQL\data\mysql\innodb_index_stats.frm" />
+    <None Include="MySQL\data\mysql\innodb_index_stats.ibd" />
+    <None Include="MySQL\data\mysql\innodb_table_stats.frm" />
+    <None Include="MySQL\data\mysql\innodb_table_stats.ibd" />
+    <None Include="MySQL\data\mysql\ndb_binlog_index.frm" />
+    <None Include="MySQL\data\mysql\ndb_binlog_index.MYD" />
+    <None Include="MySQL\data\mysql\ndb_binlog_index.MYI" />
+    <None Include="MySQL\data\mysql\plugin.frm" />
+    <None Include="MySQL\data\mysql\plugin.MYD" />
+    <None Include="MySQL\data\mysql\plugin.MYI" />
+    <None Include="MySQL\data\mysql\proc.frm" />
+    <None Include="MySQL\data\mysql\proc.MYD" />
+    <None Include="MySQL\data\mysql\proc.MYI" />
+    <None Include="MySQL\data\mysql\procs_priv.frm" />
+    <None Include="MySQL\data\mysql\procs_priv.MYD" />
+    <None Include="MySQL\data\mysql\procs_priv.MYI" />
+    <None Include="MySQL\data\mysql\proxies_priv.frm" />
+    <None Include="MySQL\data\mysql\proxies_priv.MYD" />
+    <None Include="MySQL\data\mysql\proxies_priv.MYI" />
+    <None Include="MySQL\data\mysql\roles_mapping.frm" />
+    <None Include="MySQL\data\mysql\roles_mapping.MYD" />
+    <None Include="MySQL\data\mysql\roles_mapping.MYI" />
+    <None Include="MySQL\data\mysql\servers.frm" />
+    <None Include="MySQL\data\mysql\servers.MYD" />
+    <None Include="MySQL\data\mysql\servers.MYI" />
+    <None Include="MySQL\data\mysql\slow_log.CSM" />
+    <None Include="MySQL\data\mysql\slow_log.CSV" />
+    <None Include="MySQL\data\mysql\slow_log.frm" />
+    <None Include="MySQL\data\mysql\Status_Lib.ini" />
+    <None Include="MySQL\data\mysql\tables_priv.frm" />
+    <None Include="MySQL\data\mysql\tables_priv.MYD" />
+    <None Include="MySQL\data\mysql\tables_priv.MYI" />
+    <None Include="MySQL\data\mysql\table_stats.frm" />
+    <None Include="MySQL\data\mysql\table_stats.MYD" />
+    <None Include="MySQL\data\mysql\table_stats.MYI" />
+    <None Include="MySQL\data\mysql\time_zone.frm" />
+    <None Include="MySQL\data\mysql\time_zone.MYD" />
+    <None Include="MySQL\data\mysql\time_zone.MYI" />
+    <None Include="MySQL\data\mysql\time_zone_leap_second.frm" />
+    <None Include="MySQL\data\mysql\time_zone_leap_second.MYD" />
+    <None Include="MySQL\data\mysql\time_zone_leap_second.MYI" />
+    <None Include="MySQL\data\mysql\time_zone_name.frm" />
+    <None Include="MySQL\data\mysql\time_zone_name.MYD" />
+    <None Include="MySQL\data\mysql\time_zone_name.MYI" />
+    <None Include="MySQL\data\mysql\time_zone_transition.frm" />
+    <None Include="MySQL\data\mysql\time_zone_transition.MYD" />
+    <None Include="MySQL\data\mysql\time_zone_transition.MYI" />
+    <None Include="MySQL\data\mysql\time_zone_transition_type.frm" />
+    <None Include="MySQL\data\mysql\time_zone_transition_type.MYD" />
+    <None Include="MySQL\data\mysql\time_zone_transition_type.MYI" />
+    <None Include="MySQL\data\mysql\user.frm" />
+    <None Include="MySQL\data\mysql\user.MYD" />
+    <None Include="MySQL\data\mysql\user.MYI" />
+    <None Include="MySQL\data\new_schema\db.opt" />
+    <None Include="MySQL\data\performance_schema\db.opt" />
+    <None Include="MySQL\EXCEPTIONS-CLIENT" />
+    <None Include="MySQL\my.ini" />
+    <None Include="MySQL\share\charsets\README" />
+    <None Include="MySQL\share\english\errmsg.sys" />
+    <None Include="MySQL\share\portuguese\errmsg.sys" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -235,10 +354,54 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="alogo.ico" />
+    <Content Include="HeidiSQL_8.0_Portable\gpl.txt" />
+    <Content Include="HeidiSQL_8.0_Portable\heidisql.exe" />
+    <Content Include="HeidiSQL_8.0_Portable\libmysql.dll" />
+    <Content Include="HeidiSQL_8.0_Portable\license.txt" />
+    <Content Include="HeidiSQL_8.0_Portable\plugins\dialog.dll" />
+    <Content Include="HeidiSQL_8.0_Portable\portable_settings.txt" />
+    <Content Include="HeidiSQL_8.0_Portable\readme.txt" />
     <Content Include="logo.ico" />
     <None Include="Resources\money.ico" />
     <None Include="Properties\save-money.ico" />
     <Content Include="MySql.Data.dll" />
+    <Content Include="MySQL\bin\mysql.exe" />
+    <Content Include="MySQL\bin\mysqld.exe" />
+    <Content Include="MySQL\share\charsets\armscii8.xml" />
+    <Content Include="MySQL\share\charsets\ascii.xml" />
+    <Content Include="MySQL\share\charsets\cp1250.xml" />
+    <Content Include="MySQL\share\charsets\cp1251.xml" />
+    <Content Include="MySQL\share\charsets\cp1256.xml" />
+    <Content Include="MySQL\share\charsets\cp1257.xml" />
+    <Content Include="MySQL\share\charsets\cp850.xml" />
+    <Content Include="MySQL\share\charsets\cp852.xml" />
+    <Content Include="MySQL\share\charsets\cp866.xml" />
+    <Content Include="MySQL\share\charsets\dec8.xml" />
+    <Content Include="MySQL\share\charsets\geostd8.xml" />
+    <Content Include="MySQL\share\charsets\greek.xml" />
+    <Content Include="MySQL\share\charsets\hebrew.xml" />
+    <Content Include="MySQL\share\charsets\hp8.xml" />
+    <Content Include="MySQL\share\charsets\Index.xml" />
+    <Content Include="MySQL\share\charsets\keybcs2.xml" />
+    <Content Include="MySQL\share\charsets\koi8r.xml" />
+    <Content Include="MySQL\share\charsets\koi8u.xml" />
+    <Content Include="MySQL\share\charsets\latin1.xml" />
+    <Content Include="MySQL\share\charsets\latin2.xml" />
+    <Content Include="MySQL\share\charsets\latin5.xml" />
+    <Content Include="MySQL\share\charsets\latin7.xml" />
+    <Content Include="MySQL\share\charsets\macce.xml" />
+    <Content Include="MySQL\share\charsets\macroman.xml" />
+    <Content Include="MySQL\share\charsets\swe7.xml" />
+    <Content Include="MySQL\share\errmsg-utf8.txt" />
+    <Content Include="MySQL\share\fill_help_tables.sql" />
+    <Content Include="MySQL\share\install_spider.sql" />
+    <Content Include="MySQL\share\maria_add_gis_sp.sql" />
+    <Content Include="MySQL\share\maria_add_gis_sp_bootstrap.sql" />
+    <Content Include="MySQL\share\mysql_performance_tables.sql" />
+    <Content Include="MySQL\share\mysql_system_tables.sql" />
+    <Content Include="MySQL\share\mysql_system_tables_data.sql" />
+    <Content Include="MySQL\share\mysql_test_data_timezone.sql" />
+    <Content Include="MySQL\share\mysql_to_mariadb.sql" />
     <Content Include="profits_78367.ico" />
     <None Include="Resources\Icon1.ico" />
     <None Include="Properties\iconfinder_4047420_data_user_usability_users_user interface_icon_256px.png" />
@@ -266,6 +429,527 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="alogo.ico">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Dapper">
+      <Visible>False</Visible>
+      <Group>dll</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\gpl.txt">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\heidisql.exe">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\libmysql.dll">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\license.txt">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\plugins\dialog.dll">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\portable_settings.txt">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HeidiSQL_8.0_Portable\readme.txt">
+      <Visible>False</Visible>
+      <Group>heidsql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="logo.ico">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>dll</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data.dll">
+      <Visible>False</Visible>
+      <Group>dll</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\bin\mysql.exe">
+      <Visible>False</Visible>
+      <Group>mysql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\bin\mysqld.exe">
+      <Visible>False</Visible>
+      <Group>mysql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\armscii8.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\ascii.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp1250.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp1251.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp1256.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp1257.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp850.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp852.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\cp866.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\dec8.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\geostd8.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\greek.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\hebrew.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\hp8.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\Index.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\keybcs2.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\koi8r.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\koi8u.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\latin1.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\latin2.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\latin5.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\latin7.xml">
+      <Visible>False</Visible>
+      <Group>mysql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\macce.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\macroman.xml">
+      <Visible>False</Visible>
+      <Group>mysql</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\charsets\swe7.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\errmsg-utf8.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\fill_help_tables.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\install_spider.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\maria_add_gis_sp.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\maria_add_gis_sp_bootstrap.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\mysql_performance_tables.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\mysql_system_tables.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\mysql_system_tables_data.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\mysql_test_data_timezone.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MySQL\share\mysql_to_mariadb.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="profits_78367.ico">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Properties\entrar.png">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Properties\logo.png">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Properties\sair.png">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="save-money.ico">
+      <Visible>False</Visible>
+      <Group>icon</Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
