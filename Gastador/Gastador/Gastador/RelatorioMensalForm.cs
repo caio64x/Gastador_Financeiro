@@ -26,17 +26,14 @@ namespace Gastador
         public void Listar()
         {
             quantidadeLabel.Text = "Aguarde... buscando....";
-            Application.DoEvents();// enquanto o evento acontece
-
-            // var lista = new MvFinanceiroDAO().Listar(mesDespesacomboBox.Text.Substring(0, 2).Trim());
+            Application.DoEvents();
+            // enquanto o evento acontece
+                       
             var lista = new MvFinanceiroDAO().ListarPagos(mesDespesacomboBox.Text.Substring(0, 2).Trim());
-
-
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 
             //somatorio filtrado
-
       
             valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
             valorTotalDespesaVariavelLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S").Sum(s => s.Valor).ToString("C");

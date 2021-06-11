@@ -11,7 +11,5 @@ namespace Gastador
     {
         public static Usuario UsuarioLogado { get; set; }
 
-
-        public static int IDCliente { get; set; }
     }
 }
