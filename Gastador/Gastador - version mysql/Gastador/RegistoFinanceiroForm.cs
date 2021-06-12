@@ -28,7 +28,10 @@ namespace Gastador
             quantidadeLabel.Text = "Aguarde... buscando....";
             Application.DoEvents();// enquanto o evento acontece
 
-            var lista = new MvFinanceiroDAO().Listar(filtroTextBox.Text, mesDespesacomboBox.Text.Substring(0, 2).Trim());
+            var ano = anoDespesaDateTimePicker.Value.Year;
+            var lista = new MvFinanceiroDAO().Listar(filtroTextBox.Text, mesDespesacomboBox.Text.Substring(0, 2).Trim(), anoDespesaDateTimePicker.Value.Year); ;
+
+            //   Convert.ToDateTime(AnoDespesaDateTimePicker.Value.Date)
 
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
@@ -112,6 +115,8 @@ namespace Gastador
                 }
             }
         }
+
+
 
         private void RegistrarFinanceiroForm_Load_1(object sender, EventArgs e)
         {

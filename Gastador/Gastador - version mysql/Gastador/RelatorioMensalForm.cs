@@ -29,7 +29,7 @@ namespace Gastador
             Application.DoEvents();
             // enquanto o evento acontece
                        
-            var lista = new MvFinanceiroDAO().ListarPagos(mesDespesacomboBox.Text.Substring(0, 2).Trim());
+            var lista = new MvFinanceiroDAO().ListarPagos(mesDespesacomboBox.Text.Substring(0, 2).Trim(), anoDespesaDateTimePicker.Value.Year);
             alterarButton.Enabled = lista.Count > 0;
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 

@@ -20,5 +20,6 @@ namespace Gastador.Negocios.Mapeamento
         public int    IDFinanceiroTipo { get; set; }
         public string NomeFinanceiro { get; set; }
         public string NomeFinanceiroTipo { get; set; }
+        public int Ano { get; set; }
     }
 }

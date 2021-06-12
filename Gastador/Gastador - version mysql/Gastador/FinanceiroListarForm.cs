@@ -37,6 +37,8 @@ namespace Gastador
             dataGridView1.DataSource = lista;
         }
 
+
+
         private void buscarButton_Click(object sender, EventArgs e)
         {
             Listar();

@@ -51,8 +51,8 @@ namespace Gastador.Negocios.DAL
                 //se o id for zero, é inclusão
                 return banco.Query<int>(
                 "INSERT INTO Usuarios (Nome, Ativo, Login, Senha) values " +
-                "(@Nome, @Ativo, @Login, @Senha) " +
-                "select @@Identity", usuario).SingleOrDefault();
+                "(@Nome, @Ativo, @Login, @Senha); " +
+                "SELECT  LAST_INSERT_ID(); ", usuario).SingleOrDefault();
             }
             else
             {

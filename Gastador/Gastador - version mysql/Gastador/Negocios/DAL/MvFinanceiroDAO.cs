@@ -21,26 +21,26 @@ namespace Gastador.Negocios.DAL
 
 
         // consulta com filtro por mes
-        public List<MvFinanceiro> Listar(string nome, string mes)
+        public List<MvFinanceiro> Listar(string nome, string mes, int ano)
         {
 
             if (mes == "MÊ")
                 mes = DateTime.Now.Month.ToString();
-
+                      
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and fi.Nome LIKE '%" + nome + "%' order by fi.Nome").ToList();
+            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "' and fi.Nome LIKE '%" + nome + "%' order by fi.Nome").ToList();
 
         }
 
-        public List<MvFinanceiro> ListarPagos(string mes)
+        public List<MvFinanceiro> ListarPagos(string mes, int ano)
         {
             if (mes == "MÊ")
                 mes = DateTime.Now.Month.ToString();
 
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' order by fi.Nome").ToList();
+            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "'  order by fi.Nome").ToList();
         }
 
 
@@ -119,6 +119,5 @@ namespace Gastador.Negocios.DAL
                  "WHERE ID = @ID", mvFinanceiro);
             }
         }
-
     }
 }
