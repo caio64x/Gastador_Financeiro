@@ -26,6 +26,7 @@ namespace Gastador
             idTextBox.Text = "Automático";
             idTextBox.Enabled = false;
             excluirButton.Enabled = false;
+            ativoCheckBox.Checked = true;
             usuario = new Usuario();
         }
 

@@ -107,6 +107,7 @@
             // 
             // financeiroTipoComboBox
             // 
+            this.financeiroTipoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.financeiroTipoComboBox.FormattingEnabled = true;
             this.financeiroTipoComboBox.Location = new System.Drawing.Point(15, 130);
             this.financeiroTipoComboBox.Name = "financeiroTipoComboBox";

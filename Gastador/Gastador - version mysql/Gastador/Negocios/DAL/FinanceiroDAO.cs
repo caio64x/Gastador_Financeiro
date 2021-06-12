@@ -20,15 +20,15 @@ namespace Gastador.Negocios.DAL
 
         public List<Financeiro> ListarParaCombo()
         {
-            return banco.Query<Financeiro>(@"SELECT fi.ID, concat(fi.Nome, ' | ', ti.Nome) 
-            as Nome FROM Financeiros fi join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID where fi.Ativo = 1 Order By fi.Nome").ToList();
+            return banco.Query<Financeiro>(@"SELECT fi.ID, concat(ti.Nome, ' | ', fi.Nome) 
+            as Nome FROM Financeiros fi join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID where fi.Ativo = 1 Order By ti.Nome").ToList();
         }
 
         // funciona
         public List<Financeiro> Listar(string nome)
         {
             return banco.Query<Financeiro>(@"SELECT fi.*, ft.Nome as FinanceiroTipoNome FROM Financeiros fi join FinanceiroTipos ft on fi.IDFinanceiroTipo = ft.ID
-            WHERE fi.Nome LIKE '%" + nome + "%' Order By fi.Nome").ToList();
+            WHERE fi.Nome LIKE '%" + nome + "%' Order By ft.Nome").ToList();
         }
 
 
