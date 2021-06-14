@@ -68,7 +68,7 @@ namespace Gastador
                    "data nao verificada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            mvFinanceiro.Descricao = descricaoTextBox.Text.Trim();
+            mvFinanceiro.Descricao = descricaoTextBox.Text.Trim().ToUpper();
             mvFinanceiro.Valor = Convert.ToDecimal(valorTextBox.Text.Trim());
             //formatar data do datatimepicker pra pegar so a data
             mvFinanceiro.DataVencimento = Convert.ToDateTime(dataVencimentoDateTimePicker.Value.Date);

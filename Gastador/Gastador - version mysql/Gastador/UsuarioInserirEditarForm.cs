@@ -59,10 +59,10 @@ namespace Gastador
 
         private void salvarButton_Click(object sender, EventArgs e)
         {
-            usuario.Nome = nomeTextBox.Text.Trim();
+            usuario.Nome = nomeTextBox.Text.Trim().ToUpper();
             usuario.Ativo = ativoCheckBox.Checked;
-            usuario.Login = loginTextBox.Text.Trim();
-            usuario.Senha = senhaTextBox.Text.Trim();
+            usuario.Login = loginTextBox.Text.Trim().ToUpper();
+            usuario.Senha = senhaTextBox.Text.Trim().ToUpper();
 
 
             usuario.ID = new UsuarioDAO().Salvar(usuario);

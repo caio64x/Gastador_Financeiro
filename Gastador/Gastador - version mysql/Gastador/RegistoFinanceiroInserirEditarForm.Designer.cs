@@ -108,6 +108,7 @@
             // 
             // descricaoTextBox
             // 
+            this.descricaoTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.descricaoTextBox.Location = new System.Drawing.Point(1, 81);
             this.descricaoTextBox.Multiline = true;
@@ -127,6 +128,7 @@
             // 
             // valorTextBox
             // 
+            this.valorTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mvFinanceiroBindingSource, "Valor", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
             this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.valorTextBox.Location = new System.Drawing.Point(72, 237);

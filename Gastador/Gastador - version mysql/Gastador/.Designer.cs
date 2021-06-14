@@ -30,16 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoFinanceiroForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.anoDespesaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.mesDespesacomboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.buscarButton = new System.Windows.Forms.Button();
             this.filtroTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
             this.valorTotalReceitaLabel = new System.Windows.Forms.Label();
@@ -51,17 +53,16 @@
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.mesDespesacomboBox = new System.Windows.Forms.ComboBox();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataVencimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataConfirmacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,6 +87,16 @@
             this.panel1.Size = new System.Drawing.Size(971, 72);
             this.panel1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(572, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ano despesa";
+            // 
             // anoDespesaDateTimePicker
             // 
             this.anoDespesaDateTimePicker.CustomFormat = "yyyy";
@@ -95,6 +106,39 @@
             this.anoDespesaDateTimePicker.Size = new System.Drawing.Size(79, 20);
             this.anoDespesaDateTimePicker.TabIndex = 7;
             this.anoDespesaDateTimePicker.Value = new System.DateTime(2021, 6, 12, 0, 0, 0, 0);
+            // 
+            // mesDespesacomboBox
+            // 
+            this.mesDespesacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mesDespesacomboBox.FormattingEnabled = true;
+            this.mesDespesacomboBox.Items.AddRange(new object[] {
+            "MÊS ATUAL",
+            "01 - JANEIRO",
+            "02 - FEVEREIRO",
+            "03 - MARÇO ",
+            "04 - ABRIL ",
+            "05 - MAIO ",
+            "06 - JUNHO",
+            "07 - JULHO ",
+            "08 - AGOSTO ",
+            "09 - SETEMBRO ",
+            "10 - OUTUBRO ",
+            "11 - NOVEMBRO ",
+            "12 - DEZEMBRO"});
+            this.mesDespesacomboBox.Location = new System.Drawing.Point(438, 37);
+            this.mesDespesacomboBox.Name = "mesDespesacomboBox";
+            this.mesDespesacomboBox.Size = new System.Drawing.Size(121, 21);
+            this.mesDespesacomboBox.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(435, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Despesa do mês";
             // 
             // buscarButton
             // 
@@ -160,20 +204,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
-            // NomeFinanceiroTipo
-            // 
-            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.HeaderText = "Tipo";
-            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.ReadOnly = true;
-            // 
-            // NomeFinanceiro
-            // 
-            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
-            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
-            this.NomeFinanceiro.Name = "NomeFinanceiro";
-            this.NomeFinanceiro.ReadOnly = true;
             // 
             // panel3
             // 
@@ -299,38 +329,9 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Receitas";
             // 
-            // label4
+            // mvFinanceiroBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(435, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Despesa do mês";
-            // 
-            // mesDespesacomboBox
-            // 
-            this.mesDespesacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mesDespesacomboBox.FormattingEnabled = true;
-            this.mesDespesacomboBox.Items.AddRange(new object[] {
-            "MÊS ATUAL",
-            "01 - JANEIRO",
-            "02 - FEVEREIRO",
-            "03 - MARÇO ",
-            "04 - ABRIL ",
-            "05 - MAIO ",
-            "06 - JUNHO",
-            "07 - JULHO ",
-            "08 - AGOSTO ",
-            "09 - SETEMBRO ",
-            "10 - OUTUBRO ",
-            "11 - NOVEMBRO ",
-            "12 - DEZEMBRO"});
-            this.mesDespesacomboBox.Location = new System.Drawing.Point(438, 37);
-            this.mesDespesacomboBox.Name = "mesDespesacomboBox";
-            this.mesDespesacomboBox.Size = new System.Drawing.Size(121, 21);
-            this.mesDespesacomboBox.TabIndex = 2;
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // iDdataGridViewTextBoxColumn1
             // 
@@ -349,10 +350,32 @@
             // 
             // pagoDataGridViewTextBoxColumn
             // 
+            this.pagoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.pagoDataGridViewTextBoxColumn.DataPropertyName = "Pago";
-            this.pagoDataGridViewTextBoxColumn.HeaderText = "Status_Pago";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.pagoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.pagoDataGridViewTextBoxColumn.HeaderText = "Pago";
             this.pagoDataGridViewTextBoxColumn.Name = "pagoDataGridViewTextBoxColumn";
             this.pagoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pagoDataGridViewTextBoxColumn.Width = 57;
+            // 
+            // NomeFinanceiroTipo
+            // 
+            this.NomeFinanceiroTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.HeaderText = "Tipo";
+            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.ReadOnly = true;
+            this.NomeFinanceiroTipo.Width = 53;
+            // 
+            // NomeFinanceiro
+            // 
+            this.NomeFinanceiro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
+            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
+            this.NomeFinanceiro.Name = "NomeFinanceiro";
+            this.NomeFinanceiro.ReadOnly = true;
+            this.NomeFinanceiro.Width = 116;
             // 
             // descricaoDataGridViewTextBoxColumn
             // 
@@ -365,10 +388,10 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Valor";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -386,20 +409,6 @@
             this.dataConfirmacaoDataGridViewTextBoxColumn.HeaderText = "DataConfirmacao";
             this.dataConfirmacaoDataGridViewTextBoxColumn.Name = "dataConfirmacaoDataGridViewTextBoxColumn";
             this.dataConfirmacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(572, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Ano despesa";
             // 
             // RegistoFinanceiroForm
             // 
@@ -454,6 +463,10 @@
         private System.Windows.Forms.Label valorTotalReceitaLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker anoDespesaDateTimePicker;
+        public System.Windows.Forms.ComboBox mesDespesacomboBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDdataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFinanceiroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pagoDataGridViewTextBoxColumn;
@@ -463,9 +476,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataVencimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataConfirmacaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DateTimePicker anoDespesaDateTimePicker;
-        public System.Windows.Forms.ComboBox mesDespesacomboBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
     }
 }

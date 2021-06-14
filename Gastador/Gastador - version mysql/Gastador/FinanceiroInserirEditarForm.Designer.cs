@@ -58,6 +58,8 @@
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTextBox.Location = new System.Drawing.Point(12, 75);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(437, 20);

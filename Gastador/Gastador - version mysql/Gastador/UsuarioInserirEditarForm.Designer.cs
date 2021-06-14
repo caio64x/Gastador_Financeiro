@@ -61,6 +61,7 @@
             // 
             // nomeTextBox
             // 
+            this.nomeTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.nomeTextBox.Location = new System.Drawing.Point(12, 68);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(158, 20);
@@ -122,6 +123,7 @@
             // 
             // loginTextBox
             // 
+            this.loginTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.loginTextBox.Location = new System.Drawing.Point(176, 68);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
@@ -138,6 +140,7 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.senhaTextBox.Location = new System.Drawing.Point(282, 68);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.PasswordChar = '*';

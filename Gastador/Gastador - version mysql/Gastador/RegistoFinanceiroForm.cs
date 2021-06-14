@@ -143,6 +143,7 @@ namespace Gastador
                 sub_menu.Show(dataGridView1, new Point(e.X, e.Y));
 
                 sub_menu.ItemClicked += new ToolStripItemClickedEventHandler(sub_menu_clicked);
+               
             }
         }
 
@@ -154,9 +155,8 @@ namespace Gastador
                 case "confirmar_pagamento":
 
                     //chama a função de pagamento
-
                     ConfirmarPagamento();
-
+                    
                     break;
                 case "estornar_pagamento":
 
@@ -245,6 +245,19 @@ namespace Gastador
                 }
 
             }
+
+            if (e.Value.ToString() == "RECEITA")
+            {
+                e.CellStyle.BackColor = Color.YellowGreen;
+            }
+            else
+            {
+                if (e.Value.ToString() == "DESPESA VARIÁVEL" || e.Value.ToString() == "DESPESA FIXA")
+                {
+                    e.CellStyle.BackColor = Color.IndianRed;
+                }
+            }
+
         }
     }
 }

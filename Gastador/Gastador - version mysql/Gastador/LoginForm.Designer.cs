@@ -43,6 +43,7 @@
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.senhaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.senhaTextBox.Location = new System.Drawing.Point(169, 103);
             this.senhaTextBox.Name = "senhaTextBox";
@@ -62,6 +63,7 @@
             // 
             // loginTextBox
             // 
+            this.loginTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.loginTextBox.Location = new System.Drawing.Point(63, 103);
             this.loginTextBox.Name = "loginTextBox";
