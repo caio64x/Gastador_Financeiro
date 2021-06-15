@@ -39,6 +39,8 @@
             this.buscarButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.restanteReceberlabel = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.inserirButton = new System.Windows.Forms.Button();
             this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
-            this.NomeFinanceiroTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeFinanceiro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -187,6 +187,7 @@
             this.dataGridView1.DataSource = this.mvFinanceiroBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -194,6 +195,24 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // NomeFinanceiroTipo
+            // 
+            this.NomeFinanceiroTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.HeaderText = "Tipo";
+            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
+            this.NomeFinanceiroTipo.ReadOnly = true;
+            this.NomeFinanceiroTipo.Width = 53;
+            // 
+            // NomeFinanceiro
+            // 
+            this.NomeFinanceiro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
+            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
+            this.NomeFinanceiro.Name = "NomeFinanceiro";
+            this.NomeFinanceiro.ReadOnly = true;
+            this.NomeFinanceiro.Width = 116;
             // 
             // panel5
             // 
@@ -235,9 +254,9 @@
             // 
             this.restanteReceberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restanteReceberlabel.ForeColor = System.Drawing.Color.Green;
-            this.restanteReceberlabel.Location = new System.Drawing.Point(982, 274);
+            this.restanteReceberlabel.Location = new System.Drawing.Point(822, 274);
             this.restanteReceberlabel.Name = "restanteReceberlabel";
-            this.restanteReceberlabel.Size = new System.Drawing.Size(201, 17);
+            this.restanteReceberlabel.Size = new System.Drawing.Size(361, 17);
             this.restanteReceberlabel.TabIndex = 23;
             this.restanteReceberlabel.Text = "...";
             this.restanteReceberlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -257,9 +276,9 @@
             // 
             this.lucroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lucroLabel.ForeColor = System.Drawing.Color.Green;
-            this.lucroLabel.Location = new System.Drawing.Point(982, 383);
+            this.lucroLabel.Location = new System.Drawing.Point(822, 383);
             this.lucroLabel.Name = "lucroLabel";
-            this.lucroLabel.Size = new System.Drawing.Size(201, 17);
+            this.lucroLabel.Size = new System.Drawing.Size(361, 17);
             this.lucroLabel.TabIndex = 21;
             this.lucroLabel.Text = "...";
             this.lucroLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,9 +287,9 @@
             // 
             this.restantePagarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restantePagarLabel.ForeColor = System.Drawing.Color.Red;
-            this.restantePagarLabel.Location = new System.Drawing.Point(982, 323);
+            this.restantePagarLabel.Location = new System.Drawing.Point(822, 323);
             this.restantePagarLabel.Name = "restantePagarLabel";
-            this.restantePagarLabel.Size = new System.Drawing.Size(201, 17);
+            this.restantePagarLabel.Size = new System.Drawing.Size(361, 17);
             this.restantePagarLabel.TabIndex = 19;
             this.restantePagarLabel.Text = "...";
             this.restantePagarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -290,9 +309,9 @@
             // 
             this.valorTotalDespesaFixaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaFixaLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaFixaLabel.Location = new System.Drawing.Point(982, 140);
+            this.valorTotalDespesaFixaLabel.Location = new System.Drawing.Point(822, 140);
             this.valorTotalDespesaFixaLabel.Name = "valorTotalDespesaFixaLabel";
-            this.valorTotalDespesaFixaLabel.Size = new System.Drawing.Size(201, 17);
+            this.valorTotalDespesaFixaLabel.Size = new System.Drawing.Size(361, 17);
             this.valorTotalDespesaFixaLabel.TabIndex = 17;
             this.valorTotalDespesaFixaLabel.Text = "...";
             this.valorTotalDespesaFixaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -312,9 +331,9 @@
             // 
             this.valorTotalDespesaVariavelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaVariavelLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaVariavelLabel.Location = new System.Drawing.Point(982, 90);
+            this.valorTotalDespesaVariavelLabel.Location = new System.Drawing.Point(822, 90);
             this.valorTotalDespesaVariavelLabel.Name = "valorTotalDespesaVariavelLabel";
-            this.valorTotalDespesaVariavelLabel.Size = new System.Drawing.Size(201, 17);
+            this.valorTotalDespesaVariavelLabel.Size = new System.Drawing.Size(361, 17);
             this.valorTotalDespesaVariavelLabel.TabIndex = 15;
             this.valorTotalDespesaVariavelLabel.Text = "...";
             this.valorTotalDespesaVariavelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -334,9 +353,9 @@
             // 
             this.valorTotalDespesaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalDespesaLabel.ForeColor = System.Drawing.Color.Red;
-            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(982, 189);
+            this.valorTotalDespesaLabel.Location = new System.Drawing.Point(822, 189);
             this.valorTotalDespesaLabel.Name = "valorTotalDespesaLabel";
-            this.valorTotalDespesaLabel.Size = new System.Drawing.Size(201, 17);
+            this.valorTotalDespesaLabel.Size = new System.Drawing.Size(361, 17);
             this.valorTotalDespesaLabel.TabIndex = 11;
             this.valorTotalDespesaLabel.Text = "...";
             this.valorTotalDespesaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -356,9 +375,9 @@
             // 
             this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
-            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(982, 37);
+            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(822, 37);
             this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
-            this.valorTotalReceitaLabel.Size = new System.Drawing.Size(201, 17);
+            this.valorTotalReceitaLabel.Size = new System.Drawing.Size(361, 17);
             this.valorTotalReceitaLabel.TabIndex = 12;
             this.valorTotalReceitaLabel.Text = "...";
             this.valorTotalReceitaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -451,24 +470,6 @@
             this.alterarButton.Text = "Alterar";
             this.alterarButton.UseVisualStyleBackColor = true;
             this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
-            // 
-            // NomeFinanceiroTipo
-            // 
-            this.NomeFinanceiroTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NomeFinanceiroTipo.DataPropertyName = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.HeaderText = "Tipo";
-            this.NomeFinanceiroTipo.Name = "NomeFinanceiroTipo";
-            this.NomeFinanceiroTipo.ReadOnly = true;
-            this.NomeFinanceiroTipo.Width = 53;
-            // 
-            // NomeFinanceiro
-            // 
-            this.NomeFinanceiro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.NomeFinanceiro.DataPropertyName = "NomeFinanceiro";
-            this.NomeFinanceiro.HeaderText = "Despesa/Receita";
-            this.NomeFinanceiro.Name = "NomeFinanceiro";
-            this.NomeFinanceiro.ReadOnly = true;
-            this.NomeFinanceiro.Width = 116;
             // 
             // iDdataGridViewTextBoxColumn1
             // 

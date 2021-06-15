@@ -38,20 +38,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.dataVencimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.excluirButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.repetirCadastroCheckBox = new System.Windows.Forms.CheckBox();
+            this.valorNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.valorNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(1, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -59,7 +61,7 @@
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(12, 25);
+            this.idTextBox.Location = new System.Drawing.Point(1, 26);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 0;
@@ -91,16 +93,16 @@
             this.financeiroComboBox.DisplayMember = "1";
             this.financeiroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.financeiroComboBox.FormattingEnabled = true;
-            this.financeiroComboBox.Location = new System.Drawing.Point(115, 25);
+            this.financeiroComboBox.Location = new System.Drawing.Point(126, 25);
             this.financeiroComboBox.Name = "financeiroComboBox";
-            this.financeiroComboBox.Size = new System.Drawing.Size(284, 21);
+            this.financeiroComboBox.Size = new System.Drawing.Size(273, 21);
             this.financeiroComboBox.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(112, 5);
+            this.label3.Location = new System.Drawing.Point(123, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 17);
             this.label3.TabIndex = 6;
@@ -125,22 +127,6 @@
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 8;
             this.label4.Text = "Descrição";
-            // 
-            // valorTextBox
-            // 
-            this.valorTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mvFinanceiroBindingSource, "Valor", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
-            this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.valorTextBox.Location = new System.Drawing.Point(72, 237);
-            this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(208, 23);
-            this.valorTextBox.TabIndex = 4;
-            this.valorTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.valorTextBox_KeyDown);
-            this.valorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorTextBox_KeyPress);
-            // 
-            // mvFinanceiroBindingSource
-            // 
-            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
             // 
             // label2
             // 
@@ -194,16 +180,55 @@
             this.repetirCadastroCheckBox.Text = "Repetir cadastro";
             this.repetirCadastroCheckBox.UseVisualStyleBackColor = true;
             // 
+            // valorNumericUpDown
+            // 
+            this.valorNumericUpDown.DecimalPlaces = 2;
+            this.valorNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.valorNumericUpDown.Location = new System.Drawing.Point(72, 238);
+            this.valorNumericUpDown.Maximum = new decimal(new int[] {
+            -1586618625,
+            232830643,
+            0,
+            131072});
+            this.valorNumericUpDown.Name = "valorNumericUpDown";
+            this.valorNumericUpDown.Size = new System.Drawing.Size(211, 23);
+            this.valorNumericUpDown.TabIndex = 4;
+            this.valorNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.valorNumericUpDown.ValueChanged += new System.EventHandler(this.valorNumericUpDown_ValueChanged);
+            this.valorNumericUpDown.Enter += new System.EventHandler(this.valorNumericUpDown_Enter);
+            this.valorNumericUpDown.KeyDown += new System.Windows.Forms.KeyEventHandler(this.valorNumericUpDown_KeyDown);
+            this.valorNumericUpDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorNumericUpDown_KeyPress);
+            this.valorNumericUpDown.MouseClick += new System.Windows.Forms.MouseEventHandler(this.valorNumericUpDown_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = global::Gastador.Properties.Resources.incluir;
+            this.button1.Location = new System.Drawing.Point(102, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 21);
+            this.button1.TabIndex = 13;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // mvFinanceiroBindingSource
+            // 
+            this.mvFinanceiroBindingSource.DataSource = typeof(Gastador.Negocios.Mapeamento.MvFinanceiro);
+            // 
             // RegistoFinanceiroInserirEditarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 266);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.valorNumericUpDown);
             this.Controls.Add(this.repetirCadastroCheckBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.excluirButton);
             this.Controls.Add(this.dataVencimentoDateTimePicker);
-            this.Controls.Add(this.valorTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.descricaoTextBox);
             this.Controls.Add(this.label4);
@@ -221,6 +246,7 @@
             this.Name = "RegistoFinanceiroInserirEditarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistoFinanceiroInserirEditarForm_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.valorNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,7 +262,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox descricaoTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox valorTextBox;
         private System.Windows.Forms.BindingSource mvFinanceiroBindingSource;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dataVencimentoDateTimePicker;
@@ -244,5 +269,7 @@
         public System.Windows.Forms.ComboBox financeiroComboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox repetirCadastroCheckBox;
+        private System.Windows.Forms.NumericUpDown valorNumericUpDown;
+        private System.Windows.Forms.Button button1;
     }
 }

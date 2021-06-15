@@ -20,14 +20,13 @@ namespace Gastador
         {
             InitializeComponent();
             Application.DoEvents();
-            ListarFinanceiro();
 
             this.Text = "Nova despesa/receita";
             idTextBox.Text = "Automático";
             idTextBox.Enabled = false;
             excluirButton.Enabled = false;
+            ListarFinanceiro();
             dataVencimentoDateTimePicker.Text = ("");
-            valorTextBox.Text = "0,00";
             mvFinanceiro = new MvFinanceiro();
 
         }
@@ -42,16 +41,13 @@ namespace Gastador
             this.Text = "Alteração despesa/receita";
             mvFinanceiro = new MvFinanceiroDAO().Buscar(id);
 
-            
-
             financeiroComboBox.SelectedValue = Convert.ToInt32(mvFinanceiro.IDFinanceiro);
 
             dataVencimentoDateTimePicker.Value = mvFinanceiro.DataVencimento;
             idTextBox.Text = mvFinanceiro.ID.ToString();
             descricaoTextBox.Text = mvFinanceiro.Descricao.ToString().Trim();
-            valorTextBox.Text = mvFinanceiro.Valor.ToString().Trim();
+            valorNumericUpDown.Value = mvFinanceiro.Valor;
             idTextBox.Enabled = false;
-            // nomeTextBox.Text = financeiro.Nome;
         }
 
         private void fecharButton_Click(object sender, EventArgs e)
@@ -61,19 +57,20 @@ namespace Gastador
 
         private void salvarButton_Click(object sender, EventArgs e)
         {
-
             if (dataVencimentoDateTimePicker.Text == "")
             {
                 MessageBox.Show("Selecione uma data",
                    "data nao verificada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
 
             mvFinanceiro.Descricao = descricaoTextBox.Text.Trim().ToUpper();
-            mvFinanceiro.Valor = Convert.ToDecimal(valorTextBox.Text.Trim());
+            mvFinanceiro.Valor = valorNumericUpDown.Value;
             //formatar data do datatimepicker pra pegar so a data
             mvFinanceiro.DataVencimento = Convert.ToDateTime(dataVencimentoDateTimePicker.Value.Date);
             mvFinanceiro.IDFinanceiro = Convert.ToInt32(financeiroComboBox.SelectedValue);
 
+           
             if (mvFinanceiro.IDFinanceiro == 0)
             {
                 MessageBox.Show("Selecione a despesa/receita!");
@@ -146,7 +143,6 @@ namespace Gastador
 
         private void valorTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             //Se a tecla digitada não for número e nem backspace
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
             {
@@ -155,10 +151,7 @@ namespace Gastador
                     //Atribui True no Handled para cancelar o evento
                     e.Handled = true;
                 }
-
-
             }
-
         }
 
         private void RegistoFinanceiroInserirEditarForm_KeyDown(object sender, KeyEventArgs e)
@@ -175,22 +168,58 @@ namespace Gastador
             {
                 if (e.KeyValue.Equals(13)) //enter
                 {
-                salvarButton.PerformClick();
-
+                    salvarButton.PerformClick();
                 }
             }
         }
 
-        private void valorTextBox_KeyDown(object sender, KeyEventArgs e)
+        private void valorNumericUpDown_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                if (!char.IsDigit(e.KeyChar) && e.KeyChar != 44)
+                {
+                    //Atribui True no Handled para cancelar o evento
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void valorNumericUpDown_KeyDown(object sender, KeyEventArgs e)
         {
             if (repetirCadastroCheckBox.Checked)
             {
                 if (e.KeyValue.Equals(13)) //enter
                 {
                     salvarButton.PerformClick();
-
                 }
             }
         }
+
+        private void valorNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            valorNumericUpDown.Select(0, valorNumericUpDown.Text.Length);
+        }
+
+        private void valorNumericUpDown_Enter(object sender, EventArgs e)
+        {
+            valorNumericUpDown.Select(0, valorNumericUpDown.Text.Length);
+        }
+
+        private void valorNumericUpDown_MouseClick(object sender, MouseEventArgs e)
+        {
+            valorNumericUpDown.Select(0, valorNumericUpDown.Text.Length);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form = new FinanceiroInserirEditarForm();
+            form.ShowDialog();
+            ListarFinanceiro();
+
+        }
+
+
     }
 }

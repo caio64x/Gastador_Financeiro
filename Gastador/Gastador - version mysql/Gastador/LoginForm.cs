@@ -64,16 +64,16 @@ namespace Gastador
                 var startInfo2 = new ProcessStartInfo(@"C:\Gastador\MySQL\bat\adicionando_porta_firewall.bat");
                 startInfo2.Verb = "runas";
                 //startInfo.WorkingDirectory = @"C:\Gastador\MySQL\adicionando_porta_firewall.bat";
-                startInfo2.WorkingDirectory = @"C:\Gastador\MySQL\bat\install_mysql_service.bat";
+                startInfo2.WorkingDirectory = @"C:\Gastador\MySQL\bat\adicionando_porta_firewall.bat.bat";
                 Process proc2 = Process.Start(startInfo2);
-                Thread.Sleep(2500);
+                Thread.Sleep(1500);
 
                 var startInfo = new ProcessStartInfo(@"C:\Gastador\MySQL\bat\install_mysql_service.bat");
                 startInfo.Verb = "runas";
                 //startInfo.WorkingDirectory = @"C:\Gastador\MySQL\adicionando_porta_firewall.bat";
                 startInfo.WorkingDirectory = @"C:\Gastador\MySQL\bat\install_mysql_service.bat";
                 Process proc = Process.Start(startInfo);
-                Thread.Sleep(2000);
+                Thread.Sleep(500);
 
             }
 
