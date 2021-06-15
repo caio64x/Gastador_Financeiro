@@ -34,17 +34,22 @@ namespace Gastador
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 
             //somatorio filtrado
-      
-            valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+            var calc2 = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor);
+            valorTotalReceitaLabel.Text = calc2.ToString("C");
+
             valorTotalDespesaVariavelLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
             valorTotalDespesaFixaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
 
-
+            //total despesas confirmadas
             var calc1 = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S" || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor);
-            valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S" || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
-            var calc2 = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor);
+            valorTotalDespesaLabel.Text = calc1.ToString("C");
+
+            //  valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "S" || s.IDFinanceiroTipo == 2 && s.Pago == "S").Sum(s => s.Valor).ToString("C");
+            
+            //total receitas confirmadas
+            // var calc2 = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "S").Sum(s => s.Valor);
             decimal total = calc2 - calc1;
-            lucroLabel.Text = total.ToString();
+            lucroLabel.Text = total.ToString("C");
 
             restantePagarLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 && s.Pago == "N"  || s.IDFinanceiroTipo == 2 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
             restanteReceberlabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1 && s.Pago == "N").Sum(s => s.Valor).ToString("C");
