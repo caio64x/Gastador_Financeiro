@@ -43,6 +43,7 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.usuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.atualizaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -144,7 +145,8 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
-            this.sobreToolStripMenuItem});
+            this.sobreToolStripMenuItem,
+            this.atualizaçõesToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 24);
@@ -173,6 +175,13 @@
             this.usuarioToolStripStatusLabel.Name = "usuarioToolStripStatusLabel";
             this.usuarioToolStripStatusLabel.Size = new System.Drawing.Size(47, 17);
             this.usuarioToolStripStatusLabel.Text = "Usuário";
+            // 
+            // atualizaçõesToolStripMenuItem
+            // 
+            this.atualizaçõesToolStripMenuItem.Name = "atualizaçõesToolStripMenuItem";
+            this.atualizaçõesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.atualizaçõesToolStripMenuItem.Text = "Atualizações";
+            this.atualizaçõesToolStripMenuItem.Click += new System.EventHandler(this.atualizaçõesToolStripMenuItem_Click);
             // 
             // PrincipalForm
             // 
@@ -216,6 +225,7 @@
         private System.Windows.Forms.ToolStripButton usuariostoolStripButton;
         private System.Windows.Forms.ToolStripMenuItem centroDeCustoreceitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizaçõesToolStripMenuItem;
     }
 }
 
