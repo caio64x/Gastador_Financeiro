@@ -5427,7 +5427,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Gastador"
         "ProductCode" = "8:{4A36AAA3-44FB-4DB0-9446-A08D1A50F117}"
-        "PackageCode" = "8:{9A97CFBF-FE28-4EFB-A4EE-16A7565CFF54}"
+        "PackageCode" = "8:{B0A0A0E1-C9C6-474A-9CCF-82A9EB8D852D}"
         "UpgradeCode" = "8:{848C4227-07EB-4F4D-8837-8734568E38B7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

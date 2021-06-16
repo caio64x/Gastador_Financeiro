@@ -321,7 +321,7 @@
             // 
             this.valorTotalReceitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valorTotalReceitaLabel.ForeColor = System.Drawing.Color.Green;
-            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(112, 85);
+            this.valorTotalReceitaLabel.Location = new System.Drawing.Point(88, 59);
             this.valorTotalReceitaLabel.Name = "valorTotalReceitaLabel";
             this.valorTotalReceitaLabel.Size = new System.Drawing.Size(330, 17);
             this.valorTotalReceitaLabel.TabIndex = 12;
