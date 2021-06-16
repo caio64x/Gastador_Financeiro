@@ -58,11 +58,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.quantidadeLabel = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.fecharButton = new System.Windows.Forms.Button();
-            this.inserirButton = new System.Windows.Forms.Button();
-            this.excluirButton = new System.Windows.Forms.Button();
             this.alterarButton = new System.Windows.Forms.Button();
+            this.excluirButton = new System.Windows.Forms.Button();
+            this.inserirButton = new System.Windows.Forms.Button();
+            this.fecharButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1358, 72);
+            this.panel1.Size = new System.Drawing.Size(1284, 72);
             this.panel1.TabIndex = 0;
             // 
             // label6
@@ -165,7 +164,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 72);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1358, 408);
+            this.panel2.Size = new System.Drawing.Size(1284, 325);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -191,7 +190,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(818, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(818, 325);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
@@ -232,10 +231,11 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.valorTotalReceitaLabel);
             this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.panel4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Location = new System.Drawing.Point(-74, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1358, 408);
+            this.panel5.Size = new System.Drawing.Size(1358, 325);
             this.panel5.TabIndex = 1;
             // 
             // label1
@@ -395,12 +395,15 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.fecharButton);
+            this.panel3.Controls.Add(this.inserirButton);
             this.panel3.Controls.Add(this.quantidadeLabel);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.excluirButton);
+            this.panel3.Controls.Add(this.alterarButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 480);
+            this.panel3.Location = new System.Drawing.Point(0, 397);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1358, 50);
+            this.panel3.Size = new System.Drawing.Size(1284, 70);
             this.panel3.TabIndex = 1;
             // 
             // quantidadeLabel
@@ -412,46 +415,23 @@
             this.quantidadeLabel.TabIndex = 4;
             this.quantidadeLabel.Text = "Nenhum registro";
             // 
-            // panel4
+            // alterarButton
             // 
-            this.panel4.Controls.Add(this.fecharButton);
-            this.panel4.Controls.Add(this.inserirButton);
-            this.panel4.Controls.Add(this.excluirButton);
-            this.panel4.Controls.Add(this.alterarButton);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(787, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(571, 50);
-            this.panel4.TabIndex = 0;
-            // 
-            // fecharButton
-            // 
-            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharButton.Location = new System.Drawing.Point(487, 19);
-            this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(79, 25);
-            this.fecharButton.TabIndex = 3;
-            this.fecharButton.Text = "Fechar";
-            this.fecharButton.UseVisualStyleBackColor = true;
-            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
-            // 
-            // inserirButton
-            // 
-            this.inserirButton.Image = ((System.Drawing.Image)(resources.GetObject("inserirButton.Image")));
-            this.inserirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inserirButton.Location = new System.Drawing.Point(244, 19);
-            this.inserirButton.Name = "inserirButton";
-            this.inserirButton.Size = new System.Drawing.Size(79, 25);
-            this.inserirButton.TabIndex = 0;
-            this.inserirButton.Text = "Inserir";
-            this.inserirButton.UseVisualStyleBackColor = true;
-            this.inserirButton.Click += new System.EventHandler(this.inserirButton_Click);
+            this.alterarButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarButton.Image")));
+            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarButton.Location = new System.Drawing.Point(1040, 17);
+            this.alterarButton.Name = "alterarButton";
+            this.alterarButton.Size = new System.Drawing.Size(79, 25);
+            this.alterarButton.TabIndex = 1;
+            this.alterarButton.Text = "Alterar";
+            this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // excluirButton
             // 
             this.excluirButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirButton.Image")));
             this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirButton.Location = new System.Drawing.Point(406, 19);
+            this.excluirButton.Location = new System.Drawing.Point(1121, 17);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(79, 25);
             this.excluirButton.TabIndex = 2;
@@ -459,17 +439,36 @@
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
             // 
-            // alterarButton
+            // inserirButton
             // 
-            this.alterarButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarButton.Image")));
-            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarButton.Location = new System.Drawing.Point(325, 19);
-            this.alterarButton.Name = "alterarButton";
-            this.alterarButton.Size = new System.Drawing.Size(79, 25);
-            this.alterarButton.TabIndex = 1;
-            this.alterarButton.Text = "Alterar";
-            this.alterarButton.UseVisualStyleBackColor = true;
-            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
+            this.inserirButton.Image = ((System.Drawing.Image)(resources.GetObject("inserirButton.Image")));
+            this.inserirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inserirButton.Location = new System.Drawing.Point(959, 17);
+            this.inserirButton.Name = "inserirButton";
+            this.inserirButton.Size = new System.Drawing.Size(79, 25);
+            this.inserirButton.TabIndex = 0;
+            this.inserirButton.Text = "Inserir";
+            this.inserirButton.UseVisualStyleBackColor = true;
+            this.inserirButton.Click += new System.EventHandler(this.inserirButton_Click);
+            // 
+            // fecharButton
+            // 
+            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fecharButton.Location = new System.Drawing.Point(1202, 17);
+            this.fecharButton.Name = "fecharButton";
+            this.fecharButton.Size = new System.Drawing.Size(79, 25);
+            this.fecharButton.TabIndex = 3;
+            this.fecharButton.Text = "Fechar";
+            this.fecharButton.UseVisualStyleBackColor = true;
+            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1260, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(94, 321);
+            this.panel4.TabIndex = 25;
             // 
             // iDdataGridViewTextBoxColumn1
             // 
@@ -540,12 +539,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 530);
+            this.ClientSize = new System.Drawing.Size(1284, 467);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RelatorioMensalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatorio mensal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RegistrarFinanceiroForm_Load_1);
@@ -557,7 +557,6 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -571,11 +570,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label quantidadeLabel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button fecharButton;
-        private System.Windows.Forms.Button inserirButton;
-        private System.Windows.Forms.Button excluirButton;
-        private System.Windows.Forms.Button alterarButton;
         //private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         //private System.Windows.Forms.DataGridViewTextBoxColumn iDCategoriaDataGridViewTextBoxColumn;
         //private System.Windows.Forms.DataGridViewTextBoxColumn categoriaNomeDataGridViewTextBoxColumn;
@@ -612,5 +606,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataVencimentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataConfirmacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button fecharButton;
+        private System.Windows.Forms.Button inserirButton;
+        private System.Windows.Forms.Button excluirButton;
+        private System.Windows.Forms.Button alterarButton;
+        private System.Windows.Forms.Panel panel4;
     }
 }
