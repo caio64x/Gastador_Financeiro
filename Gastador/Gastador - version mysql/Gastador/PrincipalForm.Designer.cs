@@ -41,9 +41,9 @@
             this.centroDeCustoreceitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.usuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.atualizaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -160,6 +160,13 @@
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
+            // atualizaçõesToolStripMenuItem
+            // 
+            this.atualizaçõesToolStripMenuItem.Name = "atualizaçõesToolStripMenuItem";
+            this.atualizaçõesToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.atualizaçõesToolStripMenuItem.Text = "Atualizar Sistema";
+            this.atualizaçõesToolStripMenuItem.Click += new System.EventHandler(this.atualizaçõesToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -175,13 +182,6 @@
             this.usuarioToolStripStatusLabel.Name = "usuarioToolStripStatusLabel";
             this.usuarioToolStripStatusLabel.Size = new System.Drawing.Size(47, 17);
             this.usuarioToolStripStatusLabel.Text = "Usuário";
-            // 
-            // atualizaçõesToolStripMenuItem
-            // 
-            this.atualizaçõesToolStripMenuItem.Name = "atualizaçõesToolStripMenuItem";
-            this.atualizaçõesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.atualizaçõesToolStripMenuItem.Text = "Atualizações";
-            this.atualizaçõesToolStripMenuItem.Click += new System.EventHandler(this.atualizaçõesToolStripMenuItem_Click);
             // 
             // PrincipalForm
             // 
