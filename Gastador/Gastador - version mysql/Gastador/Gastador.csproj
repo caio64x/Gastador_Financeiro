@@ -362,6 +362,7 @@
     <Content Include="HeidiSQL_8.0_Portable\portable_settings.txt" />
     <Content Include="HeidiSQL_8.0_Portable\readme.txt" />
     <Content Include="logo.ico" />
+    <Content Include="update\Gastador.exe" />
     <None Include="Resources\money.ico" />
     <None Include="Properties\save-money.ico" />
     <Content Include="MySql.Data.dll" />
