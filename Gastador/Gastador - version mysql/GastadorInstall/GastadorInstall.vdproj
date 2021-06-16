@@ -159,6 +159,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_19196145E6E04F87A501ED316FBB7DAC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_195777B32E7A4FAB9F5388353EF72F1A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -442,6 +448,12 @@
         "Entry"
         {
         "MsmKey" = "8:_51E4BC8800C947FE80E4068D0A2AFC86"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_536ECF69BC504EE19F41DEC8B80A46C5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1180,6 +1192,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_19196145E6E04F87A501ED316FBB7DAC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6F4B96853E34FB9BF7BC2FFC826B2A5A"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1252,6 +1270,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -1739,6 +1765,37 @@
             "TargetName" = "8:time_zone_name.frm"
             "Tag" = "8:"
             "Folder" = "8:_3E6057CA51614C8A9220BB7B0459D662"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_19196145E6E04F87A501ED316FBB7DAC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Atualizador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_19196145E6E04F87A501ED316FBB7DAC"
+                    {
+                    "Name" = "8:Atualizador.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Atualizador\\bin\\Debug\\Atualizador.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_1AB80BB4F4CA4B3B937AAB176563CA3C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2681,6 +2738,26 @@
             "TargetName" = "8:latin1.xml"
             "Tag" = "8:"
             "Folder" = "8:_F9FB5F1DC7B441F59A7D822A7A796289"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_536ECF69BC504EE19F41DEC8B80A46C5"
+            {
+            "SourcePath" = "8:..\\Atualizador\\Properties\\atualiza.ico"
+            "TargetName" = "8:atualiza.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D7F140AE085E4DED8992F2437C64493C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -5350,7 +5427,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Gastador"
         "ProductCode" = "8:{4A36AAA3-44FB-4DB0-9446-A08D1A50F117}"
-        "PackageCode" = "8:{235D9422-0C72-4178-814D-FF13B5C39030}"
+        "PackageCode" = "8:{9A97CFBF-FE28-4EFB-A4EE-16A7565CFF54}"
         "UpgradeCode" = "8:{848C4227-07EB-4F4D-8837-8734568E38B7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5470,6 +5547,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_125EC8FCD9B14D40B51D3B0C959BCF38"
+            {
+            "Name" = "8:Gastador"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_4A91673AE8B94BFA90D8E5FBDBC75EC1"
+            "Folder" = "8:_B9BEBF13B8794EAD95E7B515033A62BA"
+            "WorkingFolder" = "8:_1AB80BB4F4CA4B3B937AAB176563CA3C"
+            "Icon" = "8:_47D9C31F5EC945BC8BC609FDA5C1460A"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

@@ -28,14 +28,13 @@ namespace Atualizador
             {
                 System.Threading.Thread.Sleep(5000);
                 File.Delete(@".\Gastador.exe");
-                client.DownloadString("https://mega.nz/file/ADoEnZAa#FLzn6DMqYbwWQ77g9KzKt2ciRrA2Ca5pAoHzGxUWXaI");
+                client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
                 Process.Start(@".\Gastador.exe");
                 this.Close();
             }
             catch
             {
-
-                throw;
+                MessageBox.Show("Houve algum problema na comunicação!");
             }
         }
 
