@@ -120,7 +120,9 @@ namespace Gastador
             {
 
                 if (MessageBox.Show("Deseja efetuar a atualização?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) using (var client = new WebClient())
-                    {
+                        MessageBox.Show("Aguarde o sistema recarregar!");
+                {
+                    System.Threading.Thread.Sleep(1000);
                         Process.Start("Atualizador.exe");
                         this.Close();
                     }
