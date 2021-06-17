@@ -30,7 +30,7 @@ namespace Gastador
         private void entrarButton_Click(object sender, EventArgs e)
         {
             try
-            {
+            { 
                 var usuario = new UsuarioDAO().EfetuarLogin(loginTextBox.Text.Trim(), senhaTextBox.Text.Trim());
 
                 if (usuario == null)
