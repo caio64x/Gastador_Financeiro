@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,7 @@ namespace Gastador
             quantidadeLabel.Text = "Regristros encontrados: " + lista.Count;
 
             valorTotalDespesaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 3 || s.IDFinanceiroTipo == 2).Sum(s => s.Valor).ToString("C");
+
             valorTotalReceitaLabel.Text = lista.Where(s => s.IDFinanceiroTipo == 1).Sum(s => s.Valor).ToString("C");
             Application.DoEvents();
             // enquanto o evento acontece
@@ -143,7 +145,6 @@ namespace Gastador
                 sub_menu.Show(dataGridView1, new Point(e.X, e.Y));
 
                 sub_menu.ItemClicked += new ToolStripItemClickedEventHandler(sub_menu_clicked);
-               
             }
         }
 
@@ -155,6 +156,8 @@ namespace Gastador
                 case "confirmar_pagamento":
 
                     //chama a função de pagamento
+                    
+
                     ConfirmarPagamento();
                     
                     break;

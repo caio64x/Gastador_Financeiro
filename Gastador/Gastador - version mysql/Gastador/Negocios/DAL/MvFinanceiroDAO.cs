@@ -29,7 +29,7 @@ namespace Gastador.Negocios.DAL
                       
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "' and fi.Nome LIKE '%" + nome + "%' order by fi.Nome").ToList();
+            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "' and fi.Nome LIKE '%" + nome + "%'  order by mv.id DESC, mv.DataVencimento ").ToList();
 
         }
 
@@ -40,7 +40,7 @@ namespace Gastador.Negocios.DAL
 
             return banco.Query<MvFinanceiro>(@"select mv.*, fi.Nome as NomeFinanceiroTipo, ti.Nome as NomeFinanceiro,ti.ID as IDFinanceiroTipo from MvFinanceiros mv join Financeiros fi on mv.IDFinanceiro = fi.ID 
             join FinanceiroTipos ti on fi.IDFinanceiroTipo = ti.ID
-            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "'  order by fi.Nome").ToList();
+            WHERE  MONTH (mv.DataVencimento) = '" + mes + "' and YEAR (mv.DataVencimento) = '" + ano + "'  order by mv.id DESC, mv.DataVencimento").ToList();
         }
 
 

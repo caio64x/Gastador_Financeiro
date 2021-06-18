@@ -81,6 +81,7 @@
             // 
             // filtroTextBox
             // 
+            this.filtroTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.filtroTextBox.Location = new System.Drawing.Point(15, 37);
             this.filtroTextBox.Name = "filtroTextBox";
             this.filtroTextBox.Size = new System.Drawing.Size(323, 20);
