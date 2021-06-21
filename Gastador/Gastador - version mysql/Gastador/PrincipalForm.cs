@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -113,24 +114,41 @@ namespace Gastador
             form.ShowDialog();
         }
 
+        public void atualizar()
+        {
+            if (MessageBox.Show("Deseja efetuar a atualização?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("Aguarde o sistema recarregar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            {
+                System.Threading.Thread.Sleep(1000);
+                this.Close();
+                Close();
+                Process.Start("Atualizador.exe");
+
+            }
+        }
         private void atualizaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WebClient webClient = new WebClient();
             try
             {
-
-                if (MessageBox.Show("Deseja efetuar a atualização?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) using (var client = new WebClient())
-                        MessageBox.Show("Aguarde o sistema recarregar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                {
-                    System.Threading.Thread.Sleep(1000);
-                    Process.Start("Atualizador.exe");
-                    this.Close();
-                }
-
+                atualizar();
             }
             catch
             {
-                MessageBox.Show("Hove um problema ao realizar o download!");
+                try
+                {
+                    MessageBox.Show("O atualizador está com problemas, o sistema irá tentar atualiza-lo!");
+                    var client = new WebClient();
+                    // MessageBox.Show("Hove um problema ao realizar o download!");
+                    System.Threading.Thread.Sleep(5000);
+                    client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Atualizador.exe", @"Atualizador.exe");
+                    atualizar();
+                }
+                catch
+                {
+                    MessageBox.Show("Problemas de conexão com a internet!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
         }
 
@@ -143,12 +161,11 @@ namespace Gastador
 
                 System.Threading.Thread.Sleep(500);
                 Backup backup = new Backup();
-                
+
                 if (backup.GerarBackup() == 1)
                 {
 
                     MessageBox.Show("Backup realizado com sucesso");
-                    Application.Exit();
                 }
                 else
                 {
@@ -174,7 +191,7 @@ namespace Gastador
             }
             else
             {
-                MessageBox.Show("Houve um problema ao gerar o backup");
+                MessageBox.Show("Houve um problema ao gerar o backup, tente novamente");
             }
         }
 

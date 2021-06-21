@@ -46,8 +46,45 @@ namespace Atualizador
                 try
                 {
                     System.Threading.Thread.Sleep(5000);
+                    //atualizar principal
                     File.Delete(@".\Gastador.exe");
                     client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
+
+                    File.Delete(@".\Gastador.exe");
+                    client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
+
+
+                    //verifica as dlls
+                    if (File.Exists(@".\Dapper.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Dapper.dll");
+                    }
+
+                    if (File.Exists(@".\MySql.Data.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"MySql.Data.dll");
+                    }
+
+                    if (File.Exists(@".\mysqlbackup.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"mysqlbackup.dll");
+                    }
+
+                    if (File.Exists(@".\SQLite.Interop.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"SQLite.Interop.dll");
+                    }
+
+                    if (File.Exists(@".\System.Net.Http.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"System.Net.Http.dll");
+                    }
+
+                    if (File.Exists(@".\System.Runtime.CompilerServices.Unsafe.dll") == false)
+                    {
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"System.Runtime.CompilerServices.Unsafe.dll");
+                    }
+
                     Process.Start(@".\Gastador.exe");
                     this.Close();
 
