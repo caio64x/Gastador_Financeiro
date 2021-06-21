@@ -50,14 +50,14 @@ namespace Atualizador
                     File.Delete(@".\Gastador.exe");
                     client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
 
-                    File.Delete(@".\Gastador.exe");
-                    client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
+                    File.Delete(@".\Gastador.exe.config");
+                        client.DownloadFile("https://raw.githubusercontent.com/caio64x/Gastador_Financeiro/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe.config", @"Gastador.exe.config");
 
 
                     //verifica as dlls
                     if (File.Exists(@".\Dapper.dll") == false)
                     {
-                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Dapper.dll");
+                        client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/UpdateDLL/Dapper.dll", @"Dapper.dll");
                     }
 
                     if (File.Exists(@".\MySql.Data.dll") == false)
