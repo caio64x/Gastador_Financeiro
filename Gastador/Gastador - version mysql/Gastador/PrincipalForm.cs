@@ -117,8 +117,9 @@ namespace Gastador
         public void atualizar()
         {
             if (MessageBox.Show("Deseja efetuar a atualização?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                MessageBox.Show("Aguarde o sistema recarregar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             {
+                MessageBox.Show("Aguarde o sistema recarregar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 System.Threading.Thread.Sleep(1000);
                 this.Close();
                 Close();
