@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -39,7 +40,7 @@ namespace Atualizador
             WebClient webClient = new WebClient();
             var client = new WebClient();
 
- 
+
             if (IsConnected() == true)
 
             {
@@ -51,8 +52,17 @@ namespace Atualizador
                     client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe", @"Gastador.exe");
 
                     File.Delete(@".\Gastador.exe.config");
-                        client.DownloadFile("https://raw.githubusercontent.com/caio64x/Gastador_Financeiro/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe.config", @"Gastador.exe.config");
-                        
+                    client.DownloadFile("https://github.com/caio64x/Gastador_Financeiro/raw/main/Gastador/Gastador%20-%20version%20mysql/Gastador/update/Gastador.exe.zip", @"Gastador.exe.zip");
+
+                    string caminhoZip = @".\Gastador.exe.zip";
+                    string pastaExtrair = @".\";
+
+                    using (ZipArchive zip = ZipFile.OpenRead(caminhoZip))
+                    {
+                        zip.ExtractToDirectory(pastaExtrair);
+                    }
+                    File.Delete(@".\Gastador.exe.zip");
+
 
                     //verifica as dlls
                     if (File.Exists(@".\Dapper.dll") == false)
