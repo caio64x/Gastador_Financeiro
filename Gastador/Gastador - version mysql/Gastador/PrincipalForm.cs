@@ -120,18 +120,68 @@ namespace Gastador
             {
 
                 if (MessageBox.Show("Deseja efetuar a atualização?", "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) using (var client = new WebClient())
-                        MessageBox.Show("Aguarde o sistema recarregar!", "Atenção",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Aguarde o sistema recarregar!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 {
                     System.Threading.Thread.Sleep(1000);
-                        Process.Start("Atualizador.exe");
-                        this.Close();
-                    }
+                    Process.Start("Atualizador.exe");
+                    this.Close();
+                }
 
             }
             catch
             {
-
+                MessageBox.Show("Hove um problema ao realizar o download!");
             }
+        }
+
+        private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //realizar o backup
+            if (MessageBox.Show("Deseja efetuar o backup?", "Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MessageBox.Show("Por favor aguarde!");
+
+                System.Threading.Thread.Sleep(500);
+                Backup backup = new Backup();
+                
+                if (backup.GerarBackup() == 1)
+                {
+
+                    MessageBox.Show("Backup realizado com sucesso");
+                    Application.Exit();
+                }
+                else
+                {
+                    MessageBox.Show("Houve um problema ao gerar o backup");
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void realziarBackupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por favor aguarde!");
+
+            System.Threading.Thread.Sleep(500);
+            Backup backup = new Backup();
+
+            if (backup.GerarBackup() == 1)
+            {
+
+                MessageBox.Show("Backup realizado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Houve um problema ao gerar o backup");
+            }
+        }
+
+        private void restaurarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new RestaurarBackup();
+            form.ShowDialog();
         }
     }
 }

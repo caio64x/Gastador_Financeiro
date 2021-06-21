@@ -44,6 +44,9 @@
             this.atualizaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.usuarioToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.backupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.realziarBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -146,7 +149,8 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.sobreToolStripMenuItem,
-            this.atualizaçõesToolStripMenuItem});
+            this.atualizaçõesToolStripMenuItem,
+            this.backupToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 24);
@@ -183,6 +187,29 @@
             this.usuarioToolStripStatusLabel.Size = new System.Drawing.Size(47, 17);
             this.usuarioToolStripStatusLabel.Text = "Usuário";
             // 
+            // backupToolStripMenuItem
+            // 
+            this.backupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.realziarBackupToolStripMenuItem,
+            this.restaurarToolStripMenuItem});
+            this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.backupToolStripMenuItem.Text = "backup";
+            // 
+            // realziarBackupToolStripMenuItem
+            // 
+            this.realziarBackupToolStripMenuItem.Name = "realziarBackupToolStripMenuItem";
+            this.realziarBackupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.realziarBackupToolStripMenuItem.Text = "Realizar backup";
+            this.realziarBackupToolStripMenuItem.Click += new System.EventHandler(this.realziarBackupToolStripMenuItem_Click);
+            // 
+            // restaurarToolStripMenuItem
+            // 
+            this.restaurarToolStripMenuItem.Name = "restaurarToolStripMenuItem";
+            this.restaurarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restaurarToolStripMenuItem.Text = "Restaurar backup";
+            this.restaurarToolStripMenuItem.Click += new System.EventHandler(this.restaurarToolStripMenuItem_Click);
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +224,7 @@
             this.Name = "PrincipalForm";
             this.Text = "Gastador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrincipalForm_FormClosing);
             this.Shown += new System.EventHandler(this.PrincipalForm_Shown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -226,6 +254,9 @@
         private System.Windows.Forms.ToolStripMenuItem centroDeCustoreceitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem atualizaçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem realziarBackupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restaurarToolStripMenuItem;
     }
 }
 

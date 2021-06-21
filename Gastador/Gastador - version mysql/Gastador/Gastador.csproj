@@ -88,10 +88,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="mysqlbackup, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\caio ribeiro\Download\mysqlbackup\mysqlbackup.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,6 +111,18 @@
     <Compile Include=".Designer - Copy.cs">
       <DependentUpon>RelatorioMensalForm.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurarBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestaurarBackup.Designer.cs">
+      <DependentUpon>RestaurarBackup.cs</DependentUpon>
     </Compile>
     <Compile Include="SobreForm.cs">
       <SubType>Form</SubType>
@@ -143,6 +160,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Suporte\Backup.cs" />
     <Compile Include="Suporte\Compartilhada.cs" />
     <Compile Include="UsuarioInserirEditarForm.cs">
       <SubType>Form</SubType>
@@ -182,6 +200,12 @@
     <Compile Include="Negocios\Mapeamento\Financeiro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestaurarBackup.resx">
+      <DependentUpon>RestaurarBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SobreForm.resx">
       <DependentUpon>SobreForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +386,8 @@
     <Content Include="HeidiSQL_8.0_Portable\portable_settings.txt" />
     <Content Include="HeidiSQL_8.0_Portable\readme.txt" />
     <Content Include="logo.ico" />
+    <Content Include="mysqlbackup.dll" />
+    <Content Include="System.Runtime.CompilerServices.Unsafe.dll" />
     <Content Include="update\Gastador.exe" />
     <None Include="Resources\money.ico" />
     <None Include="Properties\save-money.ico" />
@@ -951,6 +977,9 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
