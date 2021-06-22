@@ -44,7 +44,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.repetirCadastroCheckBox = new System.Windows.Forms.CheckBox();
             this.valorNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.adiconarFinanceiroButton = new System.Windows.Forms.Button();
+            this.documentoPagoCheckBox = new System.Windows.Forms.CheckBox();
+            this.novoButton = new System.Windows.Forms.Button();
             this.mvFinanceiroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.valorNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).BeginInit();
@@ -68,9 +70,9 @@
             // 
             // salvarButton
             // 
-            this.salvarButton.Image = global::Gastador.Properties.Resources.salvar;
+            this.salvarButton.Image = ((System.Drawing.Image)(resources.GetObject("salvarButton.Image")));
             this.salvarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.salvarButton.Location = new System.Drawing.Point(370, 237);
+            this.salvarButton.Location = new System.Drawing.Point(197, 238);
             this.salvarButton.Name = "salvarButton";
             this.salvarButton.Size = new System.Drawing.Size(79, 25);
             this.salvarButton.TabIndex = 6;
@@ -80,10 +82,10 @@
             // 
             // fecharButton
             // 
-            this.fecharButton.Location = new System.Drawing.Point(451, 237);
+            this.fecharButton.Location = new System.Drawing.Point(452, 238);
             this.fecharButton.Name = "fecharButton";
             this.fecharButton.Size = new System.Drawing.Size(79, 25);
-            this.fecharButton.TabIndex = 7;
+            this.fecharButton.TabIndex = 9;
             this.fecharButton.Text = "Fechar";
             this.fecharButton.UseVisualStyleBackColor = true;
             this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
@@ -112,17 +114,17 @@
             // 
             this.descricaoTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.descricaoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.descricaoTextBox.Location = new System.Drawing.Point(1, 81);
+            this.descricaoTextBox.Location = new System.Drawing.Point(1, 77);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
-            this.descricaoTextBox.Size = new System.Drawing.Size(532, 140);
-            this.descricaoTextBox.TabIndex = 3;
+            this.descricaoTextBox.Size = new System.Drawing.Size(530, 140);
+            this.descricaoTextBox.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(12, 61);
+            this.label4.Location = new System.Drawing.Point(12, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 8;
@@ -132,7 +134,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(25, 237);
+            this.label2.Location = new System.Drawing.Point(1, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 10;
@@ -150,12 +152,12 @@
             // 
             // excluirButton
             // 
-            this.excluirButton.Image = global::Gastador.Properties.Resources.excluir;
+            this.excluirButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirButton.Image")));
             this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirButton.Location = new System.Drawing.Point(289, 237);
+            this.excluirButton.Location = new System.Drawing.Point(282, 238);
             this.excluirButton.Name = "excluirButton";
             this.excluirButton.Size = new System.Drawing.Size(79, 25);
-            this.excluirButton.TabIndex = 5;
+            this.excluirButton.TabIndex = 7;
             this.excluirButton.Text = "Excluir";
             this.excluirButton.UseVisualStyleBackColor = true;
             this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
@@ -173,26 +175,26 @@
             // repetirCadastroCheckBox
             // 
             this.repetirCadastroCheckBox.AutoSize = true;
-            this.repetirCadastroCheckBox.Location = new System.Drawing.Point(394, 61);
+            this.repetirCadastroCheckBox.Location = new System.Drawing.Point(384, 58);
             this.repetirCadastroCheckBox.Name = "repetirCadastroCheckBox";
-            this.repetirCadastroCheckBox.Size = new System.Drawing.Size(104, 17);
-            this.repetirCadastroCheckBox.TabIndex = 2;
-            this.repetirCadastroCheckBox.Text = "Repetir cadastro";
+            this.repetirCadastroCheckBox.Size = new System.Drawing.Size(110, 17);
+            this.repetirCadastroCheckBox.TabIndex = 3;
+            this.repetirCadastroCheckBox.Text = "Repetir cadastro?";
             this.repetirCadastroCheckBox.UseVisualStyleBackColor = true;
             // 
             // valorNumericUpDown
             // 
             this.valorNumericUpDown.DecimalPlaces = 2;
             this.valorNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.valorNumericUpDown.Location = new System.Drawing.Point(72, 238);
+            this.valorNumericUpDown.Location = new System.Drawing.Point(1, 239);
             this.valorNumericUpDown.Maximum = new decimal(new int[] {
             -1586618625,
             232830643,
             0,
             131072});
             this.valorNumericUpDown.Name = "valorNumericUpDown";
-            this.valorNumericUpDown.Size = new System.Drawing.Size(211, 23);
-            this.valorNumericUpDown.TabIndex = 4;
+            this.valorNumericUpDown.Size = new System.Drawing.Size(190, 23);
+            this.valorNumericUpDown.TabIndex = 5;
             this.valorNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.valorNumericUpDown.ValueChanged += new System.EventHandler(this.valorNumericUpDown_ValueChanged);
             this.valorNumericUpDown.Enter += new System.EventHandler(this.valorNumericUpDown_Enter);
@@ -200,19 +202,41 @@
             this.valorNumericUpDown.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valorNumericUpDown_KeyPress);
             this.valorNumericUpDown.MouseClick += new System.Windows.Forms.MouseEventHandler(this.valorNumericUpDown_MouseClick);
             // 
-            // button1
+            // adiconarFinanceiroButton
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Image = global::Gastador.Properties.Resources.incluir;
-            this.button1.Location = new System.Drawing.Point(102, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 21);
-            this.button1.TabIndex = 13;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.adiconarFinanceiroButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.adiconarFinanceiroButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.adiconarFinanceiroButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adiconarFinanceiroButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.adiconarFinanceiroButton.Image = ((System.Drawing.Image)(resources.GetObject("adiconarFinanceiroButton.Image")));
+            this.adiconarFinanceiroButton.Location = new System.Drawing.Point(102, 25);
+            this.adiconarFinanceiroButton.Name = "adiconarFinanceiroButton";
+            this.adiconarFinanceiroButton.Size = new System.Drawing.Size(24, 21);
+            this.adiconarFinanceiroButton.TabIndex = 13;
+            this.adiconarFinanceiroButton.UseVisualStyleBackColor = true;
+            this.adiconarFinanceiroButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // documentoPagoCheckBox
+            // 
+            this.documentoPagoCheckBox.AutoSize = true;
+            this.documentoPagoCheckBox.Location = new System.Drawing.Point(264, 58);
+            this.documentoPagoCheckBox.Name = "documentoPagoCheckBox";
+            this.documentoPagoCheckBox.Size = new System.Drawing.Size(114, 17);
+            this.documentoPagoCheckBox.TabIndex = 2;
+            this.documentoPagoCheckBox.Text = "Documento pago?";
+            this.documentoPagoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // novoButton
+            // 
+            this.novoButton.Image = global::Gastador.Properties.Resources.incluir;
+            this.novoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.novoButton.Location = new System.Drawing.Point(367, 238);
+            this.novoButton.Name = "novoButton";
+            this.novoButton.Size = new System.Drawing.Size(79, 25);
+            this.novoButton.TabIndex = 8;
+            this.novoButton.Text = "Novo";
+            this.novoButton.UseVisualStyleBackColor = true;
+            this.novoButton.Click += new System.EventHandler(this.novoButton_Click);
             // 
             // mvFinanceiroBindingSource
             // 
@@ -222,8 +246,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 266);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(533, 266);
+            this.Controls.Add(this.novoButton);
+            this.Controls.Add(this.documentoPagoCheckBox);
+            this.Controls.Add(this.adiconarFinanceiroButton);
             this.Controls.Add(this.valorNumericUpDown);
             this.Controls.Add(this.repetirCadastroCheckBox);
             this.Controls.Add(this.label5);
@@ -245,6 +271,8 @@
             this.MinimizeBox = false;
             this.Name = "RegistoFinanceiroInserirEditarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistoFinanceiroInserirEditarForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistoFinanceiroInserirEditarForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.valorNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();
@@ -270,6 +298,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox repetirCadastroCheckBox;
         private System.Windows.Forms.NumericUpDown valorNumericUpDown;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button adiconarFinanceiroButton;
+        private System.Windows.Forms.CheckBox documentoPagoCheckBox;
+        private System.Windows.Forms.Button novoButton;
     }
 }

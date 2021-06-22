@@ -117,10 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="salvarButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAMlJREFUOE/tkzEKwkAQRecY2ngeGwtr8RQeQRErqxSeIexEewvBRsEjiAdIYGdO
+        IDq7O0JWm11Bqzz4hN358wiEQEciJQ0AeQEVrZKypZFuvuEl/AixjZyX/q4dL+FCnmvp1IA00e0WoRRE
+        SEZvY5DnYc5HMLwT2R0MTXWqpIheHaRzELm+yCK+Fkki2qKKT4BNH8q6FwV5LL2NSGbyJpcUUV4ivIj2
+        gHaYmYMaFCdynzgXtxfRiT74ncj9R2ivfpAVe1NDx/8AeAI/tC4BDvJhdgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="excluirButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAU9JREFUOE99UkluwkAQ9DHJYyIrMANiEf9CSHyCRHDIW1gM3sg9KOYN2FdymXQ1
+        M057gZJKjJup6m28OsJ+/y1RakXMIq1/waTb/aHvJdG315r46nRe6MJnorV5SDKnJM9WdoMVB62CFlJV
+        24qJzHyezUw6GjVEx/HYnOfz/xi1xGLu2QYhBvLDoWJypHORJPxfNp1KEx/ZVy4AUUFiAL/4ZnEcc+yy
+        2Zh0MCgNYq0/YJC5QMMkDE0RRXy+7HYVMUizOHm8JhEE2YTEDnkQmHQ4rNwBSXttNeCybWYg3+8rM3Fk
+        A34kIih7hhB057oJzeAbM1iWYlqVmzb3TGVDdNdEqQUMfBfAnoH6tKUJVu3iUa/3ym9BrhJ7rk8bhIkU
+        U/nvLAbwLGkgWyl4SKXW68nkycpvgIms5B6RuSGWwEzwwqiiE/EKYtoUX5Q9l/C8P9plF3eK31zmAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="adiconarFinanceiroButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAARdJREFUOE+VkrFOwzAQhj1S3gCpUofaGVHFmzHWsdSXABQGHqBrY3eNKh6iiI7A
+        ChNIIKDcf40jN7004qRPiu78/86dT7VjbBcXWR5us9xvtCu/gLHhMXOhMNZP6mOHcTZbnJrc39HB7VHI
+        fHg5H9SyXUCsnb8XBTKrPZOum5/fPhipRhQs5p7lA9sXEgOpBngmPDChCHoNnL8hA7+RiqDPQNvyQeGZ
+        YgL9RhH4/vll0lw6E23D578Nnl7f9w3qJWmSKVEk1YB2Ya3oo2gXIv0G5RX9gZ9IRdBnkE2X57wLXU+J
+        maQ9p5g8XLMYgbWk5Kp9qAvjQjWaVSe1fBdscmSpIrj5QJwGZoINw5LgmRiaNgbW9NyEUn/WJigznVa+
+        HgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="mvFinanceiroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAA7IgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgEAAAA9ntg7QAAAAFv

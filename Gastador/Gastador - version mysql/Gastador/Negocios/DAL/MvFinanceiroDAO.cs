@@ -83,7 +83,7 @@ namespace Gastador.Negocios.DAL
         public void Pagamento(MvFinanceiro mvFinanceiro)
         {
             //confirma pagamento
-            if (mvFinanceiro.Pago == "N")
+            if (mvFinanceiro.Pago == "N" || mvFinanceiro.Pago == null )
             {
 
                 DateTime mes = DateTime.Now.Date;

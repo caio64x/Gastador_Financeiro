@@ -48,6 +48,10 @@ namespace Gastador
             descricaoTextBox.Text = mvFinanceiro.Descricao.ToString().Trim();
             valorNumericUpDown.Value = mvFinanceiro.Valor;
             idTextBox.Enabled = false;
+
+            documentoPagoCheckBox.Enabled = false;
+            documentoPagoCheckBox.Visible = false;
+            documentoPagoCheckBox.Checked = false;
         }
 
         private void fecharButton_Click(object sender, EventArgs e)
@@ -82,7 +86,7 @@ namespace Gastador
                 {
                     mvFinanceiro.ID = 0;
                     mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
-
+                    
                     if (mvFinanceiro.ID == 0)
                     {
                         MessageBox.Show("Erro ao salvar!");
@@ -93,13 +97,21 @@ namespace Gastador
                         idTextBox.Text = mvFinanceiro.ID.ToString();
                         excluirButton.Enabled = true;
                         MessageBox.Show("Registro salvo com sucesso!");
+
+                        documentoPagoCheckBox.Enabled = false;
+                        documentoPagoCheckBox.Visible = false;
+                        documentoPagoCheckBox.Checked = false;
+
                     }
                 }
                 else
                 {
                     //sem repetição de cadastro
                     mvFinanceiro.ID = new MvFinanceiroDAO().Salvar(mvFinanceiro);
-
+                    if (documentoPagoCheckBox.Checked == true)
+                    {
+                        new MvFinanceiroDAO().Pagamento(mvFinanceiro);
+                    }
                     if (mvFinanceiro.ID == 0)
                     {
                         MessageBox.Show("Erro ao salvar!");
@@ -110,6 +122,11 @@ namespace Gastador
                         idTextBox.Text = mvFinanceiro.ID.ToString();
                         excluirButton.Enabled = true;
                         MessageBox.Show("Registro salvo com sucesso!");
+
+                        documentoPagoCheckBox.Enabled = false;
+                        documentoPagoCheckBox.Visible = false;
+                        documentoPagoCheckBox.Checked = false;
+
                     }
                 }
             }
@@ -211,7 +228,7 @@ namespace Gastador
         {
             valorNumericUpDown.Select(0, valorNumericUpDown.Text.Length);
         }
-
+        //adiocionar novo tipo financeiro
         private void button1_Click(object sender, EventArgs e)
         {
             var form = new FinanceiroInserirEditarForm();
@@ -220,6 +237,34 @@ namespace Gastador
 
         }
 
+        private void novoButton_Click(object sender, EventArgs e)
+        {
 
+
+            Close();
+            
+
+            //this.Close();
+           // this. Dispose();
+
+            new RegistoFinanceiroInserirEditarForm().Show();
+            
+
+            //Dispose();
+            //this.Focus();
+            //Form f = new RegistoFinanceiroInserirEditarForm();
+            //f.FormClosed += (s, args) => this.Close();
+            //f.StartPosition = FormStartPosition.CenterScreen;
+            //this.WindowState = FormWindowState.Normal;
+
+            //f.Show();
+
+
+        }
+
+        private void RegistoFinanceiroInserirEditarForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new RegistoFinanceiroForm().Activate();
+        }
     }
 }
