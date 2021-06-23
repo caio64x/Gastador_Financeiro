@@ -45,6 +45,7 @@ namespace Gastador
             {
                 Task.Delay(3000).Wait();
                 MessageBox.Show("Backup restaurado com sucesso, feche o sistema e abra novamente!");
+                Application.ExitThread();
 
             }
             else
@@ -58,5 +59,7 @@ namespace Gastador
         {
             MessageBox.Show("Atenção, você está em uma operação de risco!!");
         }
+
+
     }
 }

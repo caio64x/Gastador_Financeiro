@@ -272,7 +272,6 @@
             this.Name = "RegistoFinanceiroInserirEditarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistoFinanceiroInserirEditarForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegistoFinanceiroInserirEditarForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.valorNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvFinanceiroBindingSource)).EndInit();

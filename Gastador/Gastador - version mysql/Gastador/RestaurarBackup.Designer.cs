@@ -38,10 +38,11 @@ namespace Gastador
             // 
             // diretorioTextBox
             // 
+            this.diretorioTextBox.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.diretorioTextBox.Location = new System.Drawing.Point(12, 82);
             this.diretorioTextBox.Name = "diretorioTextBox";
             this.diretorioTextBox.ReadOnly = true;
-            this.diretorioTextBox.Size = new System.Drawing.Size(472, 20);
+            this.diretorioTextBox.Size = new System.Drawing.Size(529, 20);
             this.diretorioTextBox.TabIndex = 0;
             this.diretorioTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
@@ -58,7 +59,8 @@ namespace Gastador
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 66);
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(14, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 13);
             this.label2.TabIndex = 2;
@@ -66,12 +68,14 @@ namespace Gastador
             // 
             // restaurarButton
             // 
+            this.restaurarButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.restaurarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.restaurarButton.Location = new System.Drawing.Point(12, 108);
             this.restaurarButton.Name = "restaurarButton";
-            this.restaurarButton.Size = new System.Drawing.Size(129, 23);
+            this.restaurarButton.Size = new System.Drawing.Size(529, 23);
             this.restaurarButton.TabIndex = 3;
             this.restaurarButton.Text = "Restaurar";
-            this.restaurarButton.UseVisualStyleBackColor = true;
+            this.restaurarButton.UseVisualStyleBackColor = false;
             this.restaurarButton.Click += new System.EventHandler(this.restaurarButton_Click);
             // 
             // selecionarSqlOpenFileDialog
@@ -85,6 +89,7 @@ namespace Gastador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(553, 144);
             this.Controls.Add(this.restaurarButton);
             this.Controls.Add(this.label2);

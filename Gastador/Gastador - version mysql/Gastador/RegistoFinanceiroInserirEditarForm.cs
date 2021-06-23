@@ -248,8 +248,8 @@ namespace Gastador
            // this. Dispose();
 
             new RegistoFinanceiroInserirEditarForm().Show();
-            
 
+            
             //Dispose();
             //this.Focus();
             //Form f = new RegistoFinanceiroInserirEditarForm();
@@ -260,11 +260,6 @@ namespace Gastador
             //f.Show();
 
 
-        }
-
-        private void RegistoFinanceiroInserirEditarForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            new RegistoFinanceiroForm().Activate();
         }
     }
 }
