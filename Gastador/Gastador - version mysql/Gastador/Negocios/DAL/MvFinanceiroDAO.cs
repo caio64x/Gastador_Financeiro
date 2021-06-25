@@ -98,6 +98,23 @@ namespace Gastador.Negocios.DAL
                     "DataConfirmacao = '" + data + "', DataVencimento = '" + data + "', Descricao = '" + mvFinanceiro.Descricao + "', Pago = 'S' " +
                     "WHERE ID = @ID", mvFinanceiro);
                 }
+
+                //caso pagamento seja adiantedo
+                string vDataVencimento = Convert.ToString(mvFinanceiro.DataVencimento);
+                vDataVencimento = vDataVencimento.Substring(3, 2);
+                int  DataVencimento =int.Parse(vDataVencimento);
+                int month = mes.Month;
+                if (DataVencimento > month)
+                {
+                    string vencimento = mvFinanceiro.DataVencimento.ToString().Substring(0, 10);
+
+                    mvFinanceiro.Descricao = (mvFinanceiro.Descricao + " " + "| Confirmação de pagamento atiantada " +
+                    " Data de vencimento anterior: " + vencimento).ToString().Trim();
+
+                    banco.Execute("UPDATE MvFinanceiros SET " +
+                    "DataConfirmacao = '" + data + "', DataVencimento = '" + data + "', Descricao = '" + mvFinanceiro.Descricao + "', Pago = 'S' " +
+                    "WHERE ID = @ID", mvFinanceiro);
+                }
                 else
                 {
                     //se nao, atualiza somente a data de confirmação
