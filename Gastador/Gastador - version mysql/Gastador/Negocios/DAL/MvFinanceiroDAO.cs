@@ -102,7 +102,7 @@ namespace Gastador.Negocios.DAL
                 //caso pagamento seja adiantedo
                 string vDataVencimento = Convert.ToString(mvFinanceiro.DataVencimento);
                 vDataVencimento = vDataVencimento.Substring(3, 2);
-                int  DataVencimento =int.Parse(vDataVencimento);
+                int DataVencimento = int.Parse(vDataVencimento);
                 int month = mes.Month;
                 if (DataVencimento > month)
                 {
