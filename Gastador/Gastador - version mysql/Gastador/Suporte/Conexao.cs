@@ -17,7 +17,6 @@ namespace Gastador
         {
             //acessando a string de conexão
             string banco = ConfigurationManager.ConnectionStrings["banco"].ConnectionString;
-            
             return new MySqlConnection(banco);
         }
 

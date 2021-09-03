@@ -232,7 +232,11 @@ namespace Gastador
         private void button1_Click(object sender, EventArgs e)
         {
             var form = new FinanceiroInserirEditarForm();
-            form.ShowDialog();
+            form.Show();
+            form.Activate();
+            form.Focus();
+            form.BringToFront();
+            form.TopMost = true;
             ListarFinanceiro();
 
         }
