@@ -56,13 +56,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.valorTotalReceitaLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.quantidadeLabel = new System.Windows.Forms.Label();
-            this.alterarButton = new System.Windows.Forms.Button();
-            this.excluirButton = new System.Windows.Forms.Button();
-            this.inserirButton = new System.Windows.Forms.Button();
-            this.fecharButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.fecharButton = new System.Windows.Forms.Button();
+            this.inserirButton = new System.Windows.Forms.Button();
+            this.quantidadeLabel = new System.Windows.Forms.Label();
+            this.excluirButton = new System.Windows.Forms.Button();
+            this.alterarButton = new System.Windows.Forms.Button();
             this.iDdataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDFinanceiroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,9 +99,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label6.Location = new System.Drawing.Point(559, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.Size = new System.Drawing.Size(121, 17);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Ano despesa";
+            this.label6.Text = "Ano de referência";
             // 
             // anoDespesaDateTimePicker
             // 
@@ -111,7 +111,7 @@
             this.anoDespesaDateTimePicker.Name = "anoDespesaDateTimePicker";
             this.anoDespesaDateTimePicker.Size = new System.Drawing.Size(79, 20);
             this.anoDespesaDateTimePicker.TabIndex = 9;
-            this.anoDespesaDateTimePicker.Value = new System.DateTime(2021, 6, 12, 0, 0, 0, 0);
+            this.anoDespesaDateTimePicker.Value = new System.DateTime(2022, 1, 3, 0, 0, 0, 0);
             // 
             // mesDespesacomboBox
             // 
@@ -142,9 +142,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(421, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 17);
+            this.label4.Size = new System.Drawing.Size(122, 17);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Despesa do mês";
+            this.label4.Text = "Mês de referência";
             // 
             // buscarButton
             // 
@@ -393,6 +393,14 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Restante a pagar";
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(1260, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(94, 321);
+            this.panel4.TabIndex = 25;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.fecharButton);
@@ -406,38 +414,16 @@
             this.panel3.Size = new System.Drawing.Size(1284, 70);
             this.panel3.TabIndex = 1;
             // 
-            // quantidadeLabel
+            // fecharButton
             // 
-            this.quantidadeLabel.AutoSize = true;
-            this.quantidadeLabel.Location = new System.Drawing.Point(12, 17);
-            this.quantidadeLabel.Name = "quantidadeLabel";
-            this.quantidadeLabel.Size = new System.Drawing.Size(84, 13);
-            this.quantidadeLabel.TabIndex = 4;
-            this.quantidadeLabel.Text = "Nenhum registro";
-            // 
-            // alterarButton
-            // 
-            this.alterarButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarButton.Image")));
-            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.alterarButton.Location = new System.Drawing.Point(1040, 17);
-            this.alterarButton.Name = "alterarButton";
-            this.alterarButton.Size = new System.Drawing.Size(79, 25);
-            this.alterarButton.TabIndex = 1;
-            this.alterarButton.Text = "Alterar";
-            this.alterarButton.UseVisualStyleBackColor = true;
-            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
-            // 
-            // excluirButton
-            // 
-            this.excluirButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirButton.Image")));
-            this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.excluirButton.Location = new System.Drawing.Point(1121, 17);
-            this.excluirButton.Name = "excluirButton";
-            this.excluirButton.Size = new System.Drawing.Size(79, 25);
-            this.excluirButton.TabIndex = 2;
-            this.excluirButton.Text = "Excluir";
-            this.excluirButton.UseVisualStyleBackColor = true;
-            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
+            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fecharButton.Location = new System.Drawing.Point(1202, 17);
+            this.fecharButton.Name = "fecharButton";
+            this.fecharButton.Size = new System.Drawing.Size(79, 25);
+            this.fecharButton.TabIndex = 3;
+            this.fecharButton.Text = "Fechar";
+            this.fecharButton.UseVisualStyleBackColor = true;
+            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
             // 
             // inserirButton
             // 
@@ -451,24 +437,38 @@
             this.inserirButton.UseVisualStyleBackColor = true;
             this.inserirButton.Click += new System.EventHandler(this.inserirButton_Click);
             // 
-            // fecharButton
+            // quantidadeLabel
             // 
-            this.fecharButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.fecharButton.Location = new System.Drawing.Point(1202, 17);
-            this.fecharButton.Name = "fecharButton";
-            this.fecharButton.Size = new System.Drawing.Size(79, 25);
-            this.fecharButton.TabIndex = 3;
-            this.fecharButton.Text = "Fechar";
-            this.fecharButton.UseVisualStyleBackColor = true;
-            this.fecharButton.Click += new System.EventHandler(this.fecharButton_Click);
+            this.quantidadeLabel.AutoSize = true;
+            this.quantidadeLabel.Location = new System.Drawing.Point(12, 17);
+            this.quantidadeLabel.Name = "quantidadeLabel";
+            this.quantidadeLabel.Size = new System.Drawing.Size(84, 13);
+            this.quantidadeLabel.TabIndex = 4;
+            this.quantidadeLabel.Text = "Nenhum registro";
             // 
-            // panel4
+            // excluirButton
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1260, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(94, 321);
-            this.panel4.TabIndex = 25;
+            this.excluirButton.Image = ((System.Drawing.Image)(resources.GetObject("excluirButton.Image")));
+            this.excluirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.excluirButton.Location = new System.Drawing.Point(1121, 17);
+            this.excluirButton.Name = "excluirButton";
+            this.excluirButton.Size = new System.Drawing.Size(79, 25);
+            this.excluirButton.TabIndex = 2;
+            this.excluirButton.Text = "Excluir";
+            this.excluirButton.UseVisualStyleBackColor = true;
+            this.excluirButton.Click += new System.EventHandler(this.excluirButton_Click);
+            // 
+            // alterarButton
+            // 
+            this.alterarButton.Image = ((System.Drawing.Image)(resources.GetObject("alterarButton.Image")));
+            this.alterarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.alterarButton.Location = new System.Drawing.Point(1040, 17);
+            this.alterarButton.Name = "alterarButton";
+            this.alterarButton.Size = new System.Drawing.Size(79, 25);
+            this.alterarButton.TabIndex = 1;
+            this.alterarButton.Text = "Alterar";
+            this.alterarButton.UseVisualStyleBackColor = true;
+            this.alterarButton.Click += new System.EventHandler(this.alterarButton_Click);
             // 
             // iDdataGridViewTextBoxColumn1
             // 

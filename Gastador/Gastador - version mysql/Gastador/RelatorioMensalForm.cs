@@ -20,6 +20,7 @@ namespace Gastador
             InitializeComponent();
             Application.DoEvents();// enquanto o evento acontece
             mvFinanceiro = new MvFinanceiro();
+            anoDespesaDateTimePicker.Value = DateTime.Now;
         }
 
         //listar os registros financeiros, que sao os gastos ou receitas

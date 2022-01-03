@@ -94,9 +94,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.Location = new System.Drawing.Point(572, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Ano despesa";
+            this.label5.Text = "Ano de referência";
             // 
             // anoDespesaDateTimePicker
             // 
@@ -137,9 +137,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(435, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 17);
+            this.label4.Size = new System.Drawing.Size(122, 17);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Despesa do mês";
+            this.label4.Text = "Mês de referência";
             // 
             // buscarButton
             // 
